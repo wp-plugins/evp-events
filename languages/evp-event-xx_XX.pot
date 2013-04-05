@@ -1,0 +1,820 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PlaceHolder\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-04 10:38+0300\n"
+"PO-Revision-Date: 2013-04-04 10:39+0300\n"
+"Last-Translator: Virgis <v.krinickij@evp.lt>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: evp-event.php:122
+#, php-format
+msgid "Event id %s not found"
+msgstr ""
+
+#: evp-event.php:169
+msgid "Invalid participant email"
+msgstr ""
+
+#: evp-event.php:173
+#: evp-event.php:177
+msgid "Please enter participant name and surname"
+msgstr ""
+
+#: evp-event.php:192
+msgid "Enter company name"
+msgstr ""
+
+#: evp-event.php:196
+msgid "Enter company code"
+msgstr ""
+
+#: evp-event.php:200
+msgid "Enter company address"
+msgstr ""
+
+#: evp-event.php:204
+msgid "Enter company PVM code"
+msgstr ""
+
+#: evp-event.php:208
+#: evp-event.php:212
+msgid "Enter contact person name and surname"
+msgstr ""
+
+#: evp-event.php:217
+msgid "Enter contact person phone"
+msgstr ""
+
+#: evp-event.php:221
+msgid "Enter contact person email"
+msgstr ""
+
+#: evp-event.php:225
+msgid "Contact person email is invalid"
+msgstr ""
+
+#: evp-event.php:243
+msgid "Please enter at least one participant"
+msgstr ""
+
+#: evp-event.php:250
+msgid "No tickets left"
+msgstr ""
+
+#: evp-event.php:402
+#: admin.php:124
+msgid "System error"
+msgstr ""
+
+#: evp-event.php:699
+msgid "Ticket with such code doesn't exists"
+msgstr ""
+
+#: evp-event.php:705
+msgid "System error, please try again"
+msgstr ""
+
+#: evp-event.php:781
+msgid "Do not have permission to check tickets"
+msgstr ""
+
+#: evp-event.php:785
+msgid "Invalid ticket id"
+msgstr ""
+
+#: evp-event.php:798
+msgid "Ticket doesn't exit"
+msgstr ""
+
+#: evp-event.php:800
+msgid "Ticket no valid yet"
+msgstr ""
+
+#: evp-event.php:802
+msgid "Ticket validation time has been expired "
+msgstr ""
+
+#: evp-event.php:804
+msgid "Ticket used:"
+msgstr ""
+
+#: evp-event.php:817
+msgid "Valid"
+msgstr ""
+
+#: evp-event.php:817
+msgid "id:"
+msgstr ""
+
+#: evp-event.php:976
+msgid "Access denied"
+msgstr ""
+
+#: admin.php:15
+msgid "EVP: new"
+msgstr ""
+
+#: admin.php:15
+msgid "Evp: new"
+msgstr ""
+
+#: admin.php:20
+msgid "EVP: #"
+msgstr ""
+
+#: admin.php:21
+#: tmpl/admin/discount_codes_list.php:1
+msgid "Discount codes"
+msgstr ""
+
+#: admin.php:22
+#: tmpl/admin/stats.php:1
+msgid "Statistics"
+msgstr ""
+
+#: admin.php:23
+msgid "Templates"
+msgstr ""
+
+#: admin.php:24
+msgid "Pair device"
+msgstr ""
+
+#: admin.php:25
+msgid "Settings"
+msgstr ""
+
+#: admin.php:72
+#: admin.php:103
+#: admin.php:118
+#: admin.php:173
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: admin.php:189
+msgid "Template has been succesfully saved"
+msgstr ""
+
+#: admin.php:435
+msgid "Ticket template was not updated, invalid ticket template. Should be *.html file"
+msgstr ""
+
+#: tmpl/payment_bankwire.php:1
+msgid "Payment bank wire page [pdf_url]"
+msgstr ""
+
+#: tmpl/payment_success.php:2
+msgid "Payment completed"
+msgstr ""
+
+#: tmpl/form.php:12
+msgid "Required fields"
+msgstr ""
+
+#: tmpl/form.php:13
+msgid "Choose ticket price"
+msgstr ""
+
+#: tmpl/form.php:23
+msgid "*no tickets left"
+msgstr ""
+
+#: tmpl/form.php:29
+msgid "Enter participants"
+msgstr ""
+
+#: tmpl/form.php:32
+#: tmpl/confirm.php:67
+msgid "Name Surname"
+msgstr ""
+
+#: tmpl/form.php:33
+#: tmpl/confirm.php:68
+msgid "Email"
+msgstr ""
+
+#: tmpl/form.php:34
+#: tmpl/confirm.php:69
+msgid "Phone number"
+msgstr ""
+
+#: tmpl/form.php:63
+msgid "Add more"
+msgstr ""
+
+#: tmpl/form.php:66
+msgid "Need invoice"
+msgstr ""
+
+#: tmpl/form.php:68
+msgid "Use discount code"
+msgstr ""
+
+#: tmpl/form.php:72
+msgid "Enter company information"
+msgstr ""
+
+#: tmpl/form.php:75
+#: tmpl/confirm.php:29
+msgid "Company name"
+msgstr ""
+
+#: tmpl/form.php:79
+#: tmpl/confirm.php:33
+msgid "Company address"
+msgstr ""
+
+#: tmpl/form.php:83
+#: tmpl/confirm.php:37
+msgid "Company code"
+msgstr ""
+
+#: tmpl/form.php:87
+msgid "Company VAT code"
+msgstr ""
+
+#: tmpl/form.php:91
+#: tmpl/confirm.php:45
+msgid "Company contact person"
+msgstr ""
+
+#: tmpl/form.php:95
+#: tmpl/confirm.php:49
+msgid "Company contact phone"
+msgstr ""
+
+#: tmpl/form.php:99
+#: tmpl/confirm.php:53
+msgid "Company fax"
+msgstr ""
+
+#: tmpl/form.php:103
+#: tmpl/confirm.php:57
+msgid "Company contact email"
+msgstr ""
+
+#: tmpl/form.php:113
+msgid "Discount code"
+msgstr ""
+
+#: tmpl/form.php:115
+msgid "Enter discount code"
+msgstr ""
+
+#: tmpl/form.php:121
+msgid "Choose payment type"
+msgstr ""
+
+#: tmpl/form.php:126
+msgid "Webtopay"
+msgstr ""
+
+#: tmpl/form.php:127
+msgid "Webtopay description"
+msgstr ""
+
+#: tmpl/form.php:132
+msgid "Prebill"
+msgstr ""
+
+#: tmpl/form.php:133
+msgid "Prebill description"
+msgstr ""
+
+#: tmpl/form.php:139
+msgid "Payment guaranty"
+msgstr ""
+
+#: tmpl/form.php:140
+msgid "Payment guaranty description"
+msgstr ""
+
+#: tmpl/form.php:144
+msgid "If you would to use prebill or payment guaranty option, you must enter company information by click need invoice checkbox"
+msgstr ""
+
+#: tmpl/form.php:146
+msgid "Confirm order"
+msgstr ""
+
+#: tmpl/form.php:163
+msgid "Required"
+msgstr ""
+
+#: tmpl/form.php:164
+msgid "Invalid email"
+msgstr ""
+
+#: tmpl/payment_guaranty.php:1
+msgid "Payment guaranty page text"
+msgstr ""
+
+#: tmpl/payment_redirect.php:2
+msgid "Redirecting to mokejimai.lt payment system"
+msgstr ""
+
+#: tmpl/confirm.php:4
+msgid "You discount code is invalid or expired"
+msgstr ""
+
+#: tmpl/confirm.php:8
+#, php-format
+msgid "Discount code <i>%s</i> successfully used"
+msgstr ""
+
+#: tmpl/confirm.php:11
+msgid "Ticket price"
+msgstr ""
+
+#: tmpl/confirm.php:18
+msgid "Discount for ticket"
+msgstr ""
+
+#: tmpl/confirm.php:21
+msgid "Particpants count"
+msgstr ""
+
+#: tmpl/confirm.php:22
+msgid "Total sum"
+msgstr ""
+
+#: tmpl/confirm.php:26
+msgid "Company info"
+msgstr ""
+
+#: tmpl/confirm.php:41
+msgid "Company PVM Code"
+msgstr ""
+
+#: tmpl/confirm.php:63
+msgid "Participants"
+msgstr ""
+
+#: tmpl/confirm.php:83
+msgid "Change order"
+msgstr ""
+
+#: tmpl/confirm.php:85
+msgid "Accept"
+msgstr ""
+
+#: tmpl/confirm.php:87
+msgid "Pay"
+msgstr ""
+
+#: tmpl/payment_cancel.php:2
+msgid "Payment canceled"
+msgstr ""
+
+#: tmpl/payment_cancel.php:4
+msgid "Back"
+msgstr ""
+
+#: tmpl/admin/stats.php:4
+msgid "Orders total"
+msgstr ""
+
+#: tmpl/admin/stats.php:8
+msgid "Unconfirmed payment guaranties"
+msgstr ""
+
+#: tmpl/admin/stats.php:12
+msgid "Unpaid pre bills"
+msgstr ""
+
+#: tmpl/admin/stats.php:16
+msgid "Participants registered"
+msgstr ""
+
+#: tmpl/admin/stats.php:20
+msgid "Amount gained from prebills"
+msgstr ""
+
+#: tmpl/admin/stats.php:24
+msgid "Amount gained from webtopay.com"
+msgstr ""
+
+#: tmpl/admin/stats.php:28
+msgid "Amount gained from payment guaranty"
+msgstr ""
+
+#: tmpl/admin/stats.php:32
+msgid "Total amount"
+msgstr ""
+
+#: tmpl/admin/participants_list.php:1
+msgid "Orders"
+msgstr ""
+
+#: tmpl/admin/participants_list.php:3
+msgid "Order successfully saved"
+msgstr ""
+
+#: tmpl/admin/participants_list.php:7
+#: tmpl/admin/discount_codes_list.php:6
+msgid "Add new"
+msgstr ""
+
+#: tmpl/admin/discount_codes_list.php:3
+msgid "Discount code successfully saved"
+msgstr ""
+
+#: tmpl/admin/checker_rights.php:1
+msgid "Pair your mobile device"
+msgstr ""
+
+#: tmpl/admin/checker_rights.php:2
+msgid ""
+"Pair your mobile device with particular event to get ability validate tickets. Just read this QR code with your device \n"
+"\t\tand follow the link."
+msgstr ""
+
+#: tmpl/admin/checker_rights.php:5
+msgid "Your mobile device must accept cookies!"
+msgstr ""
+
+#: tmpl/admin/template_editor.php:1
+msgid "Event template editor"
+msgstr ""
+
+#: tmpl/admin/template_editor.php:6
+msgid "Choose template"
+msgstr ""
+
+#: tmpl/admin/template_editor.php:10
+msgid "Email: send ticket to customer"
+msgstr ""
+
+#: tmpl/admin/template_editor.php:11
+msgid "Email: send tickets to representative person"
+msgstr ""
+
+#: tmpl/admin/template_editor.php:12
+msgid "Email: send payment guaranty to represantive person"
+msgstr ""
+
+#: tmpl/admin/template_editor.php:13
+msgid "Email: send bill to representative person"
+msgstr ""
+
+#: tmpl/admin/template_editor.php:14
+msgid "Invoice: advanced"
+msgstr ""
+
+#: tmpl/admin/template_editor.php:15
+msgid "Other: payment guaranty"
+msgstr ""
+
+#: tmpl/admin/template_editor.php:16
+msgid "Other: ticket template"
+msgstr ""
+
+#: tmpl/admin/template_editor.php:21
+msgid "Template body"
+msgstr ""
+
+#: tmpl/admin/template_editor.php:33
+msgid "Save changes"
+msgstr ""
+
+#: tmpl/admin/event_add.php:40
+#: tmpl/admin/event_add.php:245
+msgid "WebToPay"
+msgstr ""
+
+#: tmpl/admin/event_add.php:41
+#: tmpl/admin/event_add.php:249
+#: lib/participants_table.php:28
+msgid "PreBill"
+msgstr ""
+
+#: tmpl/admin/event_add.php:44
+#: tmpl/admin/event_add.php:257
+msgid "persons"
+msgstr ""
+
+#: tmpl/admin/event_add.php:69
+msgid "Do you realy want remove event?"
+msgstr ""
+
+#: tmpl/admin/event_add.php:109
+msgid "Create new event"
+msgstr ""
+
+#: tmpl/admin/event_add.php:114
+msgid "Event settings"
+msgstr ""
+
+#: tmpl/admin/event_add.php:123
+msgid "Event settings successfully saved"
+msgstr ""
+
+#: tmpl/admin/event_add.php:142
+msgid "Create new page with placeholder"
+msgstr ""
+
+#: tmpl/admin/event_add.php:148
+msgid "Event ID"
+msgstr ""
+
+#: tmpl/admin/event_add.php:155
+msgid "Remove event"
+msgstr ""
+
+#: tmpl/admin/event_add.php:159
+msgid "Placeholder"
+msgstr ""
+
+#: tmpl/admin/event_add.php:162
+msgid "Copy this placeholder in the page body"
+msgstr ""
+
+#: tmpl/admin/event_add.php:173
+msgid "Enter event details"
+msgstr ""
+
+#: tmpl/admin/event_add.php:179
+msgid "Valid from"
+msgstr ""
+
+#: tmpl/admin/event_add.php:184
+msgid "Valid to"
+msgstr ""
+
+#: tmpl/admin/event_add.php:190
+msgid "Currency"
+msgstr ""
+
+#: tmpl/admin/event_add.php:207
+msgid "Ticket groups"
+msgstr ""
+
+#: tmpl/admin/event_add.php:211
+msgid "Name"
+msgstr ""
+
+#: tmpl/admin/event_add.php:213
+msgid "Ticket amount"
+msgstr ""
+
+#: tmpl/admin/event_add.php:214
+msgid "Payment types"
+msgstr ""
+
+#: tmpl/admin/event_add.php:216
+msgid "Group discount, when register more than"
+msgstr ""
+
+#: tmpl/admin/event_add.php:274
+msgid "New ticket"
+msgstr ""
+
+#: tmpl/admin/event_add.php:284
+msgid "WebTopay.com account"
+msgstr ""
+
+#: tmpl/admin/event_add.php:290
+msgid "Project ID:"
+msgstr ""
+
+#: tmpl/admin/event_add.php:293
+msgid "Your webtopay.com project ID:"
+msgstr ""
+
+#: tmpl/admin/event_add.php:299
+msgid "Project sign:"
+msgstr ""
+
+#: tmpl/admin/event_add.php:303
+msgid "Your webtopay.com project sign password:"
+msgstr ""
+
+#: tmpl/admin/event_add.php:309
+msgid "Test mode:"
+msgstr ""
+
+#: tmpl/admin/event_add.php:323
+msgid "Upload ticket template"
+msgstr ""
+
+#: tmpl/admin/event_add.php:329
+msgid "Template"
+msgstr ""
+
+#: tmpl/admin/event_add.php:331
+msgid "You can download sample from "
+msgstr ""
+
+#: tmpl/admin/event_add.php:333
+msgid "here"
+msgstr ""
+
+#: tmpl/admin/event_add.php:352
+msgid "Mail settings"
+msgstr ""
+
+#: tmpl/admin/event_add.php:358
+msgid "Email From"
+msgstr ""
+
+#: tmpl/admin/event_add.php:365
+msgid "Email From Name"
+msgstr ""
+
+#: tmpl/admin/event_add.php:373
+msgid "Mail subjects"
+msgstr ""
+
+#: tmpl/admin/event_add.php:407
+msgid "Use SMTP"
+msgstr ""
+
+#: tmpl/admin/event_add.php:420
+msgid "SMTP Hostname"
+msgstr ""
+
+#: tmpl/admin/event_add.php:425
+msgid "SMTP Port"
+msgstr ""
+
+#: tmpl/admin/event_add.php:430
+msgid "SMTP Username"
+msgstr ""
+
+#: tmpl/admin/event_add.php:435
+msgid "SMTP Password"
+msgstr ""
+
+#: tmpl/admin/event_add.php:448
+msgid "Save event"
+msgstr ""
+
+#: tmpl/admin/discount_codes_add.php:5
+msgid "Add new discount code"
+msgstr ""
+
+#: tmpl/admin/discount_codes_add.php:8
+#: lib/codes_table.php:15
+#: lib/codes_table.php:23
+msgid "Code"
+msgstr ""
+
+#: tmpl/admin/discount_codes_add.php:12
+#: lib/codes_table.php:24
+msgid "Discount %"
+msgstr ""
+
+#: tmpl/admin/discount_codes_add.php:16
+msgid "Use amount"
+msgstr ""
+
+#: tmpl/admin/discount_codes_add.php:20
+msgid "Save"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:1
+msgid "Order view"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:4
+msgid "Payment guaranty successfully confirmed"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:8
+msgid "Remove order"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:12
+#: lib/codes_table.php:25
+#: lib/participants_table.php:30
+msgid "Amount"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:16
+msgid "Creation date"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:22
+#: lib/participants_table.php:29
+msgid "Paid in"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:23
+#: tmpl/admin/participants_view.php:32
+#: tmpl/admin/participants_view.php:43
+#: lib/participants_table.php:152
+#: lib/participants_table.php:160
+#: lib/participants_table.php:165
+#: lib/participants_table.php:172
+msgid "Yes"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:23
+#: tmpl/admin/participants_view.php:37
+#: lib/participants_table.php:152
+#: lib/participants_table.php:160
+#: lib/participants_table.php:165
+#: lib/participants_table.php:172
+msgid "No"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:26
+msgid "Paid in date"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:31
+#: tmpl/admin/participants_view.php:36
+msgid "Bank transfer"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:43
+msgid "Download"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:46
+#: lib/participants_table.php:27
+msgid "Payment guaranty confirmed"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:47
+msgid "Confirm"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:51
+msgid "Participants count"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:56
+msgid "Company information"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:75
+msgid "Company Fax"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:79
+msgid "Responsable person (Name Surname)"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:83
+msgid "Responsable phone"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:87
+msgid "Responsable email"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:94
+msgid "Participant list"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:99
+msgid "Phone"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:100
+msgid "Mail"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:101
+msgid "Ticket code"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:102
+msgid "Ticket used"
+msgstr ""
+
+#: tmpl/admin/participants_view.php:121
+msgid "Do you realy want remove order?"
+msgstr ""
+
+#: lib/codes_table.php:16
+msgid "Codes"
+msgstr ""
+
+#: lib/codes_table.php:26
+msgid "Amount left"
+msgstr ""
+
+#: lib/codes_table.php:27
+#: lib/participants_table.php:31
+msgid "Created"
+msgstr ""
+
+#: lib/participants_table.php:17
+msgid "Participant"
+msgstr ""
+
