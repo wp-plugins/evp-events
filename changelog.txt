@@ -1,8 +1,0 @@
-Evp Event
-by EVP International
-
-= V5 - 04.04.2013 =
-
-* Fixed:   Instalation into wp 3.5.1
-* Fixed:   Saving and updating events
-* Fixed:   Saving and updating event templates.
