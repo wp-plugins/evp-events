@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<style>
+    table {
+        padding: 2px;
+    }
+
+    td {
+        padding: 0;
+        margin:  0;
+    }
+    .btop {
+        border-top: 1px solid black
+    }
+
+    .bright {
+        border-right: 1px solid black
+    }
+
+    .bleft {
+        border-left: 1px solid black
+    }
+
+    .bbottom {
+        border-bottom: 1px solid black
+    }
+
+    .ball {
+        border: 1px solid black
+    }
+
+    .ball2 {
+        border: 2px solid black
+    }
+
+    .size10 {
+        font-size: 10;
+    }
+    .size11 {
+        font-size: 11;
+    }
+    .size9 {
+        font-size: 9;
+    }
+</style>
+<meta charset="UTF-8">
+</head>
+<body>
+<table>
+    <tr class="size11"><td align="center"><strong>Išankstinio apmokėjimo sąskaita</strong></td></tr>
+    <tr class="size11"><td align="center"><strong>Serija EFK Nr. [request_id]</strong></td></tr>
+    <tr><td>&nbsp;</td></tr>
+</table>
+<table style="padding: 3px">
+    <tr>
+        <td valign="top" width="320">
+            <table style="border: 2px solid black; " width="380">
+                <tr>
+                    <td class="size9" width="30%">Pardavėjo pavadinimas:</td>
+                    <td class="size10"><strong>Pavadinimas</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="size9">Įmonės kodas:</td>
+                    <td class="size10">Kodas</td>
+                </tr>
+                <tr>
+                    <td class="size9">PVM kodas:</td>
+                    <td class="size10">PVM kodas123</td>
+                </tr>
+                <tr>
+                    <td class="size9">Adresas:</td>
+                    <td class="size10">Adresas 16-60</td>
+                </tr>
+            </table>
+        </td>
+        <td width="10px">&nbsp;</td>
+        <td valign="top" width="360">
+            <table style="border: 2px solid black" width="370">
+                <tr>
+                    <td class="size9" width="30%">Pirkėjo pavadinimas:</td>
+                    <td class="size10"><strong>[company_name]</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="size9">Įmonės kodas:</td>
+                    <td class="size10">[company_code]</td>
+                </tr>
+                <tr>
+                    <td class="size9">PVM kodas:</td>
+                    <td class="size10">[company_pvm_code]</td>
+                </tr>
+                <tr>
+                    <td class="size9">Adresas:</td>
+                    <td class="size10">[company_address]</td>
+                </tr>
+            </table>
+         </td>
+   </tr>
+</table>
+<table>
+    <tr><td>&nbsp;</td></tr>
+    <tr class="size11"><td>[date]</td></tr>
+    <tr class="size11"><td>Apmokėjimo terminas 3 darbo dienos</td></tr>
+    <tr><td>&nbsp;</td></tr>
+</table>
+<table border="1">
+    <thead>
+        <tr>
+            <th align="center" width="60%">Pavadinimas</th>
+            <th align="center" width="10%">Mato vnt.</th>
+            <th align="center" width="10%">Kiekis</th>
+            <th align="center" width="10%">Kaina</th>
+            <th align="center" width="10%">Suma</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center" width="60%">Mokymai: Viešojo sektoriaus efektyvumo mokymai</td>
+            <td align="center" width="10%"></td>
+            <td align="center" width="10%">[ticket_amount]</td>
+            <td align="center" width="10%">[ticket_price]</td>
+            <td align="center" width="10%">[ticket_sum]</td>
+        </tr>
+    </tbody>
+</table>
+<p></p>
+<table border="0">
+    <tr>
+        <td width="65%" align="center" class="btop bleft"><strong>Papildoma informacija</strong></td>
+        <td width="7%" class="btop">&nbsp;</td>
+        <td width="15%" align="left" class="bleft btop bright">Iš viso</td>
+        <td width="13%" align="center" class="ball2">[ticket_sum]</td>
+    </tr>
+    <tr>
+        <td align="center" class="bbottom bleft">*PVM neapmokestinimo pagrindas: LR PVM įst. 22 str</td>
+        <td>&nbsp;</td>
+        <td align="left" class="bleft bright">PVM (-%)*</td>
+        <td align="center" class="ball">-</td>
+    </tr>
+    <tr>
+        <td class="bleft">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="bleft">&nbsp;</td>
+        <td class="ball">&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="bleft bbottom">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td align="left" class="bleft bbottom">Bendra suma</td>
+        <td align="center" class="ball2"><strong>[ticket_sum]</strong></td>
+    </tr>
+    <tr>
+        <td class="bleft">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="4" align="left" class="bbottom bleft">Suma žodžiais : [sum_words]</td>
+    </tr>
+    <tr>
+        <td colspan="4" align="left" class="ball">Mokėjimo paskirtyje nurodykite išankstinės sąskaitos numerį: <strong>[request_id]</strong></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="bbottom">Dokumentą paruošė: Vardenis Pavardenis</td>
+    </tr>
+    <tr>
+        <td colspan="4" align="center" class="size9">(pareigos, vardai, pavardės, parašai)</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="4" align="center" class="btop size9" >(pareigos, vardai, pavardės, parašai)</td>
+    </tr>
+</table>	
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table width="400px" border="1">
+	<tr>
+		<td colspan="2" align="center"><strong>Mokėjimo nurodymai</strong></td>
+	</tr>
+	<tr>
+		<td>Gavėjas</td>
+		<td>EVP International, UAB</td>
+	</tr>
+	<tr>
+		<td>Gavėjo bankas</td>
+		<td>AB DNB bankas</td>
+	</tr>
+	<tr>
+		<td>Sąskaita</td>
+		<td>LT774010042403269638</td>
+	</tr>
+	<tr>
+		<td>Mokėjimo paskirtis</td>
+		<td>[request_id]</td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<style>
+	.ticket-body {
+		width: 520pt;
+		border: 2px solid grey;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		padding: 20px;
+	}
+	
+	.left {
+		
+		float: left;
+		clear: none;
+		width: 40%;
+		border-right: 2px solid grey;
+		
+	}
+	
+	.right {
+		float:right;
+		width: 58%;
+	}
+	
+	.clear {
+		clear: both;
+	}
+	
+	.title {
+		text-align: center;
+		font-weight: bold;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 5px;
+	}
+	
+	.qrcode {
+		text-align:center;
+		margin: 10px;
+	}
+	
+	li {
+		padding: 10px;
+	}
+	</style>
+<meta charset="UTF-8">
+</head>
+<body>
+	<div class="ticket-body">
+		<div class="left">
+			<p class='title'>Elektroninis bilietas</p>
+			<p class='title'><img class='qrcode' src='data:image/jpeg;base64,[raw_png]' /></p>
+		</div>
+		<div class="right">
+			<ul>
+				<li>Renginio organizatorius: UAB test</li>
+				<li>Durys atidaromos: 2012-11-16 18:00</li>
+				<li>Kaina: [ticket_amount]</li>
+				<li>ID: [ticket_id]</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+</body>
+
