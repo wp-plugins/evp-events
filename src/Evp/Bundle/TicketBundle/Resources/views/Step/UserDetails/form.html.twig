@@ -1,0 +1,13 @@
+{% block form_row %}
+    {% spaceless %}
+        <div class="form_row">
+            {# Skip numeric fields #}
+            {% if name is not numeric %}
+                {{ form_label(form, form.vars.label|trans|raw) }}
+            {% endif %}
+
+            {{ form_errors(form) }}
+            {{ form_widget(form) }}
+        </div>
+    {% endspaceless %}
+{% endblock form_row %}

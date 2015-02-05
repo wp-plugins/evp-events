@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service
+                id="evp_reporting.report.ticket_type_sales"
+                class="Evp\Bundle\ReportingBundle\Service\Report\TicketTypeSalesReport">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <tag name="evp.report"/>
+        </service>
+
+        <service
+                id="evp_reporting.report.custom_fields"
+                class="Evp\Bundle\ReportingBundle\Service\Report\CustomFieldsReport">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <tag name="evp.report"/>
+        </service>
+
+        <service
+                id="evp_reporting.report.tickets_left"
+                class="Evp\Bundle\ReportingBundle\Service\Report\TicketsLeftReport">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <tag name="evp.report"/>
+        </service>
+
+    </services>
+</container>

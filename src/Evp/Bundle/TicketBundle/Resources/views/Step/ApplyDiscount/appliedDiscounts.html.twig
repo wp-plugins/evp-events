@@ -1,0 +1,13 @@
+<div class="columns row">
+    <div class="ticketType cell">{{ 'column.ticket_type.name'|trans({} , "columns" ) }}</div>
+    <div class="discount cell">{{ 'column.discount.name'|trans({} , "columns" ) }}</div>
+    <div class="ticketPrice cell">{{ 'column.discount.new_price'|trans({} , "columns" ) }}</div>
+</div>
+
+{% for discounts in elements.applied %}
+    <div class="ticketDiscount row">
+        <div class="ticketType cell">{{ discounts.ticketType.name }}</div>
+        <div class="discount cell">{{ discounts.ticket.discount.name }}</div>
+        <div class="ticketPrice cell">{{ discounts.ticket.price|number_format(2, ',', ' ') }} {{ discounts.ticket.event.currency }}</div>
+    </div>
+{% endfor %}

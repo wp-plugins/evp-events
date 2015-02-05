@@ -1,0 +1,16 @@
+<div class="element">
+    <div class="shortInfo">{{ 'message.payment_type_selection.short_info'|trans }}</div>
+    {{ form_start(elements) }}
+    {{ form_errors(elements) }}
+    {% for item in elements.paymentChoice %}
+            <div class="item">
+                {{ form_widget(item) }}
+                {{ form_label(item, item.vars.label|trans({}, 'columns'), { 'label_attr': {'class': item.vars.value }}) }}
+            </div>
+        {% endfor %}
+    <div class="invoice">
+        {{ form_rest(elements) }}
+    </div>
+    {% include 'EvpTicketBundle:Step:navigationWithoutForm.html.twig' %}
+    {{ form_end(elements) }}
+</div>

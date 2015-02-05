@@ -1,0 +1,16 @@
+{% extends 'EvpTicketAdminBundle::base.html.twig' %}
+
+{% block menu %}{% endblock %}
+{% block body %}
+    <ul class="nav nav-pills nav-stacked">
+        {% for menu, title in menus %}
+            <li class="tickets_admin_horizontal_menu">
+                <a
+                        class="btn btn-default btn-lg btn-block" role="button"
+                        href="{{ path('admin_manage_menu_index', {'_locale' : app.request.locale, 'menu' : menu }) }}">
+                    {{ 'admin.prefix.manage'|trans({}, 'columns') }} {{ title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

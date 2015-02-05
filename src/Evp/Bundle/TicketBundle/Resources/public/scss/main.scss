@@ -1,0 +1,225 @@
+@import "configuration";
+@import "reset";
+
+/*Basic definitions*/
+#{$wrapper} * {
+    font-size: $fontSize;
+    font-style: normal;
+    font-family: $fontType;
+}
+#{$wrapper} select,
+#{$wrapper} input,
+#{$wrapper} button {
+}
+#{$wrapper} select {
+    min-height: 2.4em;
+}
+#{$wrapper} input[type="text"] {
+    border-radius: 4px;
+}
+
+#{$wrapper} .columns {
+    font-weight: bold;
+    height: 2em;
+}
+#{$wrapper} div.nonShown {
+    /*display: none;*/
+    visibility: collapse;
+}
+#{$wrapper} .lineHeight3em {
+    line-height: 6em;
+}
+#{$wrapper} .widthToCell,
+#{$wrapper} .widthToCell input {
+    width: 5em;
+}
+.left,
+.dropdown, .ticketType, .type, .info, .item
+{
+    float: left;
+}
+#{$wrapper} {
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+}
+#{$wrapper} .bold {
+  font-weight: bold;
+}
+
+/*CSS table definitions*/
+#{$wrapper} .table {
+    display: table;
+    width: auto;
+}
+#{$wrapper} .cell {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0.25em 0.5em;
+    min-width: 6em;
+    max-width: 30em;
+}
+#{$wrapper} .row {
+    display: table-row;
+}
+#{$wrapper} .tableBody {
+    display: table-row-group;
+}
+
+/*Single event info definitions*/
+#{$wrapper} .eventInfo .headerLine {
+    font-size: 3em;
+    line-height: normal;
+}
+#{$wrapper} .eventInfo .date {
+    font-size: 0.4em;
+    padding-bottom: 1em;
+    clear: both;
+}
+#{$wrapper} .eventInfo .description {
+    padding-bottom: 3em;
+    clear: both;
+}
+#{$wrapper} .eventInfo .orderInfo {
+    padding-bottom: 1em;
+}
+
+/*Ticket type selection step definitions*/
+#{$wrapper} .cartItem.totals .cell {
+    font-weight: bold;
+    font-size: 1.1em;
+    white-space: nowrap;
+}
+
+/*Apply discount step definitions*/
+#{$wrapper} .applyDiscount .available,
+#{$wrapper}.applyDiscount .applied {
+    padding-bottom: 2em;
+}
+#{$wrapper} .applyDiscount .ticketDiscount {
+    padding-bottom: 2em;
+    clear: both;
+}
+#{$wrapper} .applyDiscount .dropdown {
+    width: 12em;
+}
+#{$wrapper} .applyDiscount .input {
+    width: 15em;
+}
+#{$wrapper} .applyDiscount .discount {
+    width: 7em;
+}
+#{$wrapper} .applyDiscount .ticketPrice {
+    width: 6em;
+}
+
+/*Payment type selection step definitions*/
+#{$wrapper} .paymentTypes .invoice {
+    padding: 2em 0;
+}
+#{$wrapper} .paymentTypes .invoiceCheckbox label {
+    margin-left: 4px;
+}
+#{$wrapper} .paymentTypes .invoiceCheckbox input {
+  margin-top: 0;
+}
+#{$wrapper} .paymentTypes .item,
+#{$wrapper} .paymentTypes .invoice {
+    clear: both;
+}
+#{$wrapper} .paymentTypes * input,
+#{$wrapper} .paymentTypes * label {
+    display: inline-block;
+}
+
+/*Invoice details fill step definitions*/
+#{$wrapper} .invoiceDetails .row {
+    padding-top: 1em;
+    clear: both;
+}
+#{$wrapper} .invoiceDetails {
+    padding-bottom: 2em;
+}
+#{$wrapper} .invoiceDetails .item {
+    padding-right: 2em;
+}
+#{$wrapper} .invoiceDetails button {
+    margin-top: 1em;
+}
+#{$wrapper} .invoiceDetails * input,
+#{$wrapper} .invoiceDetails * label {
+    display: inline-block;
+}
+#{$wrapper} .invoiceDetails * .label {
+    display: block;
+    color: inherit;
+    background-color: inherit;
+    text-shadow: none;
+}
+#{$wrapper} .invoiceDetails .form input {
+    margin-right: 1em;
+}
+
+#{$wrapper} .available {
+    /* Keep from collapsing */
+    overflow: auto;
+}
+
+/*User details fill step definitions*/
+#{$wrapper} #evp_bundle_ticketbundle_dynamic_collection_type_globalDetails,
+#{$wrapper} #evp_bundle_ticketbundle_dynamic_collection_type_commonDetails {
+    margin-bottom: 3em;
+}
+#{$wrapper} #evp_bundle_ticketbundle_dynamic_collection_type_globalDetails > .form_row,
+#{$wrapper} #evp_bundle_ticketbundle_dynamic_collection_type_commonDetails > .form_row {
+    padding: 2em 0;
+    display: block;
+    clear: both;
+}
+#{$wrapper} #evp_bundle_ticketbundle_dynamic_collection_type_commonDetails .form_row * label,
+#{$wrapper} #evp_bundle_ticketbundle_dynamic_collection_type_globalDetails .form_row * label
+{
+    display: block;
+    clear: both;
+}
+#{$wrapper} #evp_bundle_ticketbundle_dynamic_collection_type_commonDetails .form_row * input,
+#{$wrapper} #evp_bundle_ticketbundle_dynamic_collection_type_globalDetails .form_row * input
+{
+    float: left;
+}
+
+#{$wrapper} .ticketDiscount form select {
+    margin-left: -0.5em;
+}
+
+#{$wrapper} .ticketDiscountCode {
+    height: 2em;
+}
+
+#{$wrapper} .ticketDiscountCode .discount-field {
+    float: left;
+    margin-right: 0.5em;
+}
+
+#{$wrapper} .ticketDiscountCode button[type=submit] {
+    margin-top: -0.1em;
+}
+
+/*Seat selection frontend*/
+#{$wrapper} .seatSelection svg .seat.show.free,
+#{$wrapper} .seatSelection svg .seat.show.reserved {
+    cursor: pointer;
+}
+#{$wrapper} .seatSelection .seat.show {
+    stroke: black;
+}
+#{$wrapper} .seatSelection .seat.show.taken {
+    fill: $seatTaken;
+}
+#{$wrapper} .seatSelection .seat.show.reserved {
+    fill: $seatReserved;
+}
+
+#{$wrapper} .userDetails .ticket {
+    padding-top: 2em;
+}

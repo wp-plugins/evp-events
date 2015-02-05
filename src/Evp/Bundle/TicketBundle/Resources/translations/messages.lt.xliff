@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>button.add_to_cart</source>
+                <target>Į krepšelį</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>button.next_step</source>
+                <target>Toliau</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>button.previous_step</source>
+                <target>Atgal</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>button.cancel</source>
+                <target>Atšaukti</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>button.buy_tickets</source>
+                <target>Pirkti bilietus</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>tickets.not.on_sale</source>
+                <target>Bilietai šiuo metu neparduodami</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>label.main_email</source>
+                <target>Bendras paštas</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>label.email</source>
+                <target>El. paštas</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>label.birthday</source>
+                <target>Gimimo diena</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>label.name</source>
+                <target>Vardas</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>label.surname</source>
+                <target>Pavardė</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>button.submit_schema_common</source>
+                <target>Išsaugoti</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>button.submit_schema_general</source>
+                <target>Išsaugoti</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>button.remove_order_item</source>
+                <target>Pašalinti</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>button.remove_ticket_fields</source>
+                <target>Redaguoti</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>button.submit_discount</source>
+                <target>Pritaikyti</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>label.discount_value</source>
+                <target>Įveskite kodą:</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>choose.discount_type</source>
+                <target>Pasirinkite nuolaidą</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>discount.type.percentage</source>
+                <target>Procentinė nuolaida</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>discount.type.fixed_amount</source>
+                <target>Fiksuota nuolaida</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>button.submit.payment_type</source>
+                <target>Mokėti</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>label.payment.invoice</source>
+                <target>Mokėti Pervedimu</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>label.payment.invoice_required</source>
+                <target>Reikalinga sąskaita faktūra</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>label.invoice.name</source>
+                <target>Įmonės pavadinimas</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>label.invoice.code</source>
+                <target>Įmonės kodas</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>label.invoice.address</source>
+                <target>Adresas</target>
+            </trans-unit>
+            <trans-unit id="27">
+                <source>label.invoice.code_vat</source>
+                <target>PVM kodas</target>
+            </trans-unit>
+            <trans-unit id="28">
+                <source>button.invoice.submit</source>
+                <target>Išsaugoti duomenis</target>
+            </trans-unit>
+            <trans-unit id="29">
+                <source>mail.subject.invoice_email</source>
+                <target>Sąskaita faktūra Jūsų užsakymui</target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>mail.body.invoice_email</source>
+                <target>Pridedama sąskaita faktūra Jūsų užsakymui.</target>
+            </trans-unit>
+            <trans-unit id="31">
+                <source>mail.subject.ticket_email</source>
+                <target>Jūsų nupirktas bilietas</target>
+            </trans-unit>
+            <trans-unit id="32">
+                <source>mail.body.ticket_email</source>
+                <target>Pridedamas Jūsų nupirktas bilietas.</target>
+            </trans-unit>
+            <trans-unit id="33">
+                <source>message.invoice.sent_successfully</source>
+                <target>Išankstinė sąskaita faktūra buvo sėkmingai išsiųsta Jūsų el. pašto adresu. Apmokėjus šią įšankstinę sąskaitą ir mūsų administratoriui patvirtinus mokėjimą, nurodytu el. paštu gausite užsakytus bilietus.</target>
+            </trans-unit>
+            <trans-unit id="34">
+                <source>message.invoice.failed_to_send</source>
+                <target>Nepavyko išsiųsti sąskaitos faktūros Jūsų el. pašto adresu</target>
+            </trans-unit>
+            <trans-unit id="35">
+                <source>message.ticket.sent_successfully</source>
+                <target>Bilietas buvo sėkmingai išsiųstas Jūsų el. pašto adresu.</target>
+            </trans-unit>
+            <trans-unit id="36">
+                <source>message.ticket.failed_to_send</source>
+                <target>Nepavyko išsiųsti bilieto Jūsų el. pašto adresu</target>
+            </trans-unit>
+            <trans-unit id="37">
+                <source>message.tickets.sent_successfully</source>
+                <target>Visi Jūsų bilietai buvo sėkminagi išsiųsti pateiktu el. pašto adresu.</target>
+            </trans-unit>
+            <trans-unit id="38">
+                <source>message.tickets.failed_to_send</source>
+                <target>Nepavyko išsiųsti visų Jūsų bilietų pateiktu el. pašto adresu</target>
+            </trans-unit>
+            <trans-unit id="39">
+                <source>mail.subject.tickets_email</source>
+                <target>Jūsų nupirkti bilietai</target>
+            </trans-unit>
+            <trans-unit id="40">
+                <source>mail.body.tickets_email</source>
+                <target>Prieduose rasite visus savo bilietus.</target>
+            </trans-unit>
+            <trans-unit id="41">
+                <source>error.ticket.not_valid</source>
+                <target>Biletas nerastas ar Renginys jau baigėsi</target>
+            </trans-unit>
+            <trans-unit id="42">
+                <source>message.device.attached_successfully</source>
+                <target>Jūsų įrenginys sėkmingai pridėtas</target>
+            </trans-unit>
+            <trans-unit id="43">
+                <source>message.device.already_manager</source>
+                <target>Jūs jau esate šio renginio vadovas</target>
+            </trans-unit>
+            <trans-unit id="44">
+                <source>discount.type.fixed_price</source>
+                <target>Fiksuota kaina</target>
+            </trans-unit>
+            <trans-unit id="45">
+                <source>discount.scope.event</source>
+                <target>Renginio apimtis</target>
+            </trans-unit>
+            <trans-unit id="46">
+                <source>discount.scope.ticket_type</source>
+                <target>Bilieto tipo apimtis</target>
+            </trans-unit>
+            <trans-unit id="47">
+                <source>discount.scope.user</source>
+                <target>Naudotojo apimtis</target>
+            </trans-unit>
+            <trans-unit id="48">
+                <source>discount.strategy.custom_discount</source>
+                <target>Asmeninė nuolaida</target>
+            </trans-unit>
+            <trans-unit id="49">
+                <source>label.invoice.legal_type</source>
+                <target>Juridinis</target>
+            </trans-unit>
+            <trans-unit id="50">
+                <source>label.invoice.person_type</source>
+                <target>Asmuo</target>
+            </trans-unit>
+            <trans-unit id="51">
+                <source>label.invoice.type_label</source>
+                <target>Veiklos tipas</target>
+            </trans-unit>
+            <trans-unit id="52">
+                <source>button.save_user_details</source>
+                <target>Išsaugoti</target>
+            </trans-unit>
+            <trans-unit id="53">
+                <source>label.user_details.global_details</source>
+                <target>Bendra informacija</target>
+            </trans-unit>
+            <trans-unit id="54">
+                <source>label.user_details.common_details</source>
+                <target>Informacija apie kiekvieną dalyvį</target>
+            </trans-unit>
+            <trans-unit id="55">
+                <source>issue.an_issue_has_been_detected</source>
+                <target>Klaida</target>
+            </trans-unit>
+            <trans-unit id="56">
+                <source>info.ticket_type_step</source>
+                <target>Pasirinkite bilietus</target>
+            </trans-unit>
+            <trans-unit id="57">
+                <source>info.user_details_step</source>
+                <target>Užpildykite reikalinga informacija</target>
+            </trans-unit>
+            <trans-unit id="58">
+                <source>info.payment_types_step</source>
+                <target>Pasirinkite patogiausią mokėjimo būdą</target>
+            </trans-unit>
+            <trans-unit id="59">
+                <source>info.apply_discount_step</source>
+                <target>Jei turite, įveskite nuolaidos kodą</target>
+            </trans-unit>
+            <trans-unit id="60">
+                <source>info.invoice_type_step</source>
+                <target>Užpildykite papildomus laukus apie Jus ar apie Jūsų kompaniją</target>
+            </trans-unit>
+            <trans-unit id="61">
+                <source>info.ticket_type_step.cart</source>
+                <target>Jūsų krepšelis</target>
+            </trans-unit>
+            <trans-unit id="62">
+                <source>label.discount_token</source>
+                <target>Nuolaidos kodas</target>
+            </trans-unit>
+            <trans-unit id="63">
+                <source>message.device.invalid_token</source>
+                <target>Raktažodis nevalidus</target>
+            </trans-unit>
+            <trans-unit id="64">
+                <source>info.seat_selection_step</source>
+                <target>Pasirinkite vietą</target>
+            </trans-unit>
+            <trans-unit id="65">
+                <source>seat_selection.breadcrumb</source>
+                <target>Pasirinkite vietas</target>
+            </trans-unit>
+            <trans-unit id="66">
+                <source>apply_discount.breadcrumb</source>
+                <target>Pritaikykite nuolaidą</target>
+            </trans-unit>
+            <trans-unit id="67">
+                <source>user_details_fill.breadcrumb</source>
+                <target>Užpildykite informaciją</target>
+            </trans-unit>
+            <trans-unit id="68">
+                <source>payment_type_selection.breadcrumb</source>
+                <target>Mokėjimo būdas</target>
+            </trans-unit>
+            <trans-unit id="69">
+                <source>payment_window.breadcrumb</source>
+                <target>Sumokėti</target>
+            </trans-unit>
+            <trans-unit id="70">
+                <source>ticket_type_selection.breadcrumb</source>
+                <target>Pasirinkite bilietus</target>
+            </trans-unit>
+            <trans-unit id="71">
+                <source>ticket_type_discount.breadcrumb</source>
+                <target>Pasirinkite bilietus</target>
+            </trans-unit>
+            <trans-unit id="72">
+                <source>info.ticket_type_discount_step</source>
+                <target>Pasirinkite bilietus</target>
+            </trans-unit>
+            <trans-unit id="73">
+                <source>message.payment_type_selection.short_info</source>
+                <target>Pasirinkite norimą mokėjimo būdą</target>
+            </trans-unit>
+            <trans-unit id="74">
+                <source>message.user_details.ticket_type</source>
+                <target>Bilieto tipas:</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

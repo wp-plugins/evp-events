@@ -1,0 +1,23 @@
+{% stylesheets '@EvpTicketBundle/Resources/public/scss/main.scss' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+<!-- Bundle JS files -->
+{% block javascripts %}
+    {% javascripts
+    '../vendor/components/jquery/jquery.min.js'
+    '@EvpTicketBundle/Resources/public/js/*'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+
+<div id="evpTicketPluginWrapper">
+    {% if breadcrumbs is defined and breadcrumbs is not empty %}
+        {% include 'EvpTicketBundle:Step:breadcrumbs.html.twig' with {'breadcrumbs' : breadcrumbs} only %}
+    {% endif %}
+{% block content %}
+    No content...
+{% endblock %}
+</div>

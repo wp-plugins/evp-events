@@ -1,0 +1,42 @@
+{% extends "@EvpPayment/base.html.twig" %}
+
+{% block body %}
+    <div id="order">
+        <div id="processing">
+            <h2>{{ 'payment.processing'|trans }}</h2>
+            <div class="loading-image-container"><img src="{{ asset('bundles/evppayment/images/loading.gif') }}"/></div>
+        </div>
+        <div id="completed">
+            <h2>{{ 'payment.completed'|trans }}</h2>
+            <div class="customizedBlock">
+                {% block custom %}
+                    {% include 'EvpPaymentBundle:UserCallback:customizedBlock.html.twig' %}
+                {% endblock %}
+            </div>
+        </div>
+        <ul></ul>
+    </div>
+
+    <script>
+        $(function () {
+            var checkPath = "{{ path('ajax_check_payment', {'_format': 'json', 'orderToken': orderToken }) | raw }}",
+                    ticketDownloadTemplate = '<li><a href="{{ path('evp_print_ticket', { 'token': '_tokenPlaceholder' }) | raw }}" target="_blank">{{ 'payment.ticket_download'|trans }}</a>';
+
+                checkOrderStatus({
+                    checkUri: checkPath,
+
+                    onSuccess: function (response) {
+                        $('#processing').hide();
+                        $('#completed').show();
+
+                        var list = $('#order ul');
+
+                        _.each(response.tickets, function (item) {
+                            var  downloadUri = ticketDownloadTemplate.replace('_tokenPlaceholder', item.token);
+                            list.append(downloadUri);
+                        });
+                    }
+                });
+        });
+    </script>
+{% endblock %}

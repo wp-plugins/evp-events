@@ -1,0 +1,41 @@
+{% extends 'EvpTicketAdminBundle::base.html.twig' %}
+
+{% block body %}
+    {% if form_errors(elements.form) %}
+        <div class="error">
+            {{ form_errors(elements.form) }}
+        </div>
+    {% endif %}
+    {{ form_start(elements.form, { 'attr' : { 'role' : 'form' } }) }}
+        <table class="table table-hover {{ menuAlias }}">
+            {% for row in elements.form %}
+                {% if row.vars.block_prefixes.1 != 'hidden' %}
+                    <tr>
+                        <td>
+                            {{ form_label(row) }}
+                        </td>
+                        {% if row.vars.compound is defined and row.vars.compound == true %}
+                            <td class="form-inline">
+                                <div id="{{ row.vars.id }}" class="{{ row.vars.attr.class is defined ? row.vars.attr.class : '' }}">
+                                    {% for subform in row.vars.form %}
+                                        {% if subform|length > 0 %}
+                                            {% for subel in subform %}
+                                                {{ form_widget(subel, { 'attr' : { 'class' : 'form-control' } }) }}
+                                            {% endfor %}
+                                        {% else %}
+                                            {{ form_widget(subform, { 'attr' : { 'class' : 'form-control' } }) }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </td>
+                        {% else %}
+                            <td>
+                                {{ form_widget(row, { 'attr' : { 'class' : 'form-control' } }) }}
+                            </td>
+                        {% endif %}
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+    {{ form_end(elements.form) }}
+{% endblock %}

@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="lt" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>column.event_info.all.name</source>
+                <target>Renginys</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>column.event_info.date_starts.date</source>
+                <target>Prasidėda</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>column.event_info.date_starts.time</source>
+                <target>Laikas</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>column.event_info.date_ends.date</source>
+                <target>Baigiasi</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>column.event_info.date_ends.time</source>
+                <target>Laikas</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>column.ticket_type.name</source>
+                <target>Bilieto tipas</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>column.ticket_type.price</source>
+                <target>Kaina</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>column.ticket_type.currency</source>
+                <target>Valiuta</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>column.ticket_type.tickets_left</source>
+                <target>Liko</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>column.ticket_type.order_count</source>
+                <target>Kiekis</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>column.ticket_type.add_to_cart</source>
+                <target>Veiksmas</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>column.loop_index</source>
+                <target>#</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>column.ticket_type.event_name</source>
+                <target>Renginys</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>column.ticket_type.ticket_type_name</source>
+                <target>Bilieto tipas</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>column.ticket_type.remove_item</source>
+                <target>Veiksmas</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>column.discount.dropdown</source>
+                <target>Galimos nuolaidos</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>column.discount.discount_code</source>
+                <target>Kodas</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>column.discount.apply</source>
+                <target>Pritaikyti</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>column.ticket_type.name</source>
+                <target>Bilieto tipas</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>column.discount.name</source>
+                <target>Nuolaida</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>column.discount.new_price</source>
+                <target>Nauja kaina</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>column.ticket_type.order_item_price</source>
+                <target>Viso</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>column.ticket_type.total_price</source>
+                <target>Užsakymo suma su PVM:</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>payment.type.invoice</source>
+                <target>Išankstinė sąskaita</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>column.ticket_type.color</source>
+                <target>Spalva</target>
+            </trans-unit>
+            <trans-unit id="27">
+                <source>column.ticket_type.discount_value</source>
+                <target>Nuolaidos suma:</target>
+            </trans-unit>
+            <trans-unit id="28">
+                <source>column.ticket_type.amount_after_discount</source>
+                <target>Galutinė kaina:</target>
+            </trans-unit>
+            <trans-unit id="29">
+                <source>payment.title.wallet</source>
+                <target>Mokėjimai.lt sąskaita</target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>column.ticket_type.partial_sum</source>
+                <target>Tarpinė suma</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

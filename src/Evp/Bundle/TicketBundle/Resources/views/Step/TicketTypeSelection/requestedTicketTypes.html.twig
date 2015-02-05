@@ -1,0 +1,56 @@
+{% if elements.requested is not empty %}
+    <h3>{{ 'info.ticket_type_step.cart'|trans }}</h3>
+
+    <div class="table">
+        <div class="columns row">
+            {#<div class="cell itemNo">{{ 'column.loop_index'|trans({} , "columns" ) }}</div>#}
+            {#<div class="cell eventName">{{ 'column.ticket_type.event_name'|trans({} , "columns" ) }}</div>#}
+            <div class="cell ticketTypeName">{{ 'column.ticket_type.ticket_type_name'|trans({} , "columns" ) }}</div>
+            <div class="cell ticketsCount">{{ 'column.ticket_type.order_count'|trans({} , "columns" ) }}</div>
+            <div class="cell ticketPrice">{{ 'column.ticket_type.price'|trans({} , "columns" ) }}</div>
+            <div class="cell orderItemPrice">{{ 'column.ticket_type.order_item_price'|trans({} , "columns" ) }}</div>
+            <div class="cell remove">{{ 'column.ticket_type.remove_item'|trans({} , "columns" ) }}</div>
+        </div>
+        <div class="tableBody">
+        {% set totals = 0 %}
+        {% for ticketType in elements.requested %}
+            <div class="cartItem row">
+                {#<div class="cell itemNo">#}
+                    {#{{ loop.index }}#}
+                {#</div>#}
+                {#<div class="cell eventName">#}
+                    {#{{ ticketType.event.name }}#}
+                {#</div>#}
+                <div class="cell ticketTypeName">
+                    {{ ticketType.ticketType.name }}
+                </div>
+                <div class="cell ticketsCount">
+                    {{ ticketType.ticketsCount }}
+                </div>
+                <div class="cell ticketPrice">
+                    {{ ticketType.ticketType.price|number_format(2, ',', ' ') }} {{ ticketType.ticketType.event.currency }}
+                </div>
+                <div class="cell orderItemPrice">
+                    {% set sum = ticketType.ticketsCount * ticketType.ticketType.price %}
+                    {% set totals = totals + sum %}
+
+                    {{ sum|number_format(2, ',', ' ') }} {{ ticketType.ticketType.event.currency }}
+                </div>
+                <div class="cell remove">
+                    <form action="{{ path('evp_remove_order_item', { 'orderDetailsId' : ticketType.id}) }}">
+                        <button type="submit">{{ 'button.remove_order_item'|trans }}</button>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+        {% if elements.requested|length > 1 %}
+            <div class="cartItem totals row">
+                <div class="cell">&nbsp;</div>
+                <div class="cell">&nbsp;</div>
+                <div class="cell">{{ 'column.ticket_type.total_price'|trans({} , "columns" ) }}</div>
+                <div class="cell">{{ totals|number_format(2, ',', ' ') }} {{ elements.requested[0].event.currency }}</div>
+            </div>
+        {% endif %}
+        </div>
+    </div>
+{% endif %}

@@ -1,0 +1,13 @@
+{% stylesheets
+'@EvpTicketBundle/Resources/public/scss/errors.scss'
+filter='cssrewrite' %}
+<link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+<div class="formErrors">
+    {% for error in errors %}
+        <div class="error">
+            {{ error|trans({}, 'validators') }}
+        </div>
+    {% endfor %}
+</div>

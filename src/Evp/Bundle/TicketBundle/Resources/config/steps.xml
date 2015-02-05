@@ -1,0 +1,222 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="evp.service.step.default_step" type="string">ticket_type_selection|seat_selection|ticket_type_discount</parameter>
+        <parameter key="evp.service.step.current_step_session_key" type="string">currentStep</parameter>
+        <parameter key="evp.service.step.previous_step_session_key" type="string">previousStep</parameter>
+        <parameter key="evp.service.event_id_session_key" type="string">eventId</parameter>
+
+        <parameter type="collection" key="evp.event_listener.user_session.step.session_keys_that_need_removal">
+            <parameter>%evp.service.step.current_step_session_key%</parameter>
+            <parameter>%evp.service.step.default_step%</parameter>
+            <!--<parameter>%evp.service.event_id_session_key%</parameter>-->
+        </parameter>
+
+        <parameter key="evp.service.step.twig.ticket_type_selection" type="string">EvpTicketBundle:Step:ticketTypeSelection.html.twig</parameter>
+        <parameter key="evp.service.step.twig.seat_selection" type="string">EvpTicketBundle:Step:seatSelection.html.twig</parameter>
+        <parameter key="evp.service.step.twig.apply_discount" type="string">EvpTicketBundle:Step:applyDiscount.html.twig</parameter>
+        <parameter key="evp.service.step.twig.user_details_fill" type="string">EvpTicketBundle:Step:userDetails.html.twig</parameter>
+        <parameter key="evp.service.step.twig.payment_type_selection" type="string">EvpTicketBundle:Step:paymentTypeSelection.html.twig</parameter>
+        <parameter key="evp.service.step.twig.invoice_details_fill" type="string">EvpTicketBundle:Step:invoiceDetailsFill.html.twig</parameter>
+        <parameter key="evp.service.step.twig.ticket_type_discount" type="string">EvpTicketBundle:Step:ticketTypeDiscount.html.twig</parameter>
+
+        <parameter key="evp.router.next_step" type="string">evp_ticket_order_next</parameter>
+        <parameter key="evp.router.previous_step" type="string">evp_ticket_order_previous</parameter>
+
+        <parameter key="evp.service.step.required_steps" type="collection">
+            <parameter type="string">%evp.service.step.default_step%</parameter>
+            <parameter type="string">evp.service.step.user_details_fill</parameter>
+            <parameter type="string">evp.service.step.payment_window</parameter>
+        </parameter>
+
+        <parameter key="evp.service.step.conflicting_steps" type="collection">
+            <parameter key="evp.service.step.ticket_type_selection" type="collection">
+                <parameter type="string">evp.service.step.seat_selection</parameter>
+                <parameter type="string">evp.service.step.ticket_type_discount</parameter>
+            </parameter>
+            <parameter key="evp.service.step.seat_selection" type="collection">
+                <parameter type="string">evp.service.step.ticket_type_selection</parameter>
+                <parameter type="string">evp.service.step.ticket_type_discount</parameter>
+            </parameter>
+
+            <parameter key="evp.service.step.ticket_type_discount" type="collection">
+                <parameter type="string">evp.service.step.ticket_type_selection</parameter>
+                <parameter type="string">evp.service.step.seat_selection</parameter>
+                <parameter type="string">evp.service.step.apply_discount</parameter>
+            </parameter>
+
+            <parameter key="evp.service.step.apply_discount" type="collection">
+                <parameter type="string">evp.service.step.ticket_type_discount</parameter>
+            </parameter>
+        </parameter>
+
+    </parameters>
+
+    <services>
+        <service
+                id="evp.service.step.ticket_type_discount"
+                class="Evp\Bundle\TicketBundle\Step\TicketTypeDiscount"
+                parent="evp.service.step.step_abstract">
+            <call method="setParams">
+                <argument type="collection">
+                    <argument key="template">%evp.service.step.twig.ticket_type_discount%</argument>
+                    <argument key="user_session" type="service" id="evp.service.user_session"/>
+                    <argument key="apply_discount_step" type="service" id="evp.service.step.apply_discount"/>
+                </argument>
+            </call>
+            <tag name="step_service" step="ticket_type_discount"/>
+        </service>
+
+        <service
+                id="evp.service.step.ticket_type_selection"
+                class="Evp\Bundle\TicketBundle\Step\TicketTypeSelection"
+                parent="evp.service.step.step_abstract">
+            <call method="setParams">
+                <argument type="collection">
+                    <argument key="template">%evp.service.step.twig.ticket_type_selection%</argument>
+                </argument>
+            </call>
+            <tag name="step_service" step="ticket_type_selection"/>
+        </service>
+
+        <service
+                id="evp.service.step.seat_selection"
+                class="Evp\Bundle\TicketBundle\Step\SeatSelection"
+                parent="evp.service.step.step_abstract">
+            <call method="setParams">
+                <argument type="collection">
+                    <argument key="template">%evp.service.step.twig.seat_selection%</argument>
+                    <argument key="user_session" type="service" id="evp.service.user_session"/>
+                </argument>
+            </call>
+            <tag name="step_service" step="seat_selection"/>
+        </service>
+
+        <service
+                id="evp.service.step.apply_discount"
+                class="Evp\Bundle\TicketBundle\Step\ApplyDiscount"
+                parent="evp.service.step.step_abstract">
+            <call method="setParams">
+                <argument type="collection">
+                    <argument key="template">%evp.service.step.twig.apply_discount%</argument>
+                    <argument key="discount_manager" type="service" id="evp.service.discount_manager"/>
+                    <argument key="user_session" type="service" id="evp.service.user_session"/>
+                </argument>
+            </call>
+            <tag name="step_service" step="apply_discount"/>
+        </service>
+
+        <service
+                id="evp.service.step.user_details_fill"
+                class="Evp\Bundle\TicketBundle\Step\UserDetailsFill"
+                parent="evp.service.step.step_abstract">
+            <call method="setParams">
+                <argument type="collection">
+                    <argument key="template">%evp.service.step.twig.user_details_fill%</argument>
+                </argument>
+            </call>
+            <tag name="step_service" step="user_details_fill"/>
+        </service>
+
+        <service
+                id="evp.service.step.payment_type_selection"
+                class="Evp\Bundle\TicketBundle\Step\PaymentTypeSelection"
+                parent="evp.service.step.step_abstract">
+            <call method="setParams">
+                <argument type="collection">
+                    <argument key="template">%evp.service.step.twig.payment_type_selection%</argument>
+                    <argument key="payment_handler" type="service" id="evp_payment.service.payment_handler_provider"/>
+                    <argument key="order_manager" type="service" id="evp.service.order_manager"/>
+                    <argument key="user_session" type="service" id="evp.service.user_session"/>
+                </argument>
+            </call>
+            <tag name="step_service" step="payment_type_selection"/>
+        </service>
+
+        <service
+                id="evp.service.step.payment_window"
+                class="Evp\Bundle\TicketBundle\Step\PaymentWindow"
+                parent="evp.service.step.step_abstract">
+            <argument>%evp.service.step.twig.invoice_details_fill%</argument>
+            <call method="setParams">
+                <argument type="collection">
+                    <argument key="template">%evp.service.step.twig.invoice_details_fill%</argument>
+                    <argument key="payment_manager" type="service" id="evp.service.payment_manager"/>
+                </argument>
+            </call>
+            <tag name="step_service" step="payment_window"/>
+        </service>
+
+        <service
+                id="evp.service.discount_strategy.custom_discount"
+                class="Evp\Bundle\TicketBundle\Service\DiscountStrategy\CustomDiscount"
+                parent="evp.service.discount_strategy.strategy_abstract">
+        </service>
+
+
+        <service id="evp.service.step.validator.max_tickets_per_user" class="Evp\Bundle\TicketBundle\Validator\MaxTicketsPerUserValidator">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <tag name="validator.constraint_validator" alias="evp_max_tickets_per_user_validator" />
+        </service>
+
+        <service id="evp.service.step.validator.available_to_buy_count" class="Evp\Bundle\TicketBundle\Validator\AvailableToBuyCountValidator">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <tag name="validator.constraint_validator" alias="evp_available_to_buy_count_validator" />
+        </service>
+
+
+        <service
+                id="evp.service.discount.scope.event"
+                class="Evp\Bundle\TicketBundle\Service\DiscountStrategy\DiscountScope\EventScope"
+                parent="evp.service.discount_strategy.discount_scope.abstract"/>
+        <service
+                id="evp.service.discount.scope.ticket_type"
+                class="Evp\Bundle\TicketBundle\Service\DiscountStrategy\DiscountScope\TicketTypeScope"
+                parent="evp.service.discount_strategy.discount_scope.abstract"/>
+        <service
+                id="evp.service.discount.scope.user"
+                class="Evp\Bundle\TicketBundle\Service\DiscountStrategy\DiscountScope\UserScope"
+                parent="evp.service.discount_strategy.discount_scope.abstract"/>
+
+        <service
+                id="evp.service.discount.type.percentage"
+                class="Evp\Bundle\TicketBundle\Service\DiscountStrategy\DiscountType\PercentageType"
+                parent="evp.service.discount_strategy.discount_type.abstract"/>
+        <service
+                id="evp.service.discount.type.fixed_amount"
+                class="Evp\Bundle\TicketBundle\Service\DiscountStrategy\DiscountType\FixedAmountType"
+                parent="evp.service.discount_strategy.discount_type.abstract"/>
+        <service
+                id="evp.service.discount.type.fixed_price"
+                class="Evp\Bundle\TicketBundle\Service\DiscountStrategy\DiscountType\FixedPriceType"
+                parent="evp.service.discount_strategy.discount_type.abstract"/>
+
+
+        <service id="evp.service.step.step_abstract" class="Evp\Bundle\TicketBundle\Step\StepAbstract">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="evp.service.database_twig_loader"/>
+            <argument type="service" id="form.factory"/>
+            <argument type="service" id="evp.service.ticket_manager"/>
+            <call method="setTranslator">
+                <argument type="service" id="translator"/>
+            </call>
+            <call method="setLogger">
+                <argument type="service" id="logger"/>
+            </call>
+        </service>
+        <service id="evp.service.discount_strategy.strategy_abstract" class="Evp\Bundle\TicketBundle\Service\DiscountStrategy\StrategyAbstract">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="logger"/>
+        </service>
+        <service id="evp.service.discount_strategy.discount_scope.abstract" class="Evp\Bundle\TicketBundle\Service\DiscountStrategy\DiscountScope\ScopeAbstract">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="logger"/>
+        </service>
+        <service id="evp.service.discount_strategy.discount_type.abstract" class="Evp\Bundle\TicketBundle\Service\DiscountStrategy\DiscountType\TypeAbstract">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="logger"/>
+        </service>
+    </services>
+</container>

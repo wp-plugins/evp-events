@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="evp_device_api.ticket_checker_url_pattern">#^.*id/(.+)$#i</parameter>
+
+        <parameter key="evp_device_api.offline_sync.params" type="collection">
+            <parameter key="sync_depth_future" type="string">%offline_sync_depth_future%</parameter>
+            <parameter key="sync_depth_past" type="string">%offline_sync_depth_past%</parameter>
+            <parameter key="sync_limit" type="string">%offline_sync_limit%</parameter>
+        </parameter>
+
+        <parameter key="evp_device_api.authentication.bearer_regex" type="string">/Bearer ([\w\!]+)/</parameter>
+        <parameter key="evp_device_api.offline_sync_manager.template_tag_map" type="collection">
+            <parameter key="ticket_type">ticket.ticketType.name</parameter>
+            <parameter key="discount_type">ticket.discount.discount_type.name</parameter>
+            <parameter key="event_name">ticket.event.name</parameter>
+        </parameter>
+        <parameter key="evp_device_api.offline_sync_manager.templates" type="collection">
+            <parameter key="ticket_unused">ticket_unused.html.twig</parameter>
+            <parameter key="ticket_used">ticket_used.html.twig</parameter>
+        </parameter>
+    </parameters>
+
+    <services>
+        <service id="evp_device_api.ticket_token_parser"
+                 class="Evp\Bundle\DeviceApiBundle\Services\TicketTokenParser">
+            <argument>%evp_device_api.ticket_checker_url_pattern%</argument>
+        </service>
+
+        <service id="evp_device_api.offline_sync_manager" class="Evp\Bundle\DeviceApiBundle\Services\OfflineSyncManager">
+            <argument type="service" id="evp.service.ticket_manager"/>
+            <argument type="service" id="logger"/>
+            <argument type="service" id="router"/>
+            <argument type="service" id="fos_rest.view_handler"/>
+            <argument type="service" id="evp_device_api.ticket_token_parser"/>
+            <argument>%evp_device_api.offline_sync_manager.template_tag_map%</argument>
+            <argument type="service" id="evp.service.database_twig_loader"/>
+            <argument>%evp_device_api.offline_sync_manager.templates%</argument>
+            <argument type="service" id="exercise_html_purifier.basic_html"/>
+            <argument>%utc_offset%</argument>
+        </service>
+
+    <!--Bearer security starts-->
+        <service
+                id="evp_device_api.authentication.bearer_provider"
+                class="Evp\Bundle\DeviceApiBundle\Security\Authentication\Provider\BearerProvider">
+            <argument type="service" id="evp_device_api.authentication.bearer_user_provider"/>
+        </service>
+        <service id="evp_device_api.authentication.bearer_user_provider" class="Evp\Bundle\DeviceApiBundle\Security\User\BearerUserProvider">
+            <call method="setHandlers">
+                <argument type="collection">
+                    <argument key="ticket_examiner" type="service" id="evp_device_api.authentication.provider.handler.examiner_handler"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp_device_api.authentication.bearer_listener"
+                class="Evp\Bundle\DeviceApiBundle\Security\Firewall\BearerListener">
+            <argument type="service" id="security.context"/>
+            <argument type="service" id="security.authentication.manager"/>
+            <argument>%evp_device_api.authentication.bearer_regex%</argument>
+            <argument type="service" id="logger"/>
+        </service>
+        <service
+                id="evp_device_api.authentication.provider.handler.examiner_handler"
+                class="Evp\Bundle\DeviceApiBundle\Security\User\BearerHandler\ExaminerHandler"
+                parent="evp_device_api.authentication.provider.handler_abstract"/>
+        <service
+                id="evp_device_api.authentication.provider.handler_abstract"
+                class="Evp\Bundle\DeviceApiBundle\Security\User\HandlerAbstract">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="logger"/>
+        </service>
+    <!--Bearer security ends-->
+    </services>
+
+</container>

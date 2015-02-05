@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>payment.processing</source>
+                <target>Mokėjimas apdorojamas</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>payment.completed</source>
+                <target>Apmokėjimas sėkmingas</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>payment.ticket_download</source>
+                <target>Parsisiųsti bilietą</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>payment.cancelled</source>
+                <target>Apmokėjimas atšauktas</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>payment.custom.text_1</source>
+                <target>Jūsų nurodytu el. paštu išsiuntėme įsigytą bilietą(-us). Bilietą(-us) taip pat galite išsaugoti, paspaudę ant apačioje esančios nuorodos(-ų).</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>payment.custom.text_2</source>
+                <target>Elektroninį bilietą galite atsispausdinti ant balto A4 formato popieriaus lapo arba išsaugoti išmaniajame telefone. Bilietą draudžiama kopijuoti, unikalus QR kodas leidžia bilietu pasinaudoti tik vieną kartą, todėl bilieto kopijavimas ar jo perdavimas gali sutrukdyti Jums patekti į renginį.</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>payment.error.no_suitable_payment_handler_found</source>
+                <target>Neradome nei vieno mokėjimo būdo</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

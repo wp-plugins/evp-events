@@ -1,0 +1,10 @@
+{% stylesheets
+'@EvpTicketBundle/Resources/public/css/print.css'
+'@EvpTicketBundle/Resources/public/css/ticket/reset.css'
+'@EvpTicketBundle/Resources/public/css/ticket/style.css'
+filter='cssrewrite' %}
+<link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+{#Empty template. Original content stored in Database.#}
+{#This file is needed for Assetic cssrewrite#}

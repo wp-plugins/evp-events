@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="lt" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>invoice.label.proforma_invoice</source>
+                <target>Išankstinio apmokėjimo sąskaita</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>invoice.label.series</source>
+                <target>Serija</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>invoice.label.number_short</source>
+                <target>Nr.</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>invoice.label.date</source>
+                <target>Data</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>invoice.label.seller.name</source>
+                <target>Pardavėjo pavadinimas:</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>invoice.label.seller.code</source>
+                <target>Įmonės kodas:</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>invoice.label.seller.address</source>
+                <target>Adresas:</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>invoice.label.seller.vat_code</source>
+                <target>PVM mokėtojo kodas:</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>invoice.label.seller.bank_account</source>
+                <target>Atsiskaitomoji sąskaita:</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>invoice.label.seller.bank_name</source>
+                <target>Bankas:</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>invoice.label.buyer.name</source>
+                <target>Pirkėjo pavadinimas:</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>invoice.label.buyer.code</source>
+                <target>Įmonės kodas:</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>invoice.label.buyer.address</source>
+                <target>Adresas:</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>invoice.label.buyer.vat_code</source>
+                <target>PVM mokėtojo kodas:</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>invoice.label.buyer.user</source>
+                <target>Atsakingas asmuo:</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>invoice.label.payment_term</source>
+                <target>Apmokėjimo terminas:</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>invoice.label.order_details.name</source>
+                <target>Pavadinimas</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>invoice.label.order_details.count</source>
+                <target>Kiekis (Žmonės)</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>invoice.label.order_details.price</source>
+                <target>Kaina</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>invoice.label.order_details.total_price</source>
+                <target>Suma</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>invoice.label.additional_info</source>
+                <target>Papildoma informacija</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>invoice.label.order.total_wo_price</source>
+                <target>iš viso</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>invoice.label.order.total_vat</source>
+                <target>PVM (-%)*</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>invoice.label.order.total_price</source>
+                <target>Bendra suma</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>invoice.order.additional_info_text</source>
+                <target>*PVM neapmokestinimo pagrindas: LR PVM įst. 22 str.</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>invoice.label.invoice_prepared_by</source>
+                <target>Dokumentą ruošė</target>
+            </trans-unit>
+            <trans-unit id="27">
+                <source>invoice.label.superscript.invoice_prepared_by.1</source>
+                <target>(asmenų, atsakingų už pardavimo operacijos atlikimą ir teisinga įforminimą)</target>
+            </trans-unit>
+            <trans-unit id="28">
+                <source>invoice.label.superscript.invoice_prepared_by.2</source>
+                <target>(pareigos, vardai, pavardės, parašai)</target>
+            </trans-unit>
+            <trans-unit id="29">
+                <source>invoice.label.payment_guides</source>
+                <target>Mokėjimo nurodymai</target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>invoice.label.payment_guides.payment_description</source>
+                <target>Mokėjimo paskirtis</target>
+            </trans-unit>
+            <trans-unit id="31">
+                <source>invoice.footer.line.1</source>
+                <target>Renginys LR užsienio reikalų ministerijos 2013 m. liepos 9 d. sprendimu Nr. 3-4986 yra įtrauktas į Lietuvos pirmininkavimo ES Tarybai 2013 m. susitikimų sąrašą.</target>
+            </trans-unit>
+            <trans-unit id="32">
+                <source>invoice.footer.line.2</source>
+                <target>Renginio organizatorius – UAB „TOC sprendimai“ – įtrauktas į valstybės tarnautojų kvalifikacijos tobulinimo įstaigų sąrašą Lietuvos Respublikos vidaus reikalų ministro 2012 m. liepos 30 d. įsakymu Nr. 1V-579 „Dėl Lietuvos Respublikos vidaus reikalų ministro 2010 m. balandžio 9 d. įsakymo Nr. 1V-219 „Dėl valstybės tarnautojų kvalifikacijos tobulinimo įstaigų sąrašo tvirtinimo“ papildymo“.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

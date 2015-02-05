@@ -1,0 +1,72 @@
+{% extends 'EvpTicketBundle:Step:base.html.twig' %}
+
+{% block content %}
+    <div>
+        {% if breadcrumbs is not defined or breadcrumbs is empty %}
+            <h3>{{ 'info.seat_selection_step'|trans }}</h3>
+        {% endif %}
+        <div class="seatLegend table">
+            <div class="columns row">
+                <div class="cell color">{{ 'column.ticket_type.color'|trans({} , "columns" ) }}</div>
+                <div class="cell name">{{ 'column.ticket_type.name'|trans({} , "columns" ) }}</div>
+                <div class="cell price">{{ 'column.ticket_type.price'|trans({} , "columns" ) }}</div>
+            </div>
+            {% for ticketType in elements.event.ticketTypes %}
+                <div class="row">
+                    <div class="cell color" style="background-color: {{ ticketType.area.shapeFillColor }};">&nbsp;</div>
+                    <div class="cell">{{ ticketType.name }}</div>
+                    <div class="cell">{{ ticketType.price|number_format(2, ',', ' ') }} {{ ticketType.event.currency }}</div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="seatSelection">
+            {% set transY = 0 %}
+            {% set drawn = 0 %}
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="{{ elements.holderHeight }}" toggle="{{ url('reserve_seat') }}">
+                {% for ticketType in elements.event.ticketTypes %}
+                {% set area = ticketType.area %}
+                    <g transform="translate(0, {{ transY }})">
+                        {% for row in 1..area.rows %}
+                            {% if elements.drawNumbers %}
+                                <text x="0" y="{{ area.shapeOffsetX * loop.index }}">{{ loop.index * loop.parent.loop.index }}</text>
+                            {% endif %}
+                            {% for col in 1..area.columns %}
+                                {% if drawn == 0 %}
+                                    {% if elements.drawNumbers %}
+                                        <text x="{{ area.shapeOffsetX * loop.index - 5 }}" y="10">{{ loop.index }}</text>
+                                    {% endif %}
+                                {% endif %}
+                                {% if loop.last and drawn == 0 %}
+                                    {% set drawn = 1 %}
+                                {% endif %}
+                                {% for seat in area.matrix if seat.row == row and seat.col == col %}
+                                    {% set status = seat.status %}
+                                    {% if seat.orderDetails is not empty %}
+                                        {% if status == 'reserved' %}
+                                            {% set status = seat.orderDetails.user.id == elements.currentUser.id ? seat.status : 'taken' %}
+                                        {% endif %}
+                                    {% endif %}
+                                    {% include area.shapeTemplate with {
+                                        'id' : seat.id,
+                                        'cx' : area.shapeOffsetX * col,
+                                        'cy' : area.shapeOffsetY * row,
+                                        'fill' : area.shapeFillColor,
+                                        'visible' : seat.visible ? 'show' : 'hide',
+                                        'status' : status
+                                    } only %}
+                                {% endfor %}
+                            {% endfor %}
+                        {% endfor %}
+                    </g>
+                {% set transY = transY + area.rows * area.shapeOffsetY %}
+                {% endfor %}
+            </svg>
+        </div>
+    </div>
+    <div class="requested">
+        {% if elements.requested is not empty %}
+            {% include 'EvpTicketBundle:Step/TicketTypeSelection:requestedTicketTypes.html.twig' %}
+        {% endif %}
+    </div>
+    {% include 'EvpTicketBundle:Step:navigation.html.twig' %}
+{% endblock %}

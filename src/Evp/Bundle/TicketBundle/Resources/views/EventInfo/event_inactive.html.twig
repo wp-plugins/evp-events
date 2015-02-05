@@ -1,0 +1,13 @@
+{% extends 'EvpTicketBundle:Step:base.html.twig' %}
+
+{% block content %}
+    <div class="eventInfo">
+        <div class="headerLine">
+            <div class="name">{{ event.name }}</div>
+            <br>
+        </div>
+        <div class="description">
+            {{ event.description|raw|purify }}
+        </div>
+    </div>
+{% endblock %}

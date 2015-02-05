@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="user_session_listener.order" class="Evp\Bundle\TicketBundle\Listener\UserSession\Order">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="evp.service.order_manager"/>
+
+            <tag name="kernel.event_listener" event="user_session.created" method="onSessionCreate"/>
+            <tag name="kernel.event_listener" event="user_session.destroyed" method="onSessionDestroy"/>
+        </service>
+        <service id="user_session_listener.event" class="Evp\Bundle\TicketBundle\Listener\UserSession\Event">
+            <argument type="service" id="session"/>
+            <argument>%evp.service.event_id_session_key%</argument>
+            <argument type="service" id="logger"/>
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+
+            <tag name="kernel.event_listener" event="user_session.created" method="onSessionCreate"/>
+        </service>
+        <service id="user_session_listener.step" class="Evp\Bundle\TicketBundle\Listener\UserSession\Step">
+            <argument type="service" id="session"/>
+            <argument>%evp.event_listener.user_session.step.session_keys_that_need_removal%</argument>
+
+            <tag name="kernel.event_listener" event="user_session.destroyed" method="onSessionDestroy"/>
+        </service>
+
+        <service id="step_event_listener.ticket" class="Evp\Bundle\TicketBundle\Listener\Step\Ticket">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="evp.service.order_manager"/>
+            <argument type="service" id="evp.service.user_session"/>
+            <argument type="service" id="logger"/>
+
+            <tag name="kernel.event_listener" event="steps.first_step_completed" method="onFirstStepCompleted"/>
+            <tag name="kernel.event_listener" event="steps.last_step_completed" method="onLastStepCompleted"/>
+            <tag name="kernel.event_listener" event="steps.next" method="onNextStep"/>
+            <tag name="kernel.event_listener" event="steps.previous" method="onPreviousStep"/>
+            <tag name="kernel.event_listener" event="steps.canceled" method="onCancel"/>
+        </service>
+
+        <service id="order_event.seat_listener" class="Evp\Bundle\TicketBundle\Listener\Order\SeatListener">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <tag name="kernel.event_listener" event="order.expired" method="onOrderExpired"/>
+        </service>
+
+        <service id="order_event.ticket_token_listener" class="Evp\Bundle\TicketBundle\Listener\Order\TicketTokenListener">
+            <argument type="service" id="evp.service.ticket_token_manager"/>
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <tag name="kernel.event_listener" event="order.expired" method="onOrderExpired"/>
+        </service>
+    </services>
+
+</container>

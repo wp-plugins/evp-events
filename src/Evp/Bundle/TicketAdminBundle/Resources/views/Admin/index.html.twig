@@ -1,0 +1,183 @@
+{% extends 'EvpTicketAdminBundle::base.html.twig' %}
+
+{% block body %}
+    <div class="content">
+        {% if menus.specific is not empty %}
+            {% if menus.specific['submenus'] is defined %}
+                <div class="subMenu">
+                    <div class="menu sub description">
+                        {{ 'admin.menu.sub_description'|trans({}, 'columns') }}
+                    </div>
+                    {% for action in menus.specific.submenus %}
+                        <div class="menu sub">
+                            <a href="{{ path('admin_manage_action', { 'menu' : menuAlias, 'action' : action }) }}">
+                                {{ ('admin.actions.' ~action)|trans({}, 'columns') }}
+                            </a>
+                        </div>
+                        {% if not loop.last %}
+                            <div class="separator">
+                                {{ 'admin.actions.separator_char'|trans({}, 'columns') }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% if menus.specific['texts'] is defined %}
+                <div class="subText">
+                    {% for key, name in menus.specific.texts %}
+                        <div class="text sub">
+                            {% if name is iterable %}
+                                {% for act, title in name %}
+                                    <div class="menu sub">
+                                        <a href="{{ path('admin_manage_action', { 'menu' : menuAlias, 'action' : act }) }}">
+                                            {{ ('admin.actions.' ~title)|trans({}, 'columns') }}
+                                        </a>
+                                    </div>
+                                    {% if not loop.last %}
+                                        <div class="separator">
+                                            {{ 'admin.actions.separator_char'|trans({}, 'columns') }}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            {% else %}
+                                {{ name|trans({}, 'columns')|raw }}
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endif %}
+        <table class="table table-hover {{ menuAlias }}">
+            <thead class="columns">
+                <tr>
+                    {% for key, name in elements.columns %}
+                        <th>{{ name|trans({}, 'columns') }}</th>
+                    {% endfor %}
+                    {% if actions is not empty %}
+                        <th class="actions">{{ 'admin.index.actions'|trans({}, 'columns') }}</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            {% if elements['filters'] is defined and elements.filters is not empty %}
+                <tr class="filters">
+                    {{ form_start(elements.filters, {'attr' : {'class' : 'filters'}}) }}
+                        {% if form_errors(elements.filters) %}
+                            <div class="error">
+                                {{ form_errors(elements.filters) }}
+                            </div>
+                        {% endif %}
+                        {% for key, name in elements.columns %}
+                            {% set found = false %}
+                            {% for row in elements.filters %}
+                                {% if row.vars.name == key %}
+                                    <td>
+                                        {{ form_row(row) }}
+                                    </td>
+                                    {% set found = true %}
+                                {% endif %}
+                            {% endfor %}
+                            {% if not found %}
+                                <td>&nbsp;</td>
+                            {% endif %}
+                        {% endfor %}
+                        <td class="actions">
+                            {{ form_rest(elements.filters) }}
+                        </td>
+                    {{ form_end(elements.filters) }}
+                </tr>
+            {% endif %}
+            <tbody class="records">
+                {% if elements.records|length == 0 %}
+                    {% include 'EvpTicketAdminBundle:Admin:blankIndex.html.twig' %}
+                {% endif %}
+                {% for record in elements.records %}
+                    <tr>
+                        {% for property, name in elements.columns %}
+                            {% set value = attribute(record, property) %}
+                            <td>
+                                {% if value is sameas(true) %}
+                                    {{ 'admin.status.active'|trans({}, 'columns') }}
+                                {% elseif value is sameas(false) %}
+                                    {{ 'admin.status.inactive'|trans({}, 'columns') }}
+                                {% elseif value.timestamp is defined %}
+                                        {{ value|date('Y-m-d H:i') }}
+                                {% elseif property == 'description' %}
+                                    {{ value|length > 500
+                                        ? (value|slice(0, 500) ~ '...')|raw|purify
+                                        : value|raw|purify  }}
+                                {% elseif 'price' in property %}
+                                    {{ value|number_format(2, '.') }}
+                                {% elseif value.name is defined %}
+                                    {{ value.name }}
+                                {% else %}
+                                    {{ value|trans({}, 'columns') }}
+                                {% endif %}
+                            </td>
+                        {% endfor %}
+                        {% if actions is not empty %}
+                            <td class="actions">
+                                <div class="dropdown">
+                                    <a data-toggle="dropdown" href="#">{{ 'admin.index.select_action'|trans({}, 'columns') }}</a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                        {% for action in actions if '-' not in action %}
+                                            <li role="presentation">
+                                                <a role="menuitem" tabindex="-1" href="{{ path(
+                                                    'admin_manage_action',
+                                                    {
+                                                        '_locale' : app.request.locale,
+                                                        'menu' : menuAlias,
+                                                        'action' : action,
+                                                        'id' : record.id
+                                                    }) }}
+                                                ">
+                                                    {{ ('admin.actions.'~action)|trans({}, 'columns') }}
+                                                </a>
+                                            </li>
+                                        {% endfor %}
+                                        {% set submenu = [''] %}
+                                        {% for action in actions if '-' in action %}
+                                            {% if submenu|first != action|split('-')|first %}
+                                                {% set submenu = action|split('-') %}
+                                                <li class="dropdown-submenu" role="presentation">
+                                                    <a tabindex="-1" href="#">{{ ('admin.submenu_group.' ~submenu|first)|trans({}, 'columns') }}</a>
+                                                    <ul class="dropdown-menu">
+                                                        {% for action in actions if submenu|first in action %}
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="{{ path(
+                                                                'admin_manage_action',
+                                                                {
+                                                                '_locale' : app.request.locale,
+                                                                'menu' : menuAlias,
+                                                                'action' : action,
+                                                                'id' : record.id
+                                                                }) }}
+                                                            ">
+                                                                    {{ ('admin.actions.sub.'~action)|trans({}, 'columns') }}
+                                                                </a>
+                                                            </li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                </li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% if elements['paging'] is defined and elements.paging.total > 1 %}
+            {% include 'EvpTicketAdminBundle:Admin:paginator.html.twig' with
+                {
+                    'total' : elements.paging.total,
+                    'current' : elements.paging.current,
+                    'max' : 2,
+                    'maxPagers' : 6,
+                    'menu' : menuAlias
+                }
+            %}
+        {% endif %}
+    </div>
+{% endblock %}

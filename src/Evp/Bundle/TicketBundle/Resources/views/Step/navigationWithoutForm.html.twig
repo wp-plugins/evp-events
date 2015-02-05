@@ -1,0 +1,14 @@
+{% stylesheets
+'@EvpTicketBundle/Resources/public/css/navigation.css'
+filter='cssrewrite' %}
+<link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+<div class="ticket-navigation">
+    {% set nav = navigation.cancel %}
+    {#<a class="cancel" href="{{ navigation.cancel.vars.action }}">{{  nav.navItem.vars.label|trans }}</a>#}
+
+    {% set nav = navigation.next %}
+    {{ form_label(nav.navItem, nav.navItem.vars.label|trans) }}
+    {{ form_widget(nav.navItem, { 'attr': {'class': 'next'} }) }}
+</div>

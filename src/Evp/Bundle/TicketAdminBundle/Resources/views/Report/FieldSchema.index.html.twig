@@ -1,0 +1,46 @@
+{% extends 'EvpTicketAdminBundle::base.html.twig' %}
+
+{% block body %}
+    {% if menus.specific is not empty %}
+        {% if menus.specific['submenus'] is defined %}
+            <div class="subMenu">
+                <div class="menu sub description">
+                    {{ 'admin.menu.reports_sub_description'|trans({}, 'columns') }}
+                </div>
+                {% for action in menus.specific.submenus %}
+                    <div class="menu sub">
+                        <a href="{{ path('admin_manage_action', { 'menu' : menuAlias, 'action' : action }) }}">
+                            {{ ('admin.actions.' ~action)|trans({}, 'columns') }}
+                        </a>
+                    </div>
+                    {% if not loop.last %}
+                        <div class="separator">
+                            {{ 'admin.actions.separator_char'|trans({}, 'columns') }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% if menus.specific['texts'] is defined %}
+            <div class="subText">
+                {% for key, name in menus.specific.texts %}
+                    <div class="text sub">
+                        {{ name|trans({}, 'columns') }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endif %}
+
+    <div class="table">
+        <div class="row">
+            <div class="cell">
+                <div class="placeholder">&nbsp;</div>
+                {% include 'EvpTicketAdminBundle:Report:edit.html.twig' %}
+            </div>
+            <div class="cell index">
+                {% include 'EvpTicketAdminBundle:Report:index.html.twig' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% block body %}
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" toggle="{{ url('get_service_response', { 'serviceKey' : 'toggle_seat' }) }}">
+        {% for row in 1..area.rows %}
+            {% for col in 1..area.columns %}
+                {% for seat in area.matrix if seat.row == row and seat.col == col %}
+                    {% include area.shapeTemplate with {
+                        'id' : seat.id,
+                        'cx' : area.shapeOffsetX * col,
+                        'cy' : area.shapeOffsetY * row,
+                        'fill' : area.shapeFillColor,
+                        'visible' : seat.visible ? 'show' : 'hide',
+                        'status' : seat.status
+                    } only %}
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+    </svg>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}EvpTicketBundle:GenericDisplay:displayError{% endblock %}
+
+{% block body %}
+    {% stylesheets '@EvpTicketBundle/Resources/public/css/generic_info.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    <h3>{{ 'issue.an_issue_has_been_detected'|trans ~ ':'  }} {{ message|trans({}, 'validators') }}</h3>
+    {% if returnToList %}
+        <div class="linkWrapper">
+            <a href="{{ path('evp_ticket_event_list') }}">{{ 'error.return_to_event_list'|trans({}, 'validators') }}</a>
+        </div>
+    {% endif %}
+{% endblock %}

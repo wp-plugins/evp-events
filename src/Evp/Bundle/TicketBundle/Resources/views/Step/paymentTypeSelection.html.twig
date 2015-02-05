@@ -1,0 +1,13 @@
+{% extends 'EvpTicketBundle:Step:base.html.twig' %}
+
+{% block content %}
+    <div class="paymentTypes">
+        {% if breadcrumbs is not defined or breadcrumbs is empty %}
+            <h3>{{ 'info.payment_types_step'|trans }}</h3>
+        {% endif %}
+        {% include 'EvpTicketBundle:Step:errors.html.twig' %}
+        <div class="types">
+            {% include 'EvpTicketBundle:Step:paymentTypeSelection/paymentTypeSelection.html.twig' %}
+        </div>
+    </div>
+{% endblock %}

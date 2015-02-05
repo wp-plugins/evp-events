@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="lt" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>report.form_heading</source>
+                <target>Pasirinkite raporto savybes</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>report.details</source>
+                <target>Detalės</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>column.date</source>
+                <target>Data</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>report.totals</source>
+                <target>Apžvalga</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>column.total</source>
+                <target>Viso</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>column.ticket</source>
+                <target>Bilieto ID</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>column.property</source>
+                <target>Savybė</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

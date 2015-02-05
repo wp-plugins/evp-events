@@ -1,0 +1,21 @@
+{% extends 'EvpTicketBundle:Step:base.html.twig' %}
+
+{% block content %}
+    <div class="ticketTypes">
+        {% if breadcrumbs is not defined or breadcrumbs is empty %}
+            <h3>{{ 'info.ticket_type_step'|trans }}</h3>
+        {% endif %}
+        {% include 'EvpTicketBundle:Step:errors.html.twig' %}
+        {% if elements['available'] is defined %}
+            <div class="available">
+                {% include 'EvpTicketBundle:Step:TicketTypeSelection/availableTicketTypes.html.twig' %}
+            </div>
+        {% endif %}
+        {% if elements['requested'] is defined %}
+            <div class="requested">
+                {% include 'EvpTicketBundle:Step:TicketTypeSelection/requestedTicketTypes.html.twig' %}
+            </div>
+        {% endif %}
+    </div>
+    {% include 'EvpTicketBundle:Step:navigation.html.twig' %}
+{% endblock %}

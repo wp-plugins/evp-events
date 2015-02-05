@@ -1,0 +1,74 @@
+<div class="table index {{ menuAlias }}">
+    <div class="columns">
+        {% for key, name in elements.columns %}
+            <div class="cell {{ key }}">{{ name|trans({}, 'columns') }}</div>
+        {% endfor %}
+    </div>
+    {% if elements['filters'] is defined and elements.filters is not empty %}
+        {{ form_start(elements.filters, {'attr' : {'class' : 'filters'}}) }}
+            {% if form_errors(elements.filters) %}
+                <div class="error">
+                    {{ form_errors(elements.filters) }}
+                </div>
+            {% endif %}
+            {% for key, name in elements.columns %}
+                {% set found = false %}
+                {% for row in elements.filters %}
+                    {% if row.vars.name == key %}
+                        <div class="cell {{ key }}">
+                            {{ form_row(row) }}
+                        </div>
+                        {% set found = true %}
+                    {% endif %}
+                {% endfor %}
+                {% if not found %}
+                    <div class="cell {{ key }}">&nbsp;</div>
+                {% endif %}
+            {% endfor %}
+            <div class="cell actions">
+                {{ form_rest(elements.filters) }}
+            </div>
+        {{ form_end(elements.filters) }}
+    {% endif %}
+    <div class="records">
+        {% for record in elements.records %}
+            {% if loop.index is odd %}
+                {% set odd_even = 'odd' %}
+            {% else %}
+                {% set odd_even = 'even' %}
+            {% endif %}
+            <div class="row {{ odd_even }}">
+                {% for property, name in elements.columns %}
+                    {% set value = attribute(record, property) %}
+                    <div class="cell {{ property }}">
+                        {% if (
+                                'status' in property
+                                or 'enabled' in property
+                                or 'Status' in property
+                                or 'Enabled' in property
+                                or 'isRequired' in property
+                                )
+                                and value|length < 2
+                        %}
+                            {% if value == '1' %}
+                                {{ 'admin.status.active'|trans({}, 'columns') }}
+                            {% elseif value == '0' %}
+                                {{ 'admin.status.inactive'|trans({}, 'columns') }}
+                            {% endif %}
+                        {% elseif value.timestamp is defined %}
+                                {{ value|date('Y-m-d H:i') }}
+                        {% elseif property == 'description' %}
+                            {{ value|length > 500
+                                ? (value|slice(0, 500) ~ '...')|raw|purify
+                                : value|raw|purify  }}
+                        {% elseif value.name is defined %}
+                            {{ value.name }}
+                        {% else %}
+                            {{ value|trans({}, 'columns') }}
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</div>

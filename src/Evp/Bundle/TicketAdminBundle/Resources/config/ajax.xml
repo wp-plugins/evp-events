@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+<!--    <parameters>
+
+    </parameters>
+    -->
+
+    <services>
+        <service
+                id="evp.ticket_admin.service.ajax.refresh_template"
+                class="Evp\Bundle\TicketAdminBundle\Service\Ajax\RefreshTemplate"
+                parent="evp.ticket_admin.service.ajax.abstract_ajax">
+            <call method="setAnnotationReader">
+                <argument type="service" id="evp.ticket_admin.service.ticket_admin_gedmo_annotation_reader"/>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.ajax.events"
+                class="Evp\Bundle\TicketAdminBundle\Service\Ajax\Events"
+                parent="evp.ticket_admin.service.ajax.abstract_ajax">
+        </service>
+
+        <service
+                id="evp.ticket_admin.service.ajax.field_types"
+                class="Evp\Bundle\TicketAdminBundle\Service\Ajax\FieldTypes"
+                parent="evp.ticket_admin.service.ajax.abstract_ajax">
+        </service>
+
+        <service
+                id="evp.ticket_admin.service.ajax.schema_types"
+                class="Evp\Bundle\TicketAdminBundle\Service\Ajax\SchemaTypes"
+                parent="evp.ticket_admin.service.ajax.abstract_ajax">
+        </service>
+
+        <service
+                id="evp.ticket_admin.service.ajax.toggle_seat"
+                class="Evp\Bundle\TicketAdminBundle\Service\Ajax\ToggleSeat"
+                parent="evp.ticket_admin.service.ajax.abstract_ajax">
+        </service>
+    </services>
+
+</container>

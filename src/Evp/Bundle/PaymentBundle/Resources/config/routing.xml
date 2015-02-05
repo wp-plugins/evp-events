@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns="http://symfony.com/schema/routing" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+    <route id="evp_redirect_to_payment" pattern="/pay">
+        <default key="_controller">EvpPaymentBundle:Payment:redirectToPayment</default>
+        <default key="_locale">en</default>
+    </route>
+    <route id="handle_callback" pattern="/{_locale}/handle_callback/{paymentHandlerName}">
+        <default key="_controller">EvpPaymentBundle:Callback:handleCallback</default>
+        <default key="_locale">en</default>
+    </route>
+    <route id="payment_completed" pattern="/{_locale}/payment_completed/order/{orderToken}">
+        <default key="_controller">EvpPaymentBundle:UserCallback:paymentCompletedOrPending</default>
+        <default key="_locale">en</default>
+    </route>
+    <route id="payment_cancelled" pattern="/{_locale}/payment_cancelled">
+        <default key="_controller">EvpPaymentBundle:UserCallback:paymentCancelled</default>
+        <default key="_locale">en</default>
+    </route>
+    <route id="ajax_check_payment" pattern="/check_order/{orderToken}.{_format}">
+        <default key="_controller">EvpPaymentBundle:UserCallback:ajaxCheckOrder</default>
+        <requirement key="orderToken">[\w!]+</requirement>
+        <requirement key="_format">json</requirement>
+    </route>
+</routes>

@@ -1,0 +1,29 @@
+{% extends 'EvpTicketBundle:Step:base.html.twig' %}
+
+{% block content %}
+    <div class="applyDiscount">
+        {% if breadcrumbs is not defined or breadcrumbs is empty %}
+            <h3>{{ 'info.apply_discount_step'|trans }}</h3>
+        {% endif %}
+        {% include 'EvpTicketBundle:Step:errors.html.twig' %}
+        {% if elements['available'] is defined %}
+            <div class="available">
+                {% include 'EvpTicketBundle:Step:ApplyDiscount/availableDiscounts.html.twig' %}
+            </div>
+        {% endif %}
+        {#{% if elements['applied'] is defined %}#}
+            {#<div class="applied table">#}
+                {#{% include 'EvpTicketBundle:Step:ApplyDiscount/appliedDiscounts.html.twig' %}#}
+            {#</div>#}
+        {#{% endif %}#}
+        <div class="ticketCart">
+            {% include 'EvpTicketBundle:Step:ticketsInCart.html.twig' with {
+                'tickets' : elements['requestedTickets'],
+                'details' : elements['orderDetails']
+            } %}
+        </div>
+    </div>
+    <div class="ticket-navigation">
+        {% include 'EvpTicketBundle:Step:navigation.html.twig' %}
+    </div>
+{% endblock %}

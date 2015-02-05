@@ -1,0 +1,59 @@
+<div class="paging text-center">
+    <ul class="pagination">
+        <li>
+            <a href="{{ path(app.request.attributes.get('_route'), {'menu' : menu, 'page' : 1}) }}" class="clickable" onclick="return false;">&laquo;</a>
+        </li>
+        {% if total > maxPagers %}
+            {% if total - current > max %}
+                {% if current > 1 %}
+                    {% for i in (current - 1)..(current + max - 1) %}
+                        <li class="{{ i == current ? 'active' : '' }}">
+                            <a href="{{ path(app.request.attributes.get('_route'), {'menu' : menu, 'page' : i}) }}" class="clickable" onclick="return false;">{{ i }}</a>
+                        </li>
+                    {% endfor %}
+                {% else %}
+                    {% for i in current..(current + max) %}
+                        <li class="{{ i == current ? 'active' : '' }}">
+                            <a href="{{ path(app.request.attributes.get('_route'), {'menu' : menu, 'page' : i}) }}" class="clickable" onclick="return false;">{{ i }}</a>
+                        </li>
+                    {% endfor %}
+                {% endif %}
+                <li><a>...</a></li>
+                {% for i in (total - max)..total %}
+                    <li>
+                        <a href="{{ path(app.request.attributes.get('_route'), {'menu' : menu, 'page' : i}) }}" class="clickable" onclick="return false;">{{ i }}</a>
+                    </li>
+                {% endfor %}
+            {% else %}
+                {% for i in 1..(max + 1) %}
+                    <li>
+                        <a href="{{ path(app.request.attributes.get('_route'), {'menu' : menu, 'page' : i}) }}" class="clickable" onclick="return false;">{{ i }}</a>
+                    </li>
+                {% endfor %}
+                <li><a>...</a></li>
+                {% if current != total %}
+                    {% for i in (current - 1)..(current + max - 1) %}
+                        <li class="{{ i == current ? 'active' : '' }}">
+                            <a href="{{ path(app.request.attributes.get('_route'), {'menu' : menu, 'page' : i}) }}" class="clickable" onclick="return false;">{{ i }}</a>
+                        </li>
+                    {% endfor %}
+                {% else %}
+                    {% for i in (total - max)..total %}
+                        <li class="{{ i == current ? 'active' : '' }}">
+                            <a href="{{ path(app.request.attributes.get('_route'), {'menu' : menu, 'page' : i}) }}" class="clickable" onclick="return false;">{{ i }}</a>
+                        </li>
+                    {% endfor %}
+                {% endif %}
+            {% endif %}
+        {% else %}
+            {% for i in 1..total %}
+                <li class="{{ i == current ? 'active' : '' }}">
+                    <a href="{{ path(app.request.attributes.get('_route'), {'menu' : menu, 'page' : i}) }}" class="clickable" onclick="return false;">{{ i }}</a>
+                </li>
+            {% endfor %}
+        {% endif %}
+        <li>
+            <a href="{{ path(app.request.attributes.get('_route'), {'menu' : menu, 'page' : total}) }}" class="clickable" onclick="return false;">&raquo;</a>
+        </li>
+    </ul>
+</div>

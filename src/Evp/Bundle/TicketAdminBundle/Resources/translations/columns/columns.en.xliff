@@ -1,0 +1,905 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>admin.prefix.manage</source>
+                <target>Manage</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>entity.event_type.plural</source>
+                <target>Event Types</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>entity.event.plural</source>
+                <target>Events</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>entity.discount_type.plural</source>
+                <target>Discount Types</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>entity.discount.plural</source>
+                <target>Discounts</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>entity.ticket_type.plural</source>
+                <target>Ticket Types</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>entity.event_type.singular</source>
+                <target>Event Type</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>entity.event.singular</source>
+                <target>Event</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>entity.discount_type.singular</source>
+                <target>Discount Type</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>entity.discount.singular</source>
+                <target>Discount</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>entity.ticket_type.singular</source>
+                <target>Ticket Type</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>admin.prefix.add_new</source>
+                <target>Add new</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>admin.index.entity.id</source>
+                <target>Id</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>admin.index.entity.name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>admin.index.entity.max_tickets_per_user</source>
+                <target>Max tickets/user</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>admin.index.entity.status</source>
+                <target>Status</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>admin.index.actions</source>
+                <target>Actions</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>admin.prefix.list</source>
+                <target>Manage</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>admin.prefix.edit</source>
+                <target>Edit</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>admin.status.active</source>
+                <target>Active</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>admin.status.inactive</source>
+                <target>Inactive</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>admin.button.save</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>entity.event_type.name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>entity.event_type.max_tickets_per_user</source>
+                <target>Max tickets/user</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>admin.status.general_label</source>
+                <target>Status</target>
+            </trans-unit>
+            <trans-unit id="27">
+                <source>admin.prefix.add</source>
+                <target>Add</target>
+            </trans-unit>
+            <trans-unit id="28">
+                <source>admin.actions.edit</source>
+                <target>Edit</target>
+            </trans-unit>
+            <trans-unit id="29">
+                <source>admin.actions.delete</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>admin.actions.separator_char</source>
+                <target>|</target>
+            </trans-unit>
+            <trans-unit id="31">
+                <source>admin.index.entity.event_type</source>
+                <target>Event Type</target>
+            </trans-unit>
+            <trans-unit id="32">
+                <source>admin.index.entity.description</source>
+                <target>Description</target>
+            </trans-unit>
+            <trans-unit id="33">
+                <source>admin.index.entity.date_created</source>
+                <target>Created</target>
+            </trans-unit>
+            <trans-unit id="34">
+                <source>admin.index.entity.date_starts</source>
+                <target>Starts</target>
+            </trans-unit>
+            <trans-unit id="35">
+                <source>admin.index.entity.date_ends</source>
+                <target>Ends</target>
+            </trans-unit>
+            <trans-unit id="36">
+                <source>admin.index.entity.date_on_sale</source>
+                <target>On sale</target>
+            </trans-unit>
+            <trans-unit id="37">
+                <source>admin.index.entity.default_locale</source>
+                <target>Locale</target>
+            </trans-unit>
+            <trans-unit id="38">
+                <source>admin.actions.device</source>
+                <target>Device</target>
+            </trans-unit>
+            <trans-unit id="39">
+                <source>admin.entity.locale.general_label</source>
+                <target>Translation locale</target>
+            </trans-unit>
+            <trans-unit id="40">
+                <source>entity.event.event_type</source>
+                <target>Event type</target>
+            </trans-unit>
+            <trans-unit id="41">
+                <source>entity.event.name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="42">
+                <source>entity.event.description</source>
+                <target>Description</target>
+            </trans-unit>
+            <trans-unit id="43">
+                <source>entity.event.currency</source>
+                <target>Currency</target>
+            </trans-unit>
+            <trans-unit id="44">
+                <source>entity.event.default_locale</source>
+                <target>Event locale</target>
+            </trans-unit>
+            <trans-unit id="45">
+                <source>entity.event.date_starts</source>
+                <target>Starts on</target>
+            </trans-unit>
+            <trans-unit id="46">
+                <source>entity.event.date_ends</source>
+                <target>Ends on</target>
+            </trans-unit>
+            <trans-unit id="47">
+                <source>entity.event.date_on_sale</source>
+                <target>On sale from</target>
+            </trans-unit>
+            <trans-unit id="48">
+                <source>admin.index.entity.tickets_count</source>
+                <target>Tickets</target>
+            </trans-unit>
+            <trans-unit id="49">
+                <source>admin.index.discount_strategy</source>
+                <target>Strategy</target>
+            </trans-unit>
+            <trans-unit id="50">
+                <source>admin.index.discount_type</source>
+                <target>Type</target>
+            </trans-unit>
+            <trans-unit id="51">
+                <source>admin.index.discount_scope</source>
+                <target>Scope</target>
+            </trans-unit>
+            <trans-unit id="52">
+                <source>discount.strategy.custom_discount</source>
+                <target>Custom discount</target>
+            </trans-unit>
+            <trans-unit id="53">
+                <source>discount.type.percentage</source>
+                <target>Percentage</target>
+            </trans-unit>
+            <trans-unit id="54">
+                <source>discount.scope.event</source>
+                <target>Event</target>
+            </trans-unit>
+            <trans-unit id="55">
+                <source>discount.scope.ticket_type</source>
+                <target>Ticket type</target>
+            </trans-unit>
+            <trans-unit id="56">
+                <source>entity.discount.tickets_count</source>
+                <target>Tickets No</target>
+            </trans-unit>
+            <trans-unit id="57">
+                <source>entity.discount.name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="58">
+                <source>entity.discount.description</source>
+                <target>Description</target>
+            </trans-unit>
+            <trans-unit id="59">
+                <source>entity.discount.date_starts</source>
+                <target>Active from</target>
+            </trans-unit>
+            <trans-unit id="60">
+                <source>entity.discount.date_ends</source>
+                <target>Active to</target>
+            </trans-unit>
+            <trans-unit id="61">
+                <source>admin.discount.strategy</source>
+                <target>Discount strategy</target>
+            </trans-unit>
+            <trans-unit id="62">
+                <source>admin.discount.type</source>
+                <target>Applied type</target>
+            </trans-unit>
+            <trans-unit id="63">
+                <source>admin.discount.scope</source>
+                <target>Discount scope</target>
+            </trans-unit>
+            <trans-unit id="64">
+                <source>entity.field_schema.plural</source>
+                <target>Field Schemas</target>
+            </trans-unit>
+            <trans-unit id="65">
+                <source>entity.field_schema.singular</source>
+                <target>Field Schema</target>
+            </trans-unit>
+            <trans-unit id="66">
+                <source>entity.event_type_field_schema.plural</source>
+                <target>Event Type Field Schemas</target>
+            </trans-unit>
+            <trans-unit id="67">
+                <source>entity.event_type_field_schema.singular</source>
+                <target>Event Type Field Schema</target>
+            </trans-unit>
+            <trans-unit id="68">
+                <source>admin.actions.fields</source>
+                <target>Field schemas</target>
+            </trans-unit>
+            <trans-unit id="69">
+                <source>admin.index.entity.discount_type</source>
+                <target>Discount type</target>
+            </trans-unit>
+            <trans-unit id="70">
+                <source>admin.index.entity.validation_token</source>
+                <target>Validation token</target>
+            </trans-unit>
+            <trans-unit id="71">
+                <source>admin.index.entity.discount_value</source>
+                <target>Discount value</target>
+            </trans-unit>
+            <trans-unit id="72">
+                <source>entity.discount.discount_type</source>
+                <target>Discount type</target>
+            </trans-unit>
+            <trans-unit id="73">
+                <source>entity.discount.token</source>
+                <target>Validation token</target>
+            </trans-unit>
+            <trans-unit id="74">
+                <source>entity.discount.value</source>
+                <target>Discount value</target>
+            </trans-unit>
+            <trans-unit id="75">
+                <source>admin.index.entity.event_name</source>
+                <target>Event name</target>
+            </trans-unit>
+            <trans-unit id="76">
+                <source>admin.index.entity.price</source>
+                <target>Ticket price</target>
+            </trans-unit>
+            <trans-unit id="77">
+                <source>entity.ticket_type.tickets_count</source>
+                <target>Tickets count</target>
+            </trans-unit>
+            <trans-unit id="78">
+                <source>entity.ticket_type.name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="79">
+                <source>entity.ticket_type.description</source>
+                <target>Description</target>
+            </trans-unit>
+            <trans-unit id="80">
+                <source>entity.ticket_type.event_name</source>
+                <target>Event</target>
+            </trans-unit>
+            <trans-unit id="81">
+                <source>entity.ticket_type.discount_types</source>
+                <target>Discount types</target>
+            </trans-unit>
+            <trans-unit id="82">
+                <source>admin.index.entity.type</source>
+                <target>Field type</target>
+            </trans-unit>
+            <trans-unit id="83">
+                <source>admin.index.entity.validator</source>
+                <target>Field validator</target>
+            </trans-unit>
+            <trans-unit id="84">
+                <source>admin.index.entity.display_order</source>
+                <target>Display order</target>
+            </trans-unit>
+            <trans-unit id="85">
+                <source>admin.index.entity.label</source>
+                <target>Field label</target>
+            </trans-unit>
+            <trans-unit id="86">
+                <source>entity.field_schema.name</source>
+                <target>Schema name</target>
+            </trans-unit>
+            <trans-unit id="87">
+                <source>entity.field_schema.type</source>
+                <target>Type</target>
+            </trans-unit>
+            <trans-unit id="88">
+                <source>entity.field_schema.validator</source>
+                <target>Validator</target>
+            </trans-unit>
+            <trans-unit id="89">
+                <source>entity.field_schema.field_order</source>
+                <target>Display order</target>
+            </trans-unit>
+            <trans-unit id="90">
+                <source>entity.field_schema.label</source>
+                <target>Field label</target>
+            </trans-unit>
+            <trans-unit id="91">
+                <source>admin.prefix.current</source>
+                <target>Current</target>
+            </trans-unit>
+            <trans-unit id="92">
+                <source>admin.index.entity.field_schema_name</source>
+                <target>Field schema</target>
+            </trans-unit>
+            <trans-unit id="93">
+                <source>admin.index.entity.required</source>
+                <target>Required</target>
+            </trans-unit>
+            <trans-unit id="94">
+                <source>admin.index.entity.required_for_all</source>
+                <target>Required for all tickets</target>
+            </trans-unit>
+            <trans-unit id="95">
+                <source>admin.index.entity.made_by_admin</source>
+                <target>Made by admin</target>
+            </trans-unit>
+            <trans-unit id="96">
+                <source>admin.index.bool_true</source>
+                <target>Yes</target>
+            </trans-unit>
+            <trans-unit id="97">
+                <source>admin.index.bool_false</source>
+                <target>No</target>
+            </trans-unit>
+            <trans-unit id="98">
+                <source>entity.event_type_field_schema.field_schema</source>
+                <target>Field schema</target>
+            </trans-unit>
+            <trans-unit id="99">
+                <source>entity.event_type_field_schema.required</source>
+                <target>Required field</target>
+            </trans-unit>
+            <trans-unit id="100">
+                <source>entity.event_type_field_schema.required_for_all</source>
+                <target>Required for all tickets</target>
+            </trans-unit>
+            <trans-unit id="101">
+                <source>admin.event_type.steps</source>
+                <target>Event Type Steps (Press CTRL key to select multiple)</target>
+            </trans-unit>
+            <trans-unit id="102">
+                <source>admin.index.entity.order_price</source>
+                <target>Order price</target>
+            </trans-unit>
+            <trans-unit id="103">
+                <source>admin.index.entity.payment_type</source>
+                <target>Payment type</target>
+            </trans-unit>
+            <trans-unit id="104">
+                <source>admin.index.entity.user</source>
+                <target>User</target>
+            </trans-unit>
+            <trans-unit id="105">
+                <source>entity.order.singular</source>
+                <target>Order</target>
+            </trans-unit>
+            <trans-unit id="106">
+                <source>entity.order.plural</source>
+                <target>Orders</target>
+            </trans-unit>
+            <trans-unit id="107">
+                <source>entity.order_details.ticket_type</source>
+                <target>Select Ticket type</target>
+            </trans-unit>
+            <trans-unit id="108">
+                <source>entity.order_details.tickets_count</source>
+                <target>Enter Tickets count</target>
+            </trans-unit>
+            <trans-unit id="109">
+                <source>entity.order_details.user_email</source>
+                <target>Email to send tickets</target>
+            </trans-unit>
+            <trans-unit id="110">
+                <source>admin.index.entity.date_finished</source>
+                <target>Finished</target>
+            </trans-unit>
+            <trans-unit id="111">
+                <source>entity.parameters.plural</source>
+                <target>Parameters</target>
+            </trans-unit>
+            <trans-unit id="112">
+                <source>ticket_type_selection</source>
+                <target>Ticket type selection</target>
+            </trans-unit>
+            <trans-unit id="113">
+                <source>user_details_fill</source>
+                <target>User details fill</target>
+            </trans-unit>
+            <trans-unit id="114">
+                <source>payment_window</source>
+                <target>Payment/invoice window</target>
+            </trans-unit>
+            <trans-unit id="115">
+                <source>return_to_my_tickets</source>
+                <target>Return to tickets</target>
+            </trans-unit>
+            <trans-unit id="116">
+                <source>seat_selection</source>
+                <target>Seat selection</target>
+            </trans-unit>
+            <trans-unit id="117">
+                <source>apply_discount</source>
+                <target>Apply discount</target>
+            </trans-unit>
+            <trans-unit id="118">
+                <source>payment_type_selection</source>
+                <target>Payment type selection</target>
+            </trans-unit>
+            <trans-unit id="119">
+                <source>admin.actions.resend</source>
+                <target>Resend tickets</target>
+            </trans-unit>
+            <trans-unit id="120">
+                <source>entity.event_type_step.form_step_name</source>
+                <target>Step Name</target>
+            </trans-unit>
+            <trans-unit id="121">
+                <source>admin.index.entity.form_step_id</source>
+                <target>Form Step</target>
+            </trans-unit>
+            <trans-unit id="122">
+                <source>admin.index.entity.step_order</source>
+                <target>Step Order</target>
+            </trans-unit>
+            <trans-unit id="123">
+                <source>entity.event_type_step.plural</source>
+                <target>Event Type steps</target>
+            </trans-unit>
+            <trans-unit id="124">
+                <source>entity.event_type_step.singular</source>
+                <target>Event Type Step</target>
+            </trans-unit>
+            <trans-unit id="125">
+                <source>entity.event_type.invoicing_enabled</source>
+                <target>Ability to issue invoice</target>
+            </trans-unit>
+            <trans-unit id="126">
+                <source>admin.actions.link</source>
+                <target>Link</target>
+            </trans-unit>
+            <trans-unit id="127">
+                <source>admin.actions.add</source>
+                <target>Add</target>
+            </trans-unit>
+            <trans-unit id="128">
+                <source>admin.menu.sub_description</source>
+                <target>Manage items:</target>
+            </trans-unit>
+            <trans-unit id="129">
+                <source>discount.type.fixed_amount</source>
+                <target>Fixed Amount</target>
+            </trans-unit>
+            <trans-unit id="130">
+                <source>discount.type.fixed_price</source>
+                <target>Fixed price</target>
+            </trans-unit>
+            <trans-unit id="131">
+                <source>entity.order_details.event</source>
+                <target>Select event</target>
+            </trans-unit>
+            <trans-unit id="132">
+                <source>entity.settings.plural</source>
+                <target>Settings</target>
+            </trans-unit>
+            <trans-unit id="133">
+                <source>entity.settings.singular</source>
+                <target>General settings</target>
+            </trans-unit>
+            <trans-unit id="134">
+                <source>admin.actions.steps</source>
+                <target>Steps</target>
+            </trans-unit>
+            <trans-unit id="135">
+                <source>entity.event_type_step.step_name</source>
+                <target>Step</target>
+            </trans-unit>
+            <trans-unit id="136">
+                <source>entity.event_type_step.step_order</source>
+                <target>Order</target>
+            </trans-unit>
+            <trans-unit id="137">
+                <source>admin.actions.confirm</source>
+                <target>Confirm payment</target>
+            </trans-unit>
+            <trans-unit id="138">
+                <source>admin.actions.filter_results</source>
+                <target>Filter</target>
+            </trans-unit>
+            <trans-unit id="139">
+                <source>admin.actions.reports</source>
+                <target>Reports</target>
+            </trans-unit>
+            <trans-unit id="140">
+                <source>admin.actions.fieldSchema</source>
+                <target>Field schemas</target>
+            </trans-unit>
+            <trans-unit id="141">
+                <source>admin.field_schema.schema_type</source>
+                <target>Schema type</target>
+            </trans-unit>
+            <trans-unit id="142">
+                <source>admin.field_schema.schema_general</source>
+                <target>General fields</target>
+            </trans-unit>
+            <trans-unit id="143">
+                <source>admin.field_schema.schema_common</source>
+                <target>Common fields</target>
+            </trans-unit>
+            <trans-unit id="144">
+                <source>admin.index.entity.ticket</source>
+                <target>Ticket Id</target>
+            </trans-unit>
+            <trans-unit id="145">
+                <source>admin.index.entity.field_schema_value</source>
+                <target>Field value</target>
+            </trans-unit>
+            <trans-unit id="146">
+                <source>admin.menu.reports_sub_description</source>
+                <target>Manage reports</target>
+            </trans-unit>
+            <trans-unit id="147">
+                <source>entity.event.template.uses_global_entity</source>
+                <target>Item templates</target>
+            </trans-unit>
+            <trans-unit id="148">
+                <source>entity.event.template.uses_global_email</source>
+                <target>Email templates</target>
+            </trans-unit>
+            <trans-unit id="149">
+                <source>admin.actions.templates</source>
+                <target>Templates</target>
+            </trans-unit>
+            <trans-unit id="150">
+                <source>admin.actions.entity_ticket</source>
+                <target>Edit Ticket template</target>
+            </trans-unit>
+            <trans-unit id="151">
+                <source>admin.actions.entity_invoice</source>
+                <target>Edit Invoice template</target>
+            </trans-unit>
+            <trans-unit id="152">
+                <source>admin.actions.email_ticket</source>
+                <target>Edit Ticket E-mail template</target>
+            </trans-unit>
+            <trans-unit id="153">
+                <source>admin.actions.email_invoice</source>
+                <target>Edit Invoice E-mail template</target>
+            </trans-unit>
+            <trans-unit id="154">
+                <source>admin.template.email.from_email</source>
+                <target>From email</target>
+            </trans-unit>
+            <trans-unit id="155">
+                <source>admin.template.email.subject</source>
+                <target>Email subject</target>
+            </trans-unit>
+            <trans-unit id="156">
+                <source>admin.template.email.body</source>
+                <target>Email body</target>
+            </trans-unit>
+            <trans-unit id="157">
+                <source>admin.template.email.attachment</source>
+                <target>Attachment name</target>
+            </trans-unit>
+            <trans-unit id="158">
+                <source>admin.template.entity.source</source>
+                <target>Template source</target>
+            </trans-unit>
+            <trans-unit id="159">
+                <source>admin.button.add</source>
+                <target>+</target>
+            </trans-unit>
+            <trans-unit id="160">
+                <source>admin.actions.custom_template</source>
+                <target>Custom templates</target>
+            </trans-unit>
+            <trans-unit id="161">
+                <source>admin.index.entity.template_name</source>
+                <target>Template name</target>
+            </trans-unit>
+            <trans-unit id="162">
+                <source>admin.index.entity.template_source</source>
+                <target>Source</target>
+            </trans-unit>
+            <trans-unit id="163">
+                <source>admin.actions.edit_template</source>
+                <target>Edit</target>
+            </trans-unit>
+            <trans-unit id="164">
+                <source>admin.template.entity.template_name</source>
+                <target>Template name</target>
+            </trans-unit>
+            <trans-unit id="165">
+                <source>admin.actions.add_custom_template</source>
+                <target>Add custom template</target>
+            </trans-unit>
+            <trans-unit id="166">
+                <source>admin.actions.devices</source>
+                <target>Devices</target>
+            </trans-unit>
+            <trans-unit id="167">
+                <source>admin.index.entity.ticket_examiner.name</source>
+                <target>Examiner name</target>
+            </trans-unit>
+            <trans-unit id="168">
+                <source>admin.index.entity.ticket_examiner.token</source>
+                <target>QR code</target>
+            </trans-unit>
+            <trans-unit id="169">
+                <source>admin.actions.cookie_device</source>
+                <target>Pair device</target>
+            </trans-unit>
+            <trans-unit id="170">
+                <source>admin.actions.app_device</source>
+                <target>Add new Examiner</target>
+            </trans-unit>
+            <trans-unit id="171">
+                <source>admin.entity.ticket_examiner.name</source>
+                <target>Examiner name</target>
+            </trans-unit>
+            <trans-unit id="172">
+                <source>admin.index.entity.template_type</source>
+                <target>Type</target>
+            </trans-unit>
+            <trans-unit id="173">
+                <source>admin.index.entity.template_from_email</source>
+                <target>From email</target>
+            </trans-unit>
+            <trans-unit id="174">
+                <source>admin.index.entity.template_subject</source>
+                <target>Email subject</target>
+            </trans-unit>
+            <trans-unit id="175">
+                <source>admin.index.entity.template_attachment_name</source>
+                <target>Attachment name</target>
+            </trans-unit>
+            <trans-unit id="176">
+                <source>admin.template.entity.template_type</source>
+                <target>Type</target>
+            </trans-unit>
+            <trans-unit id="177">
+                <source>admin.template.entity.template_subject</source>
+                <target>Email subject</target>
+            </trans-unit>
+            <trans-unit id="178">
+                <source>admin.template.entity.template_attachment_name</source>
+                <target>Attachment name</target>
+            </trans-unit>
+            <trans-unit id="179">
+                <source>admin.entity.template_name.ticket</source>
+                <target>Ticket type template</target>
+            </trans-unit>
+            <trans-unit id="180">
+                <source>admin.entity.template_name.invoice_final</source>
+                <target>Final invoice template</target>
+            </trans-unit>
+            <trans-unit id="181">
+                <source>admin.entity.template_name.ticket_email</source>
+                <target>Email template for ticket</target>
+            </trans-unit>
+            <trans-unit id="182">
+                <source>admin.entity.template_name.invoice_final_email</source>
+                <target>Email template for final invoice</target>
+            </trans-unit>
+            <trans-unit id="183">
+                <source>admin.entity.template_name.custom</source>
+                <target>Custom template</target>
+            </trans-unit>
+            <trans-unit id="184">
+                <source>admin.template.entity.template_from_email</source>
+                <target>From Email</target>
+            </trans-unit>
+            <trans-unit id="185">
+                <source>admin.index.reports.ticket_type</source>
+                <target>Ticket type</target>
+            </trans-unit>
+            <trans-unit id="186">
+                <source>admin.index.reports.tickets_count</source>
+                <target>Tickets sold</target>
+            </trans-unit>
+            <trans-unit id="187">
+                <source>admin.index.reports.max_tickets</source>
+                <target>Tickets limit</target>
+            </trans-unit>
+            <trans-unit id="188">
+                <source>admin.index.ticket_examiner.text.unused</source>
+                <target>"Unused" text</target>
+            </trans-unit>
+            <trans-unit id="189">
+                <source>admin.index.ticket_examiner.text.used</source>
+                <target>"Used" text</target>
+            </trans-unit>
+            <trans-unit id="190">
+                <source>admin.entity.ticket_examiner.text.used</source>
+                <target>"Used" text to display</target>
+            </trans-unit>
+            <trans-unit id="191">
+                <source>admin.entity.ticket_examiner.text.unused</source>
+                <target>"Unused" text to display</target>
+            </trans-unit>
+            <trans-unit id="192">
+                <source>admin.entity.template_name.ticket_used</source>
+                <target>Template "used" ticket</target>
+            </trans-unit>
+            <trans-unit id="193">
+                <source>admin.entity.template_name.ticket_unused</source>
+                <target>Template "unused" ticket</target>
+            </trans-unit>
+            <trans-unit id="194">
+                <source>entity.event.seat_selection</source>
+                <target>Seat selection</target>
+            </trans-unit>
+            <trans-unit id="195">
+                <source>entity.event.seat_area</source>
+                <target>Area dimensions (in seats)</target>
+            </trans-unit>
+            <trans-unit id="196">
+                <source>admin.entity.seat.area.row</source>
+                <target>Rows (in seats)</target>
+            </trans-unit>
+            <trans-unit id="197">
+                <source>admin.entity.seat.area.column</source>
+                <target>Columns (in seats)</target>
+            </trans-unit>
+            <trans-unit id="198">
+                <source>admin.actions.seats</source>
+                <target>Seats</target>
+            </trans-unit>
+            <trans-unit id="199">
+                <source>admin.entity.seat.area.shape_template</source>
+                <target>Seat shape template</target>
+            </trans-unit>
+            <trans-unit id="200">
+                <source>admin.entity.seat.area.shape_template.offset.x</source>
+                <target>Shape X offset</target>
+            </trans-unit>
+            <trans-unit id="201">
+                <source>admin.entity.seat.area.shape_template.offset.y</source>
+                <target>Shape Y offset</target>
+            </trans-unit>
+            <trans-unit id="202">
+                <source>admin.entity.seat.area.shape_fill_color</source>
+                <target>Shape Fill color</target>
+            </trans-unit>
+            <trans-unit id="203">
+                <source>entity.order_details.no_valid_events</source>
+                <target>-- no active Events found --</target>
+            </trans-unit>
+            <trans-unit id="204">
+                <source>entity.order_details.has_valid_events</source>
+                <target>-- choose Event --</target>
+            </trans-unit>
+            <trans-unit id="205">
+                <source>admin.entity.template_name.invoice_proforma</source>
+                <target>Proforma invoice template</target>
+            </trans-unit>
+            <trans-unit id="206">
+                <source>entity.event_type.pay_by_invoice_enabled</source>
+                <target>Pay by Invoice option</target>
+            </trans-unit>
+            <trans-unit id="207">
+                <source>entity.event.template.breadcrumbs_enabled</source>
+                <target>Breadcrumbs</target>
+            </trans-unit>
+            <trans-unit id="208">
+                <source>admin.entity.template_name.invoice_proforma_email</source>
+                <target>Email template for proforma invoice</target>
+            </trans-unit>
+            <trans-unit id="209">
+                <source>ticket_type_discount</source>
+                <target>Ticket type discount</target>
+            </trans-unit>
+            <trans-unit id="210">
+                <source>admin.index.entity.order_token</source>
+                <target>Token</target>
+            </trans-unit>
+
+            <trans-unit id="211">
+                <source>admin.index.select_action</source>
+                <target>: : :</target>
+            </trans-unit>
+            <trans-unit id="212">
+                <source>admin.index.no_records</source>
+                <target>No records found in this category</target>
+            </trans-unit>
+            <trans-unit id="213">
+                <source>entity.report.plural</source>
+                <target>Reports</target>
+            </trans-unit>
+            <trans-unit id="214">
+                <source>entity.report.singular</source>
+                <target>Report</target>
+            </trans-unit>
+            <trans-unit id="215">
+                <source>admin.submenu_group.resend</source>
+                <target>Resend...</target>
+            </trans-unit>
+            <trans-unit id="216">
+                <source>admin.submenu_group.print</source>
+                <target>Print...</target>
+            </trans-unit>
+
+            <trans-unit id="217">
+                <source>admin.actions.sub.resend-tickets</source>
+                <target>Tickets</target>
+            </trans-unit>
+            <trans-unit id="218">
+                <source>admin.actions.sub.resend-invoice_proforma</source>
+                <target>Proforma Invoice</target>
+            </trans-unit>
+            <trans-unit id="219">
+                <source>admin.actions.sub.resend-invoice_final</source>
+                <target>Final Invoice</target>
+            </trans-unit>
+            <trans-unit id="220">
+                <source>admin.actions.sub.print-tickets</source>
+                <target>Tickets</target>
+            </trans-unit>
+            <trans-unit id="221">
+                <source>admin.actions.sub.print-invoice_proforma</source>
+                <target>Proforma Invoice</target>
+            </trans-unit>
+            <trans-unit id="222">
+                <source>admin.actions.sub.print-invoice_final</source>
+                <target>Final Invoice</target>
+            </trans-unit>
+            <trans-unit id="223">
+                <source>admin.discount.multiple</source>
+                <target>Multiple discounts</target>
+            </trans-unit>
+            <trans-unit id="224">
+                <source>admin.discount.upload_file</source>
+                <target>Upload discount codes</target>
+            </trans-unit>
+            <trans-unit id="225">
+                <source>entity.discount.status</source>
+                <target>Status</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

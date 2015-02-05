@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>message.error.date_starts_greater_date_ends</source>
+                <target>Date starts must be earlier than Date ends</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>message.error.date_on_sale_greater_date_ends</source>
+                <target>Date On sale must be earlier than Date ends</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>message.error.tickets_count_negative</source>
+                <target>Number of tickets must be positive or empty</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>message.error.tickets_count_not_integer</source>
+                <target>Number of tickets must be numeric or empty</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>message.error.discount_negative</source>
+                <target>Discount value must be positive</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>message.error.discount_not_integer</source>
+                <target>Discount value must be numeric</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>message.error.ticket_price_negative</source>
+                <target>Ticket price must be positive</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>message.error.ticket_price_not_integer</source>
+                <target>Ticket price must be numeric</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>message.error.template_already_exists</source>
+                <target>Template with selected Type &amp; Name already exists for current Scope</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>message.error.template.email_not_valid</source>
+                <target>Provided email is not valid</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

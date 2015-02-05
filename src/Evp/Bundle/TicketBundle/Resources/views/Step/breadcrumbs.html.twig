@@ -1,0 +1,22 @@
+{% stylesheets '@EvpTicketBundle/Resources/public/scss/breadcrumbs/breadcrumbs.scss' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+{% set completedSteps = breadcrumbs.availableSteps|slice(0, breadcrumbs.currentStep) %}
+{% set awaitingSteps = breadcrumbs.availableSteps|slice(breadcrumbs.currentStep + 1) %}
+
+<div class="ticketPluginBreadcrumbs">
+    {% for key, step in completedSteps %}
+        <div class="completed-step">
+            <a>{{ (completedSteps[key] ~ '.breadcrumb')|trans }}</a>
+        </div>
+    {% endfor %}
+        <div class="active-step">
+            <a>{{ (breadcrumbs.availableSteps[breadcrumbs.currentStep] ~ '.breadcrumb')|trans }}</a>
+        </div>
+    {% for key, step in awaitingSteps %}
+        <div class="awaiting-step">
+            <a>{{ (awaitingSteps[key] ~ '.breadcrumb')|trans }}</a>
+        </div>
+    {% endfor %}
+</div>

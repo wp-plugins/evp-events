@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>invoice.label.proforma_invoice</source>
+                <target>Proforma Invoice</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>invoice.label.series</source>
+                <target>Series</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>invoice.label.number_short</source>
+                <target>No.:</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>invoice.label.date</source>
+                <target>Date</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>invoice.label.seller.name</source>
+                <target>Seller name:</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>invoice.label.seller.code</source>
+                <target>Company code:</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>invoice.label.seller.address</source>
+                <target>Address:</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>invoice.label.seller.vat_code</source>
+                <target>VAT code:</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>invoice.label.seller.bank_account</source>
+                <target>Bank account:</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>invoice.label.seller.bank_name</source>
+                <target>Bank:</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>invoice.label.buyer.name</source>
+                <target>Buyer name:</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>invoice.label.buyer.code</source>
+                <target>Company code:</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>invoice.label.buyer.address</source>
+                <target>Address:</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>invoice.label.buyer.vat_code</source>
+                <target>VAT code:</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>invoice.label.buyer.user</source>
+                <target>Responsible person:</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>invoice.label.payment_term</source>
+                <target>Payment term:</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>invoice.label.order_details.name</source>
+                <target>Title</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>invoice.label.order_details.count</source>
+                <target>Amount (People)</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>invoice.label.order_details.price</source>
+                <target>Price</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>invoice.label.order_details.total_price</source>
+                <target>Sum</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>invoice.label.additional_info</source>
+                <target>Additional info</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>invoice.label.order.total_wo_price</source>
+                <target>Total</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>invoice.label.order.total_vat</source>
+                <target>VAT (-%)*</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>invoice.label.order.total_price</source>
+                <target>Total Sum</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>invoice.order.additional_info_text</source>
+                <target>*VAT exemption based on: LT VAT law 22 par.</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>invoice.label.invoice_prepared_by</source>
+                <target>Document prepared by</target>
+            </trans-unit>
+            <trans-unit id="27">
+                <source>invoice.label.superscript.invoice_prepared_by.1</source>
+                <target>persons, responsible for the sale operation performance and the correct clearance</target>
+            </trans-unit>
+            <trans-unit id="28">
+                <source>invoice.label.superscript.invoice_prepared_by.2</source>
+                <target>position, names, signatures</target>
+            </trans-unit>
+            <trans-unit id="29">
+                <source>invoice.label.payment_guides</source>
+                <target>Payment guides</target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>invoice.label.payment_guides.payment_description</source>
+                <target>Payment description</target>
+            </trans-unit>
+            <trans-unit id="31">
+                <source>invoice.footer.line.1</source>
+                <target>Event is included in a list of meetings for Lithuanian Presidency of the EU in 2013 by Ministry of Foreign Affairs in 2013. July 9. Decision No.: 3-4986</target>
+            </trans-unit>
+            <trans-unit id="32">
+                <source>invoice.footer.line.2</source>
+                <target>Event organizer - TOC Solutions - included civil servants' training institutions list of Lithuanian Republic Minister of the Interior in 2012. July 30. Order No. 1V-579 of the Lithuanian Republic Minister of the Interior in 2010. April 9. order no. 1V-219 of the civil servants' training COL approval "recharge."</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

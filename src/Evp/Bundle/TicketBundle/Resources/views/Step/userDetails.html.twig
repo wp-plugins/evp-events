@@ -1,0 +1,33 @@
+{% extends 'EvpTicketBundle:Step:base.html.twig' %}
+{% form_theme  elements['form'] 'EvpTicketBundle:Step/UserDetails:form.html.twig' %}
+
+{% block content %}
+    <div class="userDetails">
+        {% if breadcrumbs is not defined or breadcrumbs is empty %}
+            <h3>{{ 'info.user_details_step'|trans }}</h3>
+        {% endif %}
+        {% include 'EvpTicketBundle:Step:errors.html.twig' %}
+
+
+        {{ form_start(elements['form'], {'attr' : {'novalidate' : ''}}) }}
+            {% for group in elements['form'] if group.vars.form.vars.name != '_token' %}
+                {% if group.vars.form.vars.name == 'commonDetails' %}
+                    {{ form_label(group, group.vars.label|trans|raw, {'label_attr' : {'class' : 'bold'}}) }}
+                    {% for common in group.vars.form %}
+                        <div class="ticket">
+                            <div class="bold">
+                                {{ group.vars.form.parent.vars.value.tickets[loop.index0].ticketType.name }}
+                            </div>
+                            {{ form_row(common) }}
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    {{ form_label(group, group.vars.label|trans|raw, {'label_attr' : {'class' : 'bold'}}) }}
+                    {{ form_widget(group) }}
+                {% endif %}
+            {% endfor %}
+            {% include 'EvpTicketBundle:Step:navigationWithoutForm.html.twig' %}
+        {{ form_end(elements['form']) }}
+    </div>
+
+{% endblock %}

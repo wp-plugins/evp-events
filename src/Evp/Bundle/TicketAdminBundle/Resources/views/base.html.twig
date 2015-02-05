@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bundle JS files -->
+    {% block javascripts %}
+        {% javascripts
+        '../vendor/components/jquery/jquery.min.js'
+        '../vendor/components/bootstrap/js/bootstrap.min.js'
+        '@EvpTicketAdminBundle/Resources/public/js/*'
+        %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
+
+
+    <!-- Bundle CSS files -->
+    {% block stylesheets %}
+        {% stylesheets
+        '../vendor/components/bootstrap/css/bootstrap.css'
+        '@EvpTicketAdminBundle/Resources/public/css/main.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+    {% endblock %}
+</head>
+<body>
+<div class="container">
+    <div class="menuContainer">
+        {% block menu %}
+            {{ render(controller('EvpTicketAdminBundle:Admin:dashboard')) }}
+        {% endblock %}
+    </div>
+    <div class="bodyContainer">
+        {% block body %}{% endblock %}
+    </div>
+</div>
+</body>
+</html>

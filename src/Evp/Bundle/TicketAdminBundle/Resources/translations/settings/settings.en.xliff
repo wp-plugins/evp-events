@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>database_driver</source>
+                <target>Database driver</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>step_reservation_time</source>
+                <target>Each step reservation time</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>payment_reservation_time</source>
+                <target>Payment awaiting time</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>mailer_transport</source>
+                <target>Mail transport</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>mailer_host</source>
+                <target>Mail server host</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>mailer_user</source>
+                <target>Mail server User</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>mailer_password</source>
+                <target>Mail User password</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>mailer_auth_mode</source>
+                <target>Mail authentication mode</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>mailer_port</source>
+                <target>Mail server port</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>locale</source>
+                <target>Default locale</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>secret</source>
+                <target>Session secret</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>phantomjs_binary</source>
+                <target>PhantomJS binary location</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>phantomjs_rasterize</source>
+                <target>PhantomJS rasterize.js location</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>paysera_project_id</source>
+                <target>Paysera project ID</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>paysera_sign_password</source>
+                <target>Paysera project sign password</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>paysera_test_mode</source>
+                <target>Use Paysera test mode</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>fake_cron</source>
+                <target>Use fake cron</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>offline_sync_depth_future</source>
+                <target>Offline sync in future</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>offline_sync_depth_past</source>
+                <target>Offline sync in past</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>offline_sync_limit</source>
+                <target>Default offline sync limit</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>shell_enabled</source>
+                <target>System shell enabled</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>pdf_converter</source>
+                <target>PDF converter strategy</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>pdf_over_http_remote_uri</source>
+                <target>Remote PDF strategy URI</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>pdf_over_http_auth_header</source>
+                <target>Remote PDF strategy security Token</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>ticket_code_strategy</source>
+                <target>Ticket validation code strategy</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>admin.parameters.save</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="27">
+                <source>{1} week|]2,9] weeks2|]10,Inf] weeks</source>
+                <target>week|weeks|weeks</target>
+            </trans-unit>
+            <trans-unit id="28">
+                <source>enabled</source>
+                <target>enabled</target>
+            </trans-unit>
+            <trans-unit id="29">
+                <source>disabled</source>
+                <target>disabled</target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>admin.parameters.test_connection</source>
+                <target>Test mail settings</target>
+            </trans-unit>
+            <trans-unit id="31">
+                <source>mailer_encryption</source>
+                <target>Mail connection encryption</target>
+            </trans-unit>
+            <trans-unit id="32">
+                <source>no encryption</source>
+                <target>no encryption</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

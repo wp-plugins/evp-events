@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>max.ticket.limit_per_user</source>
+                <target>Kiekvienas naudotojas gali nupirkti ne daugiau kaip %string% biletų</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>value.greater.than</source>
+                <target>Biletų skaičius turi būti teigiamas</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>available.to.buy.count</source>
+                <target>Pasirinkto tipo biletų šiuo metu liko tik %string% </target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>error.check.invalid_code</source>
+                <target>Nuolaidos kodas negaliojantis</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>error.check.discount_data</source>
+                <target>Patikrinkite Jūsų pateiktus nuolaidos duomenis</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>value.invoice.name.too_short</source>
+                <target>Vardas/Pavadinimas turi būti bent {{ limit }} ženklų ilgio</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>value.invoice.code.too_short</source>
+                <target>Asmens/įmonės turi būti bent {{ limit }} ženklų ilgio</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>value.invoice.address.too_short</source>
+                <target>Adresas turi būti bent {{ limit }} ženklų ilgio</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>value.invoice.vat_code.too_short</source>
+                <target>PVM kodas turi būti bent {{ limit }} ženklų ilgio</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>error.event.not_found_by_token</source>
+                <target>Pagal nurodytą raktą renginys nerastas</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>error.invalid_step_configuration</source>
+                <target>Blogai nustatyti įvykio žingsniai</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>error.session_timeout</source>
+                <target>jūsų sesija pasibaigė</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>error.empty_form.submitted</source>
+                <target>Šis žingsnis jau buvo pakartotas</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>value.invoice.code.pattern_mismatch</source>
+                <target>Asmens/įmonės kodas yra klaidingas</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>value.invoice.code.too_long</source>
+                <target>Asmens/įmonės turi būti mažiau nei {{ limit }} ženklų ilgio</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>value.invoice.name.too_long</source>
+                <target>Vardas/Pavadinimas turi būti mažiau nei {{ limit }} ženklų ilgio</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>value.invoice.address.too_long</source>
+                <target>Adresas turi būti mažiau nei {{ limit }} ženklų ilgio</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>value.invoice.vat_code.too_long</source>
+                <target>PVM kodas turi būti mažiau nei {{ limit }} ženklų ilgio</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>value.invoice.vat_code.pattern_mismatch</source>
+                <target>PVM kodas yra klaidingas</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>value.user_details.too_short</source>
+                <target>Duota reikšmė yra per trumpa</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

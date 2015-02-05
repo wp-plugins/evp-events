@@ -1,0 +1,10 @@
+{% block body %}
+    <div class="edit">
+        {% include 'EvpTicketAdminBundle:Admin:edit.html.twig' %}
+    </div>
+    {% if elements.form.vars.value.matrix is not empty %}
+        <div class="seatMatrix">
+            {% include 'EvpTicketAdminBundle:Seat:seatMatrix.html.twig' with {'area' : elements.form.vars.value } only %}
+        </div>
+    {% endif %}
+{% endblock %}

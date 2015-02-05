@@ -1,0 +1,99 @@
+@media screen {
+    body {
+        font-size: 14px;
+        font-style: normal;
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+    }
+}
+@media print {
+    body {
+        font-size: 10px;
+        font-style: normal;
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+    }
+    .logo img {
+        width: 75%;
+        height: auto;
+    }
+}
+.widthBig {
+    width: 65%;
+}
+.widthSmall {
+    width: 30%;
+}
+.widthFull {
+    width: 100%;
+}
+.table {
+    width: 100%;
+    display: table;
+    margin-bottom: 3em;
+    padding: 0.3em;
+    border-collapse: collapse;
+}
+.columns {
+     font-weight: bold;
+ }
+.row {
+    display: table-row;
+}
+.cell {
+    padding: 0 0.3em;
+    display: table-cell;
+    white-space: nowrap;
+}
+.caption {
+    text-align: center;
+    caption-side: top;
+    border: 1px solid #000000;
+    display: table-caption;
+    width: 100%;
+    padding: 0 0.3em;
+}
+.bold {
+    font-weight: bold;
+}
+.center {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+.inlineBlock {
+    display: inline-block;
+}
+.underline {
+    border-bottom: 1px solid #000000;
+}
+.superscript {
+    vertical-align: super;
+    font-size: 0.7em;
+}
+
+.seller {
+    border: 3px solid #000000;
+}
+.seller .label, .buyer .label {
+    padding-right: 1em;
+}
+.logo, .title {
+    vertical-align: middle;
+}
+.logo {
+    text-align: right;
+}
+.paymentTerm, .paymentGuide {
+    width: 30%;
+}
+.paymentTerm .cell {
+    padding-right: 2em;
+}
+.orderDetails .row .cell, .orderInfo .cell, .paymentGuide .cell {
+    border: 1px solid #000000;
+}
+.footer .cell {
+    padding-bottom: 1em;
+    white-space: normal;
+    font-size: 0.8em;
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <!-- admin page -->
+    <route id="admin_dashboard" pattern="/{_locale}/dashboard">
+        <default key="_controller">EvpTicketAdminBundle:Admin:dashboard</default>
+        <default key="_locale">en</default>
+    </route>
+
+    <!-- Index Action -->
+    <route id="admin_manage_menu_index" pattern="/{_locale}/dashboard/{menu}/index/{page}">
+        <default key="_controller">EvpTicketAdminBundle:Admin:index</default>
+        <default key="_locale">en</default>
+        <default key="page">1</default>
+    </route>
+    <route id="admin_manage_action" pattern="/{_locale}/dashboard/{menu}/{action}/{id}">
+        <default key="_controller">EvpTicketAdminBundle:Admin:manage</default>
+        <default key="_locale">en</default>
+        <default key="id"/>
+    </route>
+
+    <!-- add entity -->
+    <route id="admin_add_entity" pattern="/{_locale}/add/{entity}">
+        <default key="_controller">EvpTicketAdminBundle:Admin:add</default>
+        <default key="_locale">en</default>
+    </route>
+
+
+    <!-- delete entity -->
+    <route id="admin_delete_entity" pattern="/delete/{entity}/{id}">
+        <default key="_controller">EvpTicketAdminBundle:Admin:delete</default>
+    </route>
+
+    <!-- edit entity -->
+    <route id="admin_edit_entity" pattern="/{_locale}/edit/{entity}/{id}">
+        <default key="_controller">EvpTicketAdminBundle:Admin:edit</default>
+    </route>
+
+    <route id="admin_parameters_edit_trans" pattern="/{_locale}/edit/{entity}/{id}/{targetLocale}">
+        <default key="_controller">EvpTicketAdminBundle:Admin:edit</default>
+        <default key="_locale">en</default>
+        <default key="targetLocale">en</default>
+    </route>
+
+    <route id="admin_generate_qr_for_attach" pattern="/{_locale}/device/generate/{token}">
+        <default key="_controller">EvpTicketAdminBundle:Pair:generateQr</default>
+    </route>
+
+    <!-- get validators based on field type  -->
+    <route id="admin_get_validators_entity" pattern="/{_locale}/get_validators/{fieldType}">
+        <default key="_controller">EvpTicketAdminBundle:Admin:getFieldTypeValidators</default>
+        <default key="_locale">en</default>
+    </route>
+
+    <!-- refresh entity based on target locale -->
+    <route id="admin_refresh_entity" pattern="/refreshEntity/{entity}/{id}/{targetLocale}">
+        <default key="_controller">EvpTicketAdminBundle:Ajax:refreshEntity</default>
+        <default key="id"></default>
+        <default key="targetLocale"></default>
+    </route>
+
+
+    <route id="get_service_response" pattern="/get_service_response/{serviceKey}/{serviceRequestId}/{serviceMethodKey}">
+        <default key="_controller">EvpTicketAdminBundle:Ajax:getServiceResponseById</default>
+        <default key="serviceRequestId"></default>
+        <default key="serviceMethodKey"></default>
+    </route>
+
+    <route id="admin_test_mail_settings" pattern="/mailer/test-settings">
+        <default key="_controller">EvpTicketAdminBundle:Ajax:testMailSettings</default>
+    </route>
+
+    <route id="admin_preview_template" pattern="/template/preview/{name}/{entity}/{token}">
+        <default key="_controller">EvpTicketAdminBundle:Template:preview</default>
+        <default key="entity"></default>
+        <default key="token"></default>
+    </route>
+</routes>

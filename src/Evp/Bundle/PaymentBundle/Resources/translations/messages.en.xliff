@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>payment.processing</source>
+                <target>Processing payment</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>payment.completed</source>
+                <target>Payment completed</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>payment.ticket_download</source>
+                <target>Download the ticket</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>payment.cancelled</source>
+                <target>The payment is cancelled</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>payment.custom.text_1</source>
+                <target>We have sent tickets to Your email. Also, you could download your tickets bellow.</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>payment.custom.text_2</source>
+                <target>The e-ticket can be either printed out on a white A4 size paper sheet or be saved to your smartphone. The ticket cannot be copied. The unique QR code allows the ticket to be used only once, thus copying or sharing the ticket can impede your entrance to the event.</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>payment.error.no_suitable_payment_handler_found</source>
+                <target>There are no payment options for this event.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

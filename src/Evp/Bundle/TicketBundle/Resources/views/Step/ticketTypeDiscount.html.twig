@@ -1,0 +1,151 @@
+{% extends 'EvpTicketBundle:Step:base.html.twig' %}
+
+{% block content %}
+    <div class="ticketTypeDiscount">
+        {% if breadcrumbs is not defined or breadcrumbs is empty %}
+            <h3>{{ 'info.ticket_type_discount_step'|trans }}</h3>
+        {% endif %}
+        {% include 'EvpTicketBundle:Step:errors.html.twig' %}
+        <div class="table">
+            <div class="columns row">
+                <div class="cell name">{{ 'column.ticket_type.name'|trans({} , "columns" ) }}</div>
+                <div class="cell ticketPrice">{{ 'column.ticket_type.price'|trans({} , "columns" ) }}</div>
+                <div class="cell quantity">{{ 'column.ticket_type.order_count'|trans({} , "columns" ) }}</div>
+                <div class="cell partialSum">{{ 'column.ticket_type.partial_sum'|trans({} , "columns" ) }}</div>
+            </div>
+            <div class="tableBody">
+                {% set totalSum = 0 %}
+                {% set currency = elements.ticketTypesMap[0].ticketType.event.currency %}
+                {% for ticketTypeMap in elements.ticketTypesMap %}
+                    <div class="row">
+                        <div class="cell name">{{ ticketTypeMap.ticketType.name }}</div>
+                        <div class="cell ticketPrice">
+
+
+                            {% if ticketTypeMap.ticketType.event.currency == 'LTL' %}
+                                {% set recalculatedPrice = (ticketTypeMap.ticketType.price / 3.4528)|round(2)|number_format(2, ',', ' ') ~ ' EUR' %}
+                            {% elseif ticketTypeMap.ticketType.event.currency == 'EUR' %}
+                                {% set recalculatedPrice = (ticketTypeMap.ticketType.price * 3.4528)|round(2)|number_format(2, ',', ' ') ~ ' LTL' %}
+                            {% endif %}
+
+
+                            {{ ticketTypeMap.ticketType.price|number_format(2, ',', ' ') }} {{ ticketTypeMap.ticketType.event.currency }}
+                            {% if recalculatedPrice is defined %}
+                                <br><span style="font-size: 0.8em">{{ recalculatedPrice }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="cell quantity">
+                            <select class="ticketCountBox"
+                                    change-url="{{ url('modify_order_detail', {'ticketTypeId' : ticketTypeMap.ticketType.id}) }}">
+                                {% for i in 0..ticketTypeMap.maxTickets %}
+                                    <option value="{{ i }}" {{ i == ticketTypeMap.count ? 'selected="selected"' : '' }}>{{ i }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="cell partialSum">
+                            {% set partialSum = ticketTypeMap.ticketType.price * ticketTypeMap.count %}
+                            {% set totalSum = totalSum + partialSum %}
+
+
+                            {% if ticketTypeMap.ticketType.event.currency == 'LTL' %}
+                                {% set recalculatedPartial = (partialSum / 3.4528)|round(2)|number_format(2, ',', ' ') ~ ' EUR' %}
+                            {% elseif ticketTypeMap.ticketType.event.currency == 'EUR' %}
+                                {% set recalculatedPartial = (partialSum * 3.4528)|round(2)|number_format(2, ',', ' ') ~ ' LTL' %}
+                            {% endif %}
+
+
+                            {{ partialSum|number_format(2, ',', ' ') }} {{ ticketTypeMap.ticketType.event.currency }}
+                            {% if recalculatedPartial is defined %}
+                                <br><span style="font-size: 0.8em">{{ recalculatedPartial }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="cartItem totals row {{ totalSum > 0 ? '' : 'nonShown' }}">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell">{{ 'column.ticket_type.total_price'|trans({} , "columns" ) }}</div>
+
+
+                    {% if currency == 'LTL' %}
+                        {% set recalculatedTotalBeforeDiscount = (totalSum / 3.4528)|round(2)|number_format(2, ',', ' ') ~ ' EUR' %}
+                    {% elseif currency == 'EUR' %}
+                        {% set recalculatedTotalBeforeDiscount = (totalSum * 3.4528)|round(2)|number_format(2, ',', ' ') ~ ' LTL' %}
+                    {% endif %}
+
+
+                    <div id="totalSumBeforeDiscount" class="cell">{{ totalSum|number_format(2, ',', ' ') }} {{ currency }}
+                        {% if recalculatedTotalBeforeDiscount is defined %}
+                            <br><span style="font-size: 0.8em">{{ recalculatedTotalBeforeDiscount }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+
+                {% set discount = 0 %}
+                {% for ticket in elements.ticketsInCart if ticket.discount is not empty %}
+                    {% set discount = discount + ticket.ticketType.price - ticket.price %}
+                {% endfor %}
+                <div class="cartItem totals row {{ discount != 0 ? '' : 'nonShown' }}">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell">{{ 'column.ticket_type.discount_value'|trans({} , "columns" ) }}</div>
+
+
+                    {% if currency == 'LTL' %}
+                        {% set recalculatedDiscount = (discount / 3.4528)|round(2)|number_format(2, ',', ' ') ~ ' EUR' %}
+                    {% elseif currency == 'EUR' %}
+                        {% set recalculatedDiscount = (discount * 3.4528)|round(2)|number_format(2, ',', ' ') ~ ' LTL' %}
+                    {% endif %}
+
+
+                    <div id="discountAmount" class="cell">{{ discount|number_format(2, ',', ' ') }} {{ currency }}
+                        {% if recalculatedDiscount is defined %}
+                            <br><span style="font-size: 0.8em">{{ recalculatedDiscount }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+
+                {% set finalAmount = totalSum - discount %}
+                <div class="cartItem totals row {{ discount != 0 ? '' : 'nonShown' }}">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell">{{ 'column.ticket_type.amount_after_discount'|trans({} , "columns" ) }}</div>
+
+
+                    {% if currency == 'LTL' %}
+                        {% set recalculatedFinal = (finalAmount / 3.4528)|round(2)|number_format(2, ',', ' ') ~ ' EUR' %}
+                    {% elseif currency == 'EUR' %}
+                        {% set recalculatedFinal = (finalAmount * 3.4528)|round(2)|number_format(2, ',', ' ') ~ ' LTL' %}
+                    {% endif %}
+
+
+                    <div id="totalDiscountedSum" class="cell">{{ finalAmount|number_format(2, ',', ' ') }} {{ currency }}
+                        {% if recalculatedFinal is defined %}
+                            <br><span style="font-size: 0.8em">{{ recalculatedFinal }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+
+                {% if elements.discountsAreAvailable %}
+                    {{ form_start(elements.discountForm, { 'attr': { 'class': 'row lineHeight3em' }}) }}
+                    <div class="cell"></div>
+                    <div class="discount-field cell">
+                        {{ form_label(elements.discountForm.token, elements.discountForm.token.vars.label|trans) }}
+                    </div>
+                    <div class="discount-field cell widthToCell">
+                        {{ form_widget(elements.discountForm.token) }}
+                    </div>
+                    <div class="discount-field cell">
+                        {{ form_label(elements.discountForm.submit, elements.discountForm.submit.vars.label|trans) }}
+                        {{ form_widget(elements.discountForm.submit) }}
+                    </div>
+                    {{ form_rest(elements.discountForm) }}
+                    {{ form_end(elements.discountForm) }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="ticket-navigation">
+        {% include 'EvpTicketBundle:Step:navigation.html.twig' %}
+    </div>
+{% endblock %}

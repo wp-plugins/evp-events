@@ -1,0 +1,248 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <imports>
+        <import resource="steps.xml"/>
+        <import resource="listeners.xml"/>
+        <import resource="seats.xml"/>
+    </imports>
+
+    <parameters>
+        <parameter key="evp.service.user_session.index_name">user_id</parameter>
+        <parameter key="evp.service.user_session.ticket_checker_key">ticket_checker</parameter>
+        <parameter key="evp.service.event_manager.cookie_validity">+1 month</parameter>
+        <parameter type="collection" key="evp.service.qr_code_generator">
+            <parameter key="size">6</parameter>
+            <parameter key="margin">1</parameter>
+            <parameter key="path_to_tmp">%kernel.cache_dir%/%kernel.environment%/qr_codes</parameter>
+            <parameter key="ticket_checker_route_name">ticket_checker</parameter>
+            <parameter key="ticket_attach_device_router_name">ticket_admin_attach_device</parameter>
+        </parameter>
+
+        <parameter type="collection" key="evp.service.ticket_reservations">
+            <parameter key="short" type="string">%step_reservation_time%</parameter>
+            <parameter key="long" type="string">%payment_reservation_time%</parameter>
+        </parameter>
+
+        <parameter type="collection" key="evp.service.ticket_status_types">
+            <parameter key="reserved" type="string">reserved</parameter>
+            <parameter key="unused" type="string">unused</parameter>
+            <parameter key="used" type="string">used</parameter>
+        </parameter>
+
+        <parameter key="evp.service.print.ticket_templates" type="collection">
+            <parameter key="html">ticket.html.twig</parameter>
+            <parameter key="pdf">EvpTicketBundle:Print:ticket.pdf.twig</parameter>
+        </parameter>
+
+        <parameter key="evp.service.mailer.templates" type="collection">
+            <parameter key="ticket">ticket.html.twig</parameter>
+            <parameter key="invoice_final">invoice_final.html.twig</parameter>
+            <parameter key="invoice_proforma">invoice_proforma.html.twig</parameter>
+            <parameter key="multipleTickets">ticket.html.twig</parameter>
+        </parameter>
+    </parameters>
+
+    <services>
+        <service id="evp.service.step_manager" class="Evp\Bundle\TicketBundle\Service\StepManager" parent="evp.service.manager_abstract">
+            <argument type="string">%evp.service.step.current_step_session_key%</argument>
+            <argument type="string">%evp.service.step.previous_step_session_key%</argument>
+            <argument type="string">%evp.service.event_id_session_key%</argument>
+            <argument type="string">%evp.service.step.default_step%</argument>
+            <argument type="service" id="session"/>
+            <argument type="service" id="form.factory"/>
+            <argument type="service" id="router"/>
+            <argument type="service" id="evp.service.user_session"/>
+            <argument type="service" id="event_dispatcher"/>
+        </service>
+
+        <service id="evp.service.ticket_manager" class="Evp\Bundle\TicketBundle\Service\TicketManager" parent="evp.service.manager_abstract">
+            <call method="setReservation">
+                <argument>%evp.service.ticket_reservations%</argument>
+            </call>
+            <call method="setTemplates">
+                <argument>%evp.service.print.ticket_templates%</argument>
+            </call>
+            <call method="setSyncParams">
+                <argument>%evp_device_api.offline_sync.params%</argument>
+            </call>
+            <call method="setTicketTokenManager">
+                <argument type="service" id="evp.service.ticket_token_manager"/>
+            </call>
+        </service>
+
+        <service id="evp.service.payment_manager" class="Evp\Bundle\TicketBundle\Service\PaymentManager" parent="evp.service.manager_abstract">
+            <argument type="service" id="evp_payment.service.payment_handler_provider"/>
+        </service>
+
+        <service id="evp.service.user_session" class="Evp\Bundle\TicketBundle\Service\UserSession" parent="evp.service.manager_abstract">
+            <argument type="service" id="session"/>
+            <argument>%evp.service.user_session.index_name%</argument>
+            <argument type="service" id="event_dispatcher"/>
+            <argument type="service" id="service_container"/>
+        </service>
+
+        <service
+                id="evp.service.discount_manager"
+                class="Evp\Bundle\TicketBundle\Service\DiscountManager"
+                parent="evp.service.manager_abstract">
+            <argument type="collection">
+                <argument key="discount.strategy.custom_discount" type="service" id="evp.service.discount_strategy.custom_discount"/>
+            </argument>
+            <argument type="collection">
+                <argument key="discount.type.percentage" type="service" id="evp.service.discount.type.percentage"/>
+                <argument key="discount.type.fixed_amount" type="service" id="evp.service.discount.type.fixed_amount"/>
+                <argument key="discount.type.fixed_price" type="service" id="evp.service.discount.type.fixed_price"/>
+            </argument>
+            <argument type="collection">
+                <argument key="discount.scope.event" type="service" id="evp.service.discount.scope.event"/>
+                <argument key="discount.scope.ticket_type" type="service" id="evp.service.discount.scope.ticket_type"/>
+                <argument key="discount.scope.user" type="service" id="evp.service.discount.scope.user"/>
+            </argument>
+        </service>
+
+        <service
+                id="evp.service.ticket_code_generator"
+                class="Evp\Bundle\TicketBundle\Service\TicketCodeGenerator">
+            <argument>%ticket_code_strategy%</argument>
+        </service>
+
+        <service id="evp.service.ticket_code_generator.qr_code_generator" class="Evp\Bundle\TicketBundle\Service\TicketCodeStrategy\QrCodeStrategy">
+            <argument>%evp.service.qr_code_generator%</argument>
+            <argument type="service" id="router"/>
+            <tag name="ticket_code_strategy" strategy="qr_code"/>
+        </service>
+        <service id="evp.service.ticket_code_generator.bar_code_generator" class="Evp\Bundle\TicketBundle\Service\TicketCodeStrategy\BarCodeStrategy">
+            <argument type="service" id="router"/>
+            <tag name="ticket_code_strategy" strategy="bar_code"/>
+        </service>
+
+        <service
+                id="evp.service.ticket_token_provider.random_provider"
+                class="Evp\Bundle\TicketBundle\Service\TicketTokenProvider\RandomTicketTokenProvider">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="evp_ticket_maintenance.service.unique_token_generator"/>
+            <tag name="ticket_token_provider" type="random" priority="2"/>
+        </service>
+        <service
+                id="evp.service.ticket_token_provider.pool_provider"
+                class="Evp\Bundle\TicketBundle\Service\TicketTokenProvider\PoolTicketTokenProvider">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <tag name="ticket_token_provider" type="pool" priority="1"/>
+        </service>
+        <service
+                id="evp.service.ticket_token_manager"
+                class="Evp\Bundle\TicketBundle\Service\TicketTokenManager">
+            <argument type="service" id="logger"/>
+        </service>
+
+        <service id="evp.service.event_manager"
+                 class="Evp\Bundle\TicketBundle\Service\EventManager"
+                 parent="evp.service.manager_abstract"/>
+
+        <service id="evp.service.order_manager" class="Evp\Bundle\TicketBundle\Service\OrderManager" parent="evp.service.manager_abstract">
+            <argument>%evp.service.ticket_reservations%</argument>
+            <argument type="service" id="evp.service.user_session"/>
+            <argument>%evp.service.event_id_session_key%</argument>
+            <argument type="service" id="session"/>
+            <argument>%paysera_test_mode%</argument>
+        </service>
+
+        <service id="evp.service.mail_manager" class="Evp\Bundle\TicketBundle\Service\MailManager" parent="evp.service.manager_abstract">
+            <argument>%evp.service.mailer.templates%</argument>
+            <argument type="service" id="mailer"/>
+            <argument type="collection">
+                <argument key="ticket" type="service" id="evp.service.mailer.ticket_strategy"/>
+                <argument key="invoice_final" type="service" id="evp.service.mailer.invoice_strategy"/>
+                <argument key="invoice_proforma" type="service" id="evp.service.mailer.invoice_strategy"/>
+                <argument key="multipleTickets" type="service" id="evp.service.mailer.multiple_tickets_strategy"/>
+            </argument>
+        </service>
+
+        <service
+                id="evp.service.mailer.ticket_strategy"
+                class="Evp\Bundle\TicketBundle\Service\MailStrategy\TicketStrategy"
+                parent="evp.service.mailer.strategy_abstract"/>
+        <service
+                id="evp.service.mailer.invoice_strategy"
+                class="Evp\Bundle\TicketBundle\Service\MailStrategy\InvoiceStrategy"
+                parent="evp.service.mailer.strategy_abstract"/>
+        <service
+                id="evp.service.mailer.multiple_tickets_strategy"
+                class="Evp\Bundle\TicketBundle\Service\MailStrategy\MultipleTicketsStrategy"
+                parent="evp.service.mailer.strategy_abstract"/>
+
+        <service id="evp.service.manager_abstract" class="Evp\Bundle\TicketBundle\Service\ManagerAbstract">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="logger"/>
+        </service>
+        <service id="evp.service.mailer.strategy_abstract" class="Evp\Bundle\TicketBundle\Service\MailStrategy\StrategyAbstract">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="logger"/>
+            <argument type="service" id="evp.service.database_twig_loader"/>
+            <argument type="service" id="router"/>
+            <argument type="service" id="translator"/>
+            <argument type="service" id="evp.service.html_convert.current_converter"/>
+        </service>
+        <service id="evp.service.ticket_device_checker" class="Evp\Bundle\TicketBundle\Service\TicketChecker">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="logger"/>
+            <argument type="string">%evp.service.user_session.ticket_checker_key%</argument>
+            <argument type="string">%evp.service.event_manager.cookie_validity%</argument>
+        </service>
+        <service
+                id="evp.service.database_twig_loader"
+                class="Evp\Bundle\TicketBundle\Service\DatabaseTwigLoader">
+            <argument type="service" id="evp.service.twig_template_manager"/>
+            <argument type="service" id="twig"/>
+            <argument type="service" id="twig.loader"/>
+        </service>
+        <service
+                id="evp.service.twig_template_manager"
+                class="Evp\Bundle\TicketBundle\Service\TwigTemplateManager"
+                parent="evp.service.manager_abstract">
+        </service>
+        <service
+                id="evp.service.seat_manager"
+                class="Evp\Bundle\TicketBundle\Service\SeatManager"
+                parent="evp.service.manager_abstract"/>
+
+        <service
+                id="evp.service.json_data_manager"
+                class="Evp\Bundle\TicketBundle\Service\JsonDataManager"
+                parent="evp.service.manager_abstract"/>
+
+
+        <service
+                id="evp.service.html_convert"
+                class="Evp\Bundle\TicketBundle\Service\HtmlConvert"/>
+
+        <service
+                id="evp.service.html_convert.current_converter"
+                class="Evp\Bundle\TicketBundle\Service\HtmlConvert\HtmlConvertInterface"
+                factory-service="evp.service.html_convert"
+                factory-method="getCurrentConverter">
+            <argument>%pdf_converter%</argument>
+        </service>
+
+        <service
+                id="evp.service.html_convert.html_to_html"
+                class="Evp\Bundle\TicketBundle\Service\HtmlConvert\HtmlToHtml">
+            <tag name="evp.html_converter" converter="html"/>
+            <argument type="service" id="logger"/>
+        </service>
+
+        <service
+                id="evp.service.html_convert.html_to_pdf_over_http"
+                class="Evp\Bundle\TicketBundle\Service\HtmlConvert\HtmlToPdfOverHttp">
+            <tag name="evp.html_converter" converter="over_http"/>
+            <argument type="service" id="logger"/>
+            <argument>%pdf_over_http_remote_uri%</argument>
+            <argument>%pdf_over_http_auth_header%</argument>
+        </service>
+    </services>
+
+</container>

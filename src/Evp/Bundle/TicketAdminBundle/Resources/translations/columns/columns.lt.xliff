@@ -1,0 +1,423 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="lt" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>admin.prefix.manage</source>
+                <target>Valdyti</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>entity.event_type.plural</source>
+                <target>Renginių Tipai</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>entity.event.plural</source>
+                <target>Renginiai</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>entity.discount_type.plural</source>
+                <target>Nuolaidų Tipai</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>entity.discount.plural</source>
+                <target>Nuolaidos</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>entity.ticket_type.plural</source>
+                <target>Bilietų Tipai</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>entity.event_type.singular</source>
+                <target>Renginio Tipas</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>entity.event.singular</source>
+                <target>Renginys</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>entity.discount_type.singular</source>
+                <target>Nuolaidos Tipas</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>entity.discount.singular</source>
+                <target>Nuolaida</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>entity.ticket_type.singular</source>
+                <target>Bilieto Tipas</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>admin.prefix.add_new</source>
+                <target>Pridėti naują</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>admin.index.entity.id</source>
+                <target>Nr</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>admin.index.entity.name</source>
+                <target>Vardas</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>admin.index.entity.max_tickets_per_user</source>
+                <target>Daugiausia bilietų/naudotojui</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>admin.index.entity.status</source>
+                <target>Būsena</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>admin.index.actions</source>
+                <target>Veiksmai</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>admin.prefix.list</source>
+                <target>Valdyti</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>admin.prefix.edit</source>
+                <target>Redaguoti</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>admin.status.active</source>
+                <target>Aktyvus</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>admin.status.inactive</source>
+                <target>Neaktyvus</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>admin.button.save</source>
+                <target>Išsaugoti</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>entity.event_type.name</source>
+                <target>Vardas</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>entity.event_type.max_tickets_per_user</source>
+                <target>Daugiausia bilietų/naudotojui</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>admin.status.general_label</source>
+                <target>Būsena</target>
+            </trans-unit>
+            <trans-unit id="27">
+                <source>admin.prefix.add</source>
+                <target>Pridėti</target>
+            </trans-unit>
+            <trans-unit id="28">
+                <source>admin.actions.edit</source>
+                <target>Redaguoti</target>
+            </trans-unit>
+            <trans-unit id="29">
+                <source>admin.actions.delete</source>
+                <target>Ištrinti</target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>admin.actions.separator_char</source>
+                <target>|</target>
+            </trans-unit>
+            <trans-unit id="31">
+                <source>admin.index.entity.event_type</source>
+                <target>Renginio Tipas</target>
+            </trans-unit>
+            <trans-unit id="32">
+                <source>admin.index.entity.description</source>
+                <target>Aprašymas</target>
+            </trans-unit>
+            <trans-unit id="33">
+                <source>admin.index.entity.date_created</source>
+                <target>Sukūrtas</target>
+            </trans-unit>
+            <trans-unit id="34">
+                <source>admin.index.entity.date_starts</source>
+                <target>Prasidėda</target>
+            </trans-unit>
+            <trans-unit id="35">
+                <source>admin.index.entity.date_ends</source>
+                <target>Baigiasi</target>
+            </trans-unit>
+            <trans-unit id="36">
+                <source>admin.index.entity.date_on_sale</source>
+                <target>Bilietai parduodami</target>
+            </trans-unit>
+            <trans-unit id="37">
+                <source>admin.index.entity.default_locale</source>
+                <target>Vieta</target>
+            </trans-unit>
+            <trans-unit id="38">
+                <source>admin.actions.device</source>
+                <target>Įrenginys</target>
+            </trans-unit>
+            <trans-unit id="39">
+                <source>admin.entity.locale.general_label</source>
+                <target>Vertimo lokalė</target>
+            </trans-unit>
+            <trans-unit id="40">
+                <source>entity.event.event_type</source>
+                <target>Renginio tipas</target>
+            </trans-unit>
+            <trans-unit id="41">
+                <source>entity.event.name</source>
+                <target>Vardas</target>
+            </trans-unit>
+            <trans-unit id="42">
+                <source>entity.event.description</source>
+                <target>Aprašymas</target>
+            </trans-unit>
+            <trans-unit id="43">
+                <source>entity.event.currency</source>
+                <target>Valiuta</target>
+            </trans-unit>
+            <trans-unit id="44">
+                <source>entity.event.default_locale</source>
+                <target>Renginio vieta</target>
+            </trans-unit>
+            <trans-unit id="45">
+                <source>entity.event.date_starts</source>
+                <target>Prasidėda</target>
+            </trans-unit>
+            <trans-unit id="46">
+                <source>entity.event.date_ends</source>
+                <target>Baigiasi</target>
+            </trans-unit>
+            <trans-unit id="47">
+                <source>entity.event.date_on_sale</source>
+                <target>Bilietai parduodami nuo</target>
+            </trans-unit>
+            <trans-unit id="48">
+                <source>admin.index.entity.tickets_count</source>
+                <target>Bilietai</target>
+            </trans-unit>
+            <trans-unit id="49">
+                <source>admin.index.discount_strategy</source>
+                <target>Strategija</target>
+            </trans-unit>
+            <trans-unit id="50">
+                <source>admin.index.discount_type</source>
+                <target>Tipas</target>
+            </trans-unit>
+            <trans-unit id="51">
+                <source>admin.index.discount_scope</source>
+                <target>Apimtis</target>
+            </trans-unit>
+            <trans-unit id="52">
+                <source>discount.strategy.custom_discount</source>
+                <target>Asmeninė nuolaida</target>
+            </trans-unit>
+            <trans-unit id="53">
+                <source>discount.type.percentage</source>
+                <target>Procentinė</target>
+            </trans-unit>
+            <trans-unit id="54">
+                <source>discount.scope.event</source>
+                <target>Renginys</target>
+            </trans-unit>
+            <trans-unit id="55">
+                <source>discount.scope.ticket_type</source>
+                <target>Bilieto tipas</target>
+            </trans-unit>
+            <trans-unit id="56">
+                <source>entity.discount.tickets_count</source>
+                <target>Bilieto Nr.</target>
+            </trans-unit>
+            <trans-unit id="57">
+                <source>entity.discount.name</source>
+                <target>Vardas</target>
+            </trans-unit>
+            <trans-unit id="58">
+                <source>entity.discount.description</source>
+                <target>Aprašymas</target>
+            </trans-unit>
+            <trans-unit id="59">
+                <source>entity.discount.date_starts</source>
+                <target>Galioja nuo</target>
+            </trans-unit>
+            <trans-unit id="60">
+                <source>entity.discount.date_ends</source>
+                <target>Galioja iki</target>
+            </trans-unit>
+            <trans-unit id="61">
+                <source>admin.discount.strategy</source>
+                <target>Nuolaidų strategija</target>
+            </trans-unit>
+            <trans-unit id="62">
+                <source>admin.discount.type</source>
+                <target>Pritaikytos nuolaidos tipas</target>
+            </trans-unit>
+            <trans-unit id="63">
+                <source>admin.discount.scope</source>
+                <target>Nuolaidos apimtis</target>
+            </trans-unit>
+            <trans-unit id="64">
+                <source>entity.field_schema.plural</source>
+                <target>Lauko Schemos</target>
+            </trans-unit>
+            <trans-unit id="65">
+                <source>entity.field_schema.singular</source>
+                <target>Lauko Schema</target>
+            </trans-unit>
+            <trans-unit id="66">
+                <source>entity.event_type_field_schema.plural</source>
+                <target>Renginio Tipo Lauko Schemos</target>
+            </trans-unit>
+            <trans-unit id="67">
+                <source>entity.event_type_field_schema.singular</source>
+                <target>Renginio Tipo Lauko Schema</target>
+            </trans-unit>
+            <trans-unit id="68">
+                <source>admin.actions.fields</source>
+                <target>Lauko schemos</target>
+            </trans-unit>
+            <trans-unit id="69">
+                <source>admin.index.entity.discount_type</source>
+                <target>Nuolaidos tipas</target>
+            </trans-unit>
+            <trans-unit id="70">
+                <source>admin.index.entity.validation_token</source>
+                <target>Patvirtinimo raktas</target>
+            </trans-unit>
+            <trans-unit id="71">
+                <source>admin.index.entity.discount_value</source>
+                <target>Nuolaidos vertė</target>
+            </trans-unit>
+            <trans-unit id="72">
+                <source>entity.discount.discount_type</source>
+                <target>Nuolaidos tipas</target>
+            </trans-unit>
+            <trans-unit id="73">
+                <source>entity.discount.token</source>
+                <target>Patvirtinimo raktas</target>
+            </trans-unit>
+            <trans-unit id="74">
+                <source>entity.discount.value</source>
+                <target>Nuolaidos vertė</target>
+            </trans-unit>
+            <trans-unit id="75">
+                <source>admin.index.entity.event_name</source>
+                <target>Renginio pavadinimas</target>
+            </trans-unit>
+            <trans-unit id="76">
+                <source>admin.index.entity.price</source>
+                <target>Bileto kaina</target>
+            </trans-unit>
+            <trans-unit id="77">
+                <source>entity.ticket_type.tickets_count</source>
+                <target>Bilietų skaičius</target>
+            </trans-unit>
+            <trans-unit id="78">
+                <source>entity.ticket_type.name</source>
+                <target>Vardas</target>
+            </trans-unit>
+            <trans-unit id="79">
+                <source>entity.ticket_type.description</source>
+                <target>Aprašymas</target>
+            </trans-unit>
+            <trans-unit id="80">
+                <source>entity.ticket_type.event_name</source>
+                <target>Renginys</target>
+            </trans-unit>
+            <trans-unit id="81">
+                <source>entity.ticket_type.discount_types</source>
+                <target>Nuolaidų tipai</target>
+            </trans-unit>
+            <trans-unit id="82">
+                <source>admin.index.entity.type</source>
+                <target>Lauko tipas</target>
+            </trans-unit>
+            <trans-unit id="83">
+                <source>admin.index.entity.validator</source>
+                <target>Lauko tvirtintojas</target>
+            </trans-unit>
+            <trans-unit id="84">
+                <source>admin.index.entity.display_order</source>
+                <target>Rodyti tvarką</target>
+            </trans-unit>
+            <trans-unit id="85">
+                <source>admin.index.entity.label</source>
+                <target>Lauko ženklas</target>
+            </trans-unit>
+            <trans-unit id="86">
+                <source>entity.field_schema.name</source>
+                <target>Schemos pavadinimas</target>
+            </trans-unit>
+            <trans-unit id="87">
+                <source>entity.field_schema.type</source>
+                <target>Tipas</target>
+            </trans-unit>
+            <trans-unit id="88">
+                <source>entity.field_schema.validator</source>
+                <target>Validatorius</target>
+            </trans-unit>
+            <trans-unit id="89">
+                <source>entity.field_schema.field_order</source>
+                <target>Lauko rikiavimas</target>
+            </trans-unit>
+            <trans-unit id="90">
+                <source>entity.field_schema.label</source>
+                <target>Schemos antraštė</target>
+            </trans-unit>
+            <trans-unit id="91">
+                <source>admin.prefix.current</source>
+                <target>Dabartinis</target>
+            </trans-unit>
+            <trans-unit id="92">
+                <source>admin.index.entity.field_schema_name</source>
+                <target>Lauko schema</target>
+            </trans-unit>
+            <trans-unit id="93">
+                <source>admin.index.entity.required</source>
+                <target>Būtina</target>
+            </trans-unit>
+            <trans-unit id="94">
+                <source>admin.index.entity.required_for_all</source>
+                <target>Būtina visiems bilietams</target>
+            </trans-unit>
+            <trans-unit id="95">
+                <source>admin.index.entity.made_by_admin</source>
+                <target>Sukurta administratoriaus</target>
+            </trans-unit>
+            <trans-unit id="96">
+                <source>admin.index.bool_true</source>
+                <target>Taip</target>
+            </trans-unit>
+            <trans-unit id="97">
+                <source>admin.index.bool_false</source>
+                <target>Ne</target>
+            </trans-unit>
+            <trans-unit id="98">
+                <source>entity.event_type_field_schema.field_schema</source>
+                <target>Lauko schema</target>
+            </trans-unit>
+            <trans-unit id="99">
+                <source>entity.event_type_field_schema.required</source>
+                <target>Būtinas laukas</target>
+            </trans-unit>
+            <trans-unit id="100">
+                <source>entity.event_type_field_schema.required_for_all</source>
+                <target>Būtina visiems bilietams</target>
+            </trans-unit>
+            <trans-unit id="101">
+                <source>entity.settings.singular</source>
+                <target>Bendri nustatymai</target>
+            </trans-unit>
+            <trans-unit id="102">
+                <source>admin.index.entity.order_token</source>
+                <target>Raktas</target>
+            </trans-unit>
+            <trans-unit id="103">
+                <source>admin.index.select_action</source>
+                <target>: : :</target>
+            </trans-unit>
+            <trans-unit id="104">
+                <source>admin.index.no_records</source>
+                <target>Šioje kategorijoje įrašų nerasta</target>
+            </trans-unit>
+            <trans-unit id="105">
+                <source>admin.discount.multiple</source>
+                <target>Daugkartinės nuolaidos</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

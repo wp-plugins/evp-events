@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns="http://symfony.com/schema/routing" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+    <route id="evp_ticket_fields" pattern="/fields">
+        <default key="_controller">EvpTicketBundle:Default:fields</default>
+    </route>
+    <!-- Order action routes start -->
+    <route id="evp_ticket_order_cancel" pattern="/{_locale}/order/cancel">
+        <default key="_controller">EvpTicketBundle:Step:cancel</default>
+    </route>
+    <route id="evp_ticket_order_next" pattern="/{_locale}/order/next_step">
+        <default key="_controller">EvpTicketBundle:Step:next</default>
+        <default key="_locale">en</default>
+    </route>
+    <route id="evp_ticket_order_locale" pattern="/{_locale}/order/{eventId}">
+        <default key="_controller">EvpTicketBundle:Step:index</default>
+        <default key="_locale">en</default>
+    </route>
+    <!-- Order action routes start -->
+    <!-- Removal action routes start -->
+    <route id="evp_remove_order_item" pattern="/{_locale}/remove/orderDetails/{orderDetailsId}">
+        <default key="_controller">EvpTicketBundle:Removal:orderDetails</default>
+        <default key="_locale">en</default>
+    </route>
+    <route id="evp_remove_ticket_fields" pattern="/{_locale}/remove/ticketRecords/{ticketId}">
+        <default key="_controller">EvpTicketBundle:Removal:ticketRecords</default>
+        <default key="_locale">en</default>
+    </route>
+    <!-- Removal action routes end -->
+    <!-- QR code routes start -->
+    <route id="evp_ticket_generate_qr" pattern="/ticket/qr/{ticketToken}">
+        <default key="_controller">EvpTicketBundle:QrCode:show</default>
+    </route>
+    <route id="evp_device_generate_qr" pattern="/device/browser/generate/{token}">
+        <default key="_controller">EvpTicketBundle:QrCode:pairingCode</default>
+    </route>
+    <route id="evp_device_generate_qr_for_api" pattern="/device/app/generate/{token}">
+        <default key="_controller">EvpTicketBundle:QrCode:generateQrForApiDevice</default>
+    </route>
+    <!-- QR code routes end -->
+    <!-- Printer routes start -->
+    <route id="evp_print_ticket" pattern="/{_locale}/print/ticket/{token}/{output}">
+        <default key="_controller">EvpTicketBundle:Print:ticket</default>
+        <default key="_locale">en</default>
+        <default key="output">pdf</default>
+    </route>
+    <route id="evp_print_tickets" pattern="/{_locale}/print/tickets/{token}/{output}">
+        <default key="_controller">EvpTicketBundle:Print:tickets</default>
+        <default key="_locale">en</default>
+        <default key="output">pdf</default>
+    </route>
+    <route id="evp_print_invoice" pattern="/{_locale}/print/invoice/{token}/{output}/{type}">
+        <default key="_controller">EvpTicketBundle:Print:invoice</default>
+        <default key="_locale">en</default>
+        <default key="output">pdf</default>
+        <default key="type">invoice_final</default>
+    </route>
+    <!-- Printer routes end -->
+    <!-- Mailer routes start -->
+    <route id="evp_send_invoice" pattern="/{_locale}/send/invoice/{token}/{type}">
+        <default key="_controller">EvpTicketBundle:Mail:invoice</default>
+        <default key="_locale">en</default>
+        <default key="type">invoice_final</default>
+    </route>
+    <route id="evp_send_ticket" pattern="/{_locale}/send/ticket/{token}">
+        <default key="_controller">EvpTicketBundle:Mail:ticket</default>
+        <default key="_locale">en</default>
+    </route>
+    <route id="evp_send_tickets" pattern="/{_locale}/send/tickets/{token}">
+        <default key="_controller">EvpTicketBundle:Mail:tickets</default>
+        <default key="_locale">en</default>
+    </route>
+    <!--Mailer routes end-->
+    <!-- Event info routes start -->
+    <route id="evp_ticket_event_list" pattern="/{_locale}/info/all">
+        <default key="_controller">EvpTicketBundle:EventInfo:all</default>
+    </route>
+    <route id="evp_ticket_event_info" pattern="/{_locale}/info/event/{eventId}">
+        <default key="_controller">EvpTicketBundle:EventInfo:event</default>
+    </route>
+    <route id="evp_ticket_event_info_inactive" pattern="/{_locale}/info/event-inactive/{eventId}">
+        <default key="_controller">EvpTicketBundle:EventInfo:eventInactive</default>
+    </route>
+    <!-- Event info routes end -->
+    <route id="evp_ticket_test_page" pattern="/test/{name}">
+        <default key="_controller">EvpTicketBundle:Default:index</default>
+    </route>
+    <route id="ticket_checker" pattern="/checker/id/{ticketToken}">
+        <default key="_controller">EvpTicketBundle:TicketChecker:checkTicket</default>
+    </route>
+    <route id="display_error" pattern="/{_locale}/error/{message}">
+        <default key="_controller">EvpTicketBundle:GenericDisplay:displayError</default>
+        <default key="_locale">en</default>
+    </route>
+    <route id="display_info" pattern="/{_locale}/info/{message}">
+        <default key="_controller">EvpTicketBundle:GenericDisplay:displayInfo</default>
+        <default key="_locale">en</default>
+    </route>
+    <route id="display_info_no_partials" pattern="/{_locale}/info-no-partials/{message}">
+        <default key="_controller">EvpTicketBundle:GenericDisplay:displayInfoNoPartials</default>
+        <default key="_locale">en</default>
+    </route>
+    <route id="reserve_seat" path="/{_locale}/seat/reserve/{seatId}">
+        <default key="_controller">EvpTicketBundle:Ajax:reserveSeat</default>
+        <default key="_locale">en</default>
+        <default key="seatId"></default>
+    </route>
+    <route id="modify_order_detail" path="/{_locale}/order/modify/{ticketTypeId}/{count}">
+        <default key="_controller">EvpTicketBundle:Ajax:modifyOrderDetails</default>
+        <default key="_locale">en</default>
+        <default key="count"/>
+    </route>
+    <!--Device attach routes start-->
+    <route id="ticket_admin_attach_device" pattern="/{_locale}/device/attach/{token}">
+        <default key="_controller">EvpTicketBundle:Device:attach</default>
+        <default key="_locale">en</default>
+    </route>
+    <!--Device attach routes end-->
+</routes>

@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>max.ticket.limit_per_user</source>
+                <target>Each user not allowed to buy more than %string% tickets</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>value.greater.than</source>
+                <target>Number of tickets must be positive</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>available.to.buy.count</source>
+                <target>For selected ticket type currently left only %string% tickets</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>error.check.invalid_code</source>
+                <target>Discount code invalid</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>error.check.discount_data</source>
+                <target>Check Your provided discount data</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>value.invoice.name.too_short</source>
+                <target>Name must be at least {{ limit }} characters long</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>value.invoice.code.too_short</source>
+                <target>Code must be at least {{ limit }} characters long</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>value.invoice.address.too_short</source>
+                <target>Address must be at least {{ limit }} characters long</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>value.invoice.vat_code.too_short</source>
+                <target>VAT code must be at least {{ limit }} characters long</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>error.event.not_found_by_token</source>
+                <target>Event not found by given token</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>error.invalid_step_configuration</source>
+                <target>Some of the required steps are missing for this event</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>error.session_timeout</source>
+                <target>your session has expired</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>missing_step.ticket_type_selection|seat_selection</source>
+                <target>Required step "Ticket Type Selection" or "Seat Selection" is missing</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>missing_step.user_details_fill</source>
+                <target>Required step "User Details Fill" is missing</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>missing_step.payment_window</source>
+                <target>Required step "Payment Window" is missing</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>step_conflict.ticket_type_selection_x_seat_selection</source>
+                <target>Step conflict: Only "Ticket Type Selection" or "Seat Selection" is allowed</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>error.return_to_event_list</source>
+                <target>Retry</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>error.ticket_type_discount_step.order_details_not_found</source>
+                <target>Unable to find orderDetails</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>error.empty_form.submitted</source>
+                <target>This step has been repeated</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>value.invoice.code.pattern_mismatch</source>
+                <target>Person/company code is invalid</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>value.invoice.code.too_long</source>
+                <target>Person/company code should ne less than {{ limit }} characters long</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>value.invoice.name.too_long</source>
+                <target>Name/Title should ne less than {{ limit }} characters long</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>value.invoice.address.too_long</source>
+                <target>Address should ne less than {{ limit }} characters long</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>value.invoice.vat_code.too_long</source>
+                <target>VAT code should ne less than {{ limit }} characters long</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>value.invoice.vat_code.pattern_mismatch</source>
+                <target>VAT code is invalid</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>value.user_details.too_short</source>
+                <target>Given value is too short</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

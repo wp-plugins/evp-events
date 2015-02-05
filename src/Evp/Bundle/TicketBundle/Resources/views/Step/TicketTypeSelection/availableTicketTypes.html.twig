@@ -1,0 +1,27 @@
+<div class="table">
+    <div class="columns row">
+        <div class="cell name">{{ 'column.ticket_type.name'|trans({} , "columns" ) }}</div>
+        <div class="cell ticketPrice">{{ 'column.ticket_type.price'|trans({} , "columns" ) }}</div>
+        {#<div class="cell left">{{ 'column.ticket_type.tickets_left'|trans({} , "columns" ) }}</div>#}
+        <div class="cell input">{{ 'column.ticket_type.order_count'|trans({} , "columns" ) }}</div>
+        <div class="cell submit">{{ 'column.ticket_type.add_to_cart'|trans({} , "columns" ) }}</div>
+    </div>
+    <div class="tableBody">
+    {% for ticketType in elements.available %}
+            {{ form_start(ticketType, { 'attr': { 'class': 'row' } }) }}
+                {{ form_errors(ticketType) }}
+                <div class="cell name">{{ ticketType.vars.value.ticketTypeName }}</div>
+                <div class="cell ticketPrice">{{ ticketType.vars.value.price|number_format(2, ',', ' ') }} {{ ticketType.vars.value.currency }}</div>
+                {#<div class="cell left">{{ ticketType.vars.value.ticketsLeft }} &nbsp;</div>#}
+                <div class="cell input">
+                    {{ form_label(ticketType.ticketsCount, ticketType.ticketsCount.vars.label|trans) }}
+                    {{ form_widget(ticketType.ticketsCount) }}
+                </div>
+                <div class="cell submit">
+                   {{ form_label(ticketType.addToCart, ticketType.addToCart.vars.label|trans) }}
+                   {{ form_widget(ticketType.addToCart) }}
+                </div>
+            {{ form_end(ticketType) }}
+    {% endfor %}
+    </div>
+</div>

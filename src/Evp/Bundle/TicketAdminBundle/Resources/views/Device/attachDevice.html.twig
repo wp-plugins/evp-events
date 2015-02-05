@@ -1,0 +1,10 @@
+{% extends 'EvpTicketAdminBundle::base.html.twig' %}
+
+{% block body %}
+    <div class="panel panel-default">
+        <div class="panel-heading">{{ 'info.qr_code.how_to_attach'|trans }}</div>
+        <div class="panel-body">
+            <img class="qrCode" src="{{ path('evp_device_generate_qr', { 'token' : elements.columns }) }}">
+        </div>
+    </div>
+{% endblock %}

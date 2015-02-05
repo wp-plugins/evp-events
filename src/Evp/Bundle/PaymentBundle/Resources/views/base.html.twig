@@ -1,0 +1,21 @@
+<!-- jquery -->
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://underscorejs.org/underscore-min.js"></script>
+
+<!-- Bundle JS files -->
+{% block javascripts %}
+    {% javascripts '@EvpPaymentBundle/Resources/public/js/*' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+
+<!-- Bundle CSS files -->
+{% block stylesheets %}
+    {% stylesheets '@EvpPaymentBundle/Resources/public/css/*' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block body %}
+{% endblock %}

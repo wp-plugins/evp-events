@@ -1,0 +1,18 @@
+{% extends 'EvpTicketBundle:Step:base.html.twig' %}
+
+{% block content %}
+    <div class="eventInfo">
+        <div class="headerLine">
+            <div class="name">{{ event.name }}</div>
+            <br>
+        </div>
+        <div class="description">
+            {{ event.description|raw|purify }}
+        </div>
+        <div class="orderInfo">
+        <form action="{{ path('evp_ticket_order_locale', {'_locale' : event.defaultLocale, 'eventId' : event.id}) }}">
+            <input type="submit" value="{{ 'button.buy_tickets'|trans }}"/>
+        </form>
+        </div>
+    </div>
+{% endblock %}

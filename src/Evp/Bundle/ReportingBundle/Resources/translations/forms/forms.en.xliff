@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>report.submit_form</source>
+                <target>Get report</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>report.event_label</source>
+                <target>Event:</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>report.date_from_label</source>
+                <target>Date From:</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>report.date_to_label</source>
+                <target>Date To:</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>report.report_label</source>
+                <target>Report:</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>report.include_test_orders</source>
+                <target>Include test orders</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>ticket_type_sales</source>
+                <target>Ticket Type sales by days</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>custom_fields</source>
+                <target>Custom Fields by Tickets</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>tickets_left</source>
+                <target>Sold/Available Tickets by Type</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

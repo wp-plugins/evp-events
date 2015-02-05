@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="lt" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>database_driver</source>
+                <target>Duomenų bazės tvarkyklė</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>step_reservation_time</source>
+                <target>Žingsnio rezervacijos laikas</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>payment_reservation_time</source>
+                <target>Apmokėjimo rezervacijos laikas</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>mailer_transport</source>
+                <target>Pašto transportas</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>mailer_host</source>
+                <target>Pašto serveris</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>mailer_user</source>
+                <target>Pašto vartotojas</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>mailer_password</source>
+                <target>Pašto vartotojo slaptažodis</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>mailer_auth_mode</source>
+                <target>Pašto autentikacijos mechanizmas</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>mailer_port</source>
+                <target>Pašto serverio prievadas</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>locale</source>
+                <target>Numatytoji lokalė</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>secret</source>
+                <target>Sesijos šifras</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>phantomjs_binary</source>
+                <target>PhantomJS vieta</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>phantomjs_rasterize</source>
+                <target>PhantomJS rasterize.js vieta</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>paysera_project_id</source>
+                <target>Paysera projekto ID</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>paysera_sign_password</source>
+                <target>Paysera projekto slaptažodis</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>paysera_test_mode</source>
+                <target>Naudoti Paysera test režimu</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>fake_cron</source>
+                <target>Naudoti dirbtinį croną</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>offline_sync_depth_future</source>
+                <target>Programėlės sichronizacija į ateitį</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>offline_sync_depth_past</source>
+                <target>Programėlės sichronizacija į praeitį</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>offline_sync_limit</source>
+                <target>Numatytasis programėlės sinchronizacijos dydis</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>shell_enabled</source>
+                <target>Sistemoje leistinas shell</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>pdf_converter</source>
+                <target>PDF generavimo strategija</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>pdf_over_http_remote_uri</source>
+                <target>Nutolusio serverio URI</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>pdf_over_http_auth_header</source>
+                <target>Nutolusio serverio saugumo raktas</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>ticket_code_strategy</source>
+                <target>Bilieto kodo strategija</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>admin.parameters.save</source>
+                <target>Išsaugoti</target>
+            </trans-unit>
+            <trans-unit id="27">
+                <source>enabled</source>
+                <target>įjungta</target>
+            </trans-unit>
+            <trans-unit id="28">
+                <source>disabled</source>
+                <target>išjungta</target>
+            </trans-unit>
+            <trans-unit id="29">
+                <source>no auth</source>
+                <target>jokios</target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>local</source>
+                <target>Šiame serveryje</target>
+            </trans-unit>
+            <trans-unit id="31">
+                <source>remote</source>
+                <target>Nutolusiame serveryje</target>
+            </trans-unit>
+            <trans-unit id="32">
+                <source>{1} week|]2,9] weeks2|]10,Inf] weeks</source>
+                <target>savaitė|savaitės|savaičių</target>
+            </trans-unit>
+            <trans-unit id="33">
+                <source>admin.parameters.test_connection</source>
+                <target>Tikrinti pašto nustatymus</target>
+            </trans-unit>
+            <trans-unit id="34">
+                <source>mailer_encryption</source>
+                <target>Pašto serverio susijungimo šifravimas</target>
+            </trans-unit>
+            <trans-unit id="35">
+                <source>no encryption</source>
+                <target>jokio šifravimo</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

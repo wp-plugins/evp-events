@@ -1,0 +1,18 @@
+{% for discounts in elements.available %}
+    <div class="ticketDiscountCode">
+        {{ form_start(discounts) }}
+
+        <div class="discount-field">
+            {{ form_label(discounts.token, discounts.token.vars.label|trans) }}
+        </div>
+        <div class="discount-field">
+            {{ form_widget(discounts.token) }}
+        </div>
+        <div class="discount-field">
+            {{ form_label(discounts.submit, discounts.submit.vars.label|trans) }}
+            {{ form_widget(discounts.submit) }}
+        </div>
+        {{ form_rest(discounts) }}
+        {{ form_end(discounts) }}
+    </div>
+{% endfor %}

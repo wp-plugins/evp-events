@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter type="string" key="evp_payment.rank.wallet">2</parameter>
+        <parameter type="string" key="evp_payment.rank.web_to_pay">1</parameter>
+        <parameter type="string" key="evp_payment.rank.invoice">0</parameter>
+    </parameters>
+
+    <services>
+        <service id="evp_payment.service.payment_handler_provider" class="Evp\Bundle\PaymentBundle\Service\PaymentHandlerProvider">
+            <argument type="service" id="service_container"/>
+        </service>
+
+        <service id="evp_payment.payment_handler.handler_abstract"
+                 class="Evp\Bundle\PaymentBundle\PaymentHandler\HandlerAbstract"
+                 abstract="true">
+            <argument type="service" id="router"/>
+            <argument type="service" id="evp.service.user_session"/>
+            <argument type="service" id="logger"/>
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+        </service>
+
+        <service id="evp_payment.payment_handler.wallet" class="Evp\Bundle\PaymentBundle\PaymentHandler\WalletHandler"
+                 parent="evp_payment.payment_handler.handler_abstract">
+            <tag name="evp.payment_handler" rank="%evp_payment.rank.wallet%"/>
+        </service>
+        <service id="evp_payment.payment_handler.invoice" class="Evp\Bundle\PaymentBundle\PaymentHandler\InvoiceHandler"
+                 parent="evp_payment.payment_handler.handler_abstract">
+            <tag name="evp.payment_handler" rank="%evp_payment.rank.invoice%"/>
+        </service>
+        <service id="evp_payment.payment_handler.web_to_pay" class="Evp\Bundle\PaymentBundle\PaymentHandler\WebToPayHandler"
+                 parent="evp_payment.payment_handler.handler_abstract">
+            <argument type="service" id="evp_web_to_pay.factory"/>
+            <argument type="string">%paysera_test_mode%</argument>
+
+            <tag name="evp.payment_handler" rank="%evp_payment.rank.web_to_pay%"/>
+        </service>
+    </services>
+
+</container>

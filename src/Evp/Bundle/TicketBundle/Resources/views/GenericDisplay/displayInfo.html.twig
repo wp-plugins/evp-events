@@ -1,0 +1,11 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}EvpTicketBundle:GenericDisplay:displayError{% endblock %}
+
+{% block body %}
+    {% stylesheets '@EvpTicketBundle/Resources/public/css/generic_info.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    <h3>{{ message|trans|raw }}</h3>
+{% endblock %}

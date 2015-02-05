@@ -1,0 +1,28 @@
+<div class="table edit {{ menuAlias }}">
+    <div class="fields">
+        {{ form_start(elements.form) }}
+        {% if form_errors(elements.form) %}
+            <div class="error">
+                {{ form_errors(elements.form) }}
+            </div>
+        {% endif %}
+            {% for row in elements.form %}
+                {% if loop.index is odd %}
+                    {% set odd_even = 'odd' %}
+                {% else %}
+                    {% set odd_even = 'even' %}
+                {% endif %}
+                {% if row.vars.block_prefixes.1 != 'hidden' %}
+                    <div class="row {{ odd_even }}">
+                        <div class="cell label">
+                        {{ form_label(row) }}
+                        </div>
+                        <div class="cell field">
+                            {{ form_widget(row) }}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {{ form_end(elements.form) }}
+    </div>
+</div>

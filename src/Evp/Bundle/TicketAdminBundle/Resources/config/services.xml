@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <imports>
+        <import resource="actions.xml"/>
+        <import resource="menus.xml"/>
+        <import resource="ajax.xml"/>
+    </imports>
+
+    <services>
+        <service id="evp.ticket_admin.service.menu_manager" class="Evp\Bundle\TicketAdminBundle\Service\MenuManager">
+            <argument>%evp.ticket_admin.regular_templates%</argument>
+            <argument type="service" id="evp.service.database_twig_loader"/>
+            <argument type="service" id="router"/>
+            <argument type="service" id="session"/>
+            <argument>%evp.ticket_admin.menu_supplemental_items%</argument>
+            <argument type="service" id="logger"/>
+            <argument type="service" id="evp_ticket_maintenance.service.current_user_provider"/>
+        </service>
+
+        <service
+                id="evp.ticket_admin.service.ticket_admin_gedmo_annotation_reader"
+                class="Evp\Bundle\TicketAdminBundle\Service\TicketAdminGedmoAnnotationReader">
+            <argument type="service" id="annotation_reader"/>
+        </service>
+
+       <service
+            id="evp.ticket_admin.service.ticket_admin_annotation_reader"
+            class="Evp\Bundle\TicketAdminBundle\Service\TicketAdminAnnotationReader">
+            <argument type="service" id="annotation_reader"/>
+       </service>
+
+        <service
+                id="evp.ticket_admin.service.ajax_manager"
+                class="Evp\Bundle\TicketAdminBundle\Service\AjaxManager">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="evp.ticket_admin.service.ticket_admin_gedmo_annotation_reader"/>
+            <argument>%evp.ticket_admin.menu_supplemental_items%</argument>
+            <argument>%evp.ticket_admin.action_supplements%</argument>
+
+            <call method="setScopes">
+                <argument type="collection">
+                    <argument key="events" type="service" id="evp.ticket_admin.service.ajax.events"/>
+                    <argument key="field_types" type="service" id="evp.ticket_admin.service.ajax.field_types"/>
+                    <argument key="schema_types" type="service" id="evp.ticket_admin.service.ajax.schema_types"/>
+                    <argument key="template" type="service" id="evp.ticket_admin.service.ajax.refresh_template"/>
+                    <argument key="toggle_seat" type="service" id="evp.ticket_admin.service.ajax.toggle_seat"/>
+                </argument>
+            </call>
+        </service>
+
+        <service
+                id="evp.ticket_admin.service.ajax.abstract_ajax"
+                class="Evp\Bundle\TicketAdminBundle\Service\Ajax\AjaxAbstract">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="logger"/>
+            <argument type="service" id="session"/>
+        </service>
+        <service
+            id="evp.ticket_admin.service.menu.menu_abstract"
+            class="Evp\Bundle\TicketAdminBundle\Service\Menu\MenuAbstract">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="logger"/>
+            <argument type="service" id="translator"/>
+            <argument type="service" id="evp.service.discount_manager"/>
+            <argument>%evp.ticket_admin.menu_supplemental_items%</argument>
+            <argument>%evp.ticket_admin.locales%</argument>
+            <argument type="service" id="router"/>
+            <argument>%evp.ticket_admin.country_codes%</argument>
+            <argument>%evp.ticket_admin.default_country_code%</argument>
+        </service>
+    </services>
+
+</container>

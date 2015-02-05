@@ -1,0 +1,52 @@
+<div class="field">
+    {{ form_start(elements, {'attr' : {'novalidate' : ''}}) }}
+    {{ form_errors(elements) }}
+    {#<div class="row">#}
+        {#<div class="label">#}
+            {#{{ form_label(elements.type) }}#}
+        {#</div>#}
+        {#<div class="value">#}
+            {#{% for item in elements.type %}#}
+                {#<div class="item">#}
+                    {#{{ form_widget(item) }}#}
+                    {#{{ form_label(item) }}#}
+                {#</div>#}
+            {#{% endfor %}#}
+        {#</div>#}
+    {#</div>#}
+    <div class="row">
+        <div class="label">
+            {{ form_label(elements.name) }}
+        </div>
+        <div class="value">
+            {{ form_widget(elements.name) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="label">
+            {{ form_label(elements.code) }}
+        </div>
+        <div class="value">
+            {{ form_widget(elements.code) }}
+        </div>    </div>
+    <div class="row">
+        <div class="label">
+            {{ form_label(elements.address) }}
+        </div>
+        <div class="value">
+            {{ form_widget(elements.address) }}
+        </div>    </div>
+    <div class="row">
+        <div class="label">
+            {{ form_label(elements.vatCode) }}
+        </div>
+        <div class="value">
+            {{ form_widget(elements.vatCode) }}
+        </div>
+    </div>
+    {{ form_rest(elements) }}
+    <div class="navigation">
+        {% include 'EvpTicketBundle:Step:navigationWithoutForm.html.twig' %}
+    </div>
+    {{ form_end(elements) }}
+</div>

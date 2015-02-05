@@ -1,0 +1,248 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="evp.ticket_admin.action_supplements" type="collection">
+            <parameter key="regular_templates" type="collection">
+                <parameter key="dashboard" type="string">EvpTicketAdminBundle:Admin:dashboard.html.twig</parameter>
+                <parameter key="index" type="string">EvpTicketAdminBundle:Admin:index.html.twig</parameter>
+                <parameter key="edit" type="string">EvpTicketAdminBundle:Admin:edit.html.twig</parameter>
+                <parameter key="add" type="string">EvpTicketAdminBundle:Admin:edit.html.twig</parameter>
+            </parameter>
+            <parameter key="menu_redirects" type="collection">
+                <parameter key="fields" type="string">EventTypeFieldSchema</parameter>
+                <parameter key="steps" type="string">EventTypeStep</parameter>
+                <parameter key="reports" type="string">Report</parameter>
+                <parameter key="templates" type="string">Templates</parameter>
+                <parameter key="devices" type="string">Devices</parameter>
+                <parameter key="seats" type="string">Seat</parameter>
+            </parameter>
+            <parameter key="redirect_parents" type="collection">
+                <parameter key="EventTypeFieldSchema" type="string">eventType</parameter>
+                <parameter key="EventTypeStep" type="string">eventType</parameter>
+                <parameter key="Report" type="string">event</parameter>
+                <parameter key="Templates" type="string">event</parameter>
+                <parameter key="Devices" type="string">event</parameter>
+                <parameter key="Seat" type="string">event</parameter>
+            </parameter>
+            <parameter key="parent_session_key" type="string">parent</parameter>
+        </parameter>
+    </parameters>
+
+    <services>
+        <service id="evp.ticket_admin.service.menu_manager" class="Evp\Bundle\TicketAdminBundle\Service\MenuManager">
+            <argument>%evp.ticket_admin.regular_templates%</argument>
+        </service>
+
+        <service
+                id="evp.ticket_admin.service.menu.action.index"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\IndexAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+            <call method="setProviders">
+                <argument type="collection">
+                    <argument key="filterProvider" type="service" id="evp.ticket_admin.service.menu.action.provider.filter_provider"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.event_menu.examiners_index"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\EventMenu\ExaminersIndexAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+            <call method="setProviders">
+                <argument type="collection">
+                    <argument key="filterProvider" type="service" id="evp.ticket_admin.service.menu.action.provider.filter_provider"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.edit"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\EditAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+            <call method="setCascadors">
+                <argument type="collection">
+                    <argument key="TicketType" type="service" id="evp.ticket_admin.service.menu.action.edit_cascador.ticket_type_cascador"/>
+                    <argument key="EventTypeFieldSchema" type="service" id="evp.ticket_admin.service.menu.action.edit_cascador.event_type_field_schema_cascador"/>
+                    <argument key="EventTypeStep" type="service" id="evp.ticket_admin.service.menu.action.edit_cascador.event_type_step_cascador"/>
+                    <argument key="EventType" type="service" id="evp.ticket_admin.service.menu.action.additional_action.event_type_field_schema_init"/>
+                    <argument key="DiscountType" type="service" id="evp.ticket_admin.service.menu.action.edit_cascador.discount_type_cascador"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.templates.edit"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\Templates\EditAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+            <call method="setTwig">
+                <argument type="service" id="twig"/>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.seat.edit"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\Seat\EditAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+            <call method="setManagers">
+                <argument type="collection">
+                    <argument type="service" key="seat_manager" id="evp.service.seat_manager"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.templates.index"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\Templates\IndexAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.delete"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\DeleteAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.settings_menu.edit"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\SettingsMenu\EditAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+            <call method="setEnvironmentManager">
+                <argument type="service" id="evp_ticket_maintenance.service.system_environment"/>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.event_menu.cookie_device"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\EventMenu\CookieDeviceAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.event_menu.api_device"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\EventMenu\ApiDeviceAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.order_menu.resend_tickets"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\OrderMenu\ResendTicketsAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.order_menu.resend_invoice_proforma"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\OrderMenu\ResendInvoiceProformaAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.order_menu.resend_invoice_final"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\OrderMenu\ResendInvoiceFinalAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.order_menu.print_invoice_proforma"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\OrderMenu\PrintInvoiceProformaAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.order_menu.print_invoice_final"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\OrderMenu\PrintInvoiceFinalAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.order_menu.print_tickets"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\OrderMenu\PrintTicketsAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.order_menu.mark_as_paid"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\OrderMenu\MarkAsPaidAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+            <call method="setManagers">
+                <argument type="collection">
+                    <argument key="orderManager" type="service" id="evp.service.order_manager"/>
+                    <argument key="mailManager" type="service" id="evp.service.mail_manager"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.event_menu.event_link"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\EventMenu\LinkAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.menu_redirect"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\MenuRedirectAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.order_menu.add"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\OrderMenu\AddAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+            <call method="setManagers">
+                <argument type="service" id="evp.service.order_manager"/>
+                <argument type="service" id="evp.service.ticket_manager"/>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.report.field_schema"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\Report\FieldSchemaReport"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+            <call method="setHandlers">
+                <argument type="collection">
+                    <argument key="results" type="service" id="evp.ticket_admin.service.menu.action.report.field_schema_report.index"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.report.general_stats"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\Report\GeneralStatsReport"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.blank"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\BlankAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.edit_cascador.ticket_type_cascador"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\EditCascador\TicketTypeCascador"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.edit_cascador.discount_type_cascador"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\EditCascador\DiscountTypeCascador"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.additional_action.event_type_field_schema_init"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\EditCascador\AdditionalAction\EventTypeFieldSchemaInitializer"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.edit_cascador.event_type_field_schema_cascador"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\EditCascador\EventTypeFieldSchemaCascador"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.edit_cascador.event_type_step_cascador"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\EditCascador\EventTypeStepCascador"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.provider.filter_provider"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\Provider\FilterProvider"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.report.field_schema_report.index"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\Report\FieldSchemaReport\IndexAction"
+                parent="evp.ticket_admin.service.menu.action.action_abstract">
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.action.action_abstract"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\Action\ActionAbstract">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="logger"/>
+            <argument type="service" id="evp.ticket_admin.service.ticket_admin_annotation_reader"/>
+            <argument type="service" id="form.factory"/>
+            <argument>%evp.ticket_admin.action_supplements%</argument>
+            <argument type="service" id="session"/>
+            <argument type="service" id="router"/>
+            <argument type="service" id="translator"/>
+        </service>
+    </services>
+
+</container>

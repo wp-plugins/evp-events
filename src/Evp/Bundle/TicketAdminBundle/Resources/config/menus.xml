@@ -1,0 +1,639 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="evp.ticket_admin.regular_templates" type="collection">
+            <parameter key="horizontal" type="string">EvpTicketAdminBundle:Admin:Dashboard/horizontal.html.twig</parameter>
+            <parameter key="vertical" type="string">EvpTicketAdminBundle:Admin:Dashboard/vertical.html.twig</parameter>
+            <parameter key="index" type="string">EvpTicketAdminBundle:Admin:index.html.twig</parameter>
+            <parameter key="edit" type="string">EvpTicketAdminBundle:Admin:edit.html.twig</parameter>
+        </parameter>
+
+        <parameter key="evp.ticket_admin.locales" type="collection">
+            <parameter key="en">EN</parameter>
+            <parameter key="lt">LT</parameter>
+            <parameter key="ru">RU</parameter>
+            <parameter key="lv">LV</parameter>
+        </parameter>
+
+        <parameter key="evp.ticket_admin.default_country_code">lt</parameter>
+
+        <!-- http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 -->
+        <parameter key="evp.ticket_admin.country_codes" type="collection">
+            <parameter key="en">EN</parameter>
+            <parameter key="lt">LT</parameter>
+            <parameter key="ru">RU</parameter>
+            <parameter key="lv">LV</parameter>
+            <parameter key="ee">EE</parameter>
+            <parameter key="ru">RU</parameter>
+            <parameter key="pl">PL</parameter>
+            <parameter key="gb">GB</parameter>
+            <parameter key="us">US</parameter>
+            <parameter key="dk">DK</parameter>
+            <parameter key="es">ES</parameter>
+            <parameter key="ua">UA</parameter>
+            <parameter key="ie">IE</parameter>
+            <parameter key="au">AU</parameter>
+            <parameter key="az">AZ</parameter>
+            <parameter key="ge">GE</parameter>
+            <parameter key="il">IL</parameter>
+            <parameter key="kz">KZ</parameter>
+            <parameter key="fi">FI</parameter>
+            <parameter key="se">SE</parameter>
+            <parameter key="zm">ZM</parameter>
+            <parameter key="de">DE</parameter>
+            <parameter key="fr">FR</parameter>
+            <parameter key="ch">CH</parameter>
+            <parameter key="cz">CZ</parameter>
+            <parameter key="by">BY</parameter>
+            <parameter key="be">BE</parameter>
+            <parameter key="bg">BG</parameter>
+            <parameter key="gr">GR</parameter>
+            <parameter key="ae">AE</parameter>
+            <parameter key="no">NO</parameter>
+            <parameter key="tr">TR</parameter>
+            <parameter key="hu">HU</parameter>
+            <parameter key="sy">SY</parameter>
+            <parameter key="at">AT</parameter>
+            <parameter key="eg">EG</parameter>
+            <parameter key="cy">CY</parameter>
+            <parameter key="lu">LU</parameter>
+            <parameter key="hr">HR</parameter>
+            <parameter key="ca">CA</parameter>
+            <parameter key="nl">NL</parameter>
+            <parameter key="sk">SK</parameter>
+            <parameter key="si">SI</parameter>
+            <parameter key="kw">KW</parameter>
+            <parameter key="iq">IQ</parameter>
+            <parameter key="ir">IR</parameter>
+            <parameter key="am">AM</parameter>
+            <parameter key="af">AF</parameter>
+            <parameter key="vg">VG</parameter>
+            <parameter key="vi">VI</parameter>
+            <parameter key="pt">PT</parameter>
+            <parameter key="is">IS</parameter>
+            <parameter key="mt">MT</parameter>
+            <parameter key="ro">RO</parameter>
+            <parameter key="sc">SC</parameter>
+            <parameter key="li">LI</parameter>
+            <parameter key="jo">JO</parameter>
+            <parameter key="ye">YE</parameter>
+            <parameter key="sa">SA</parameter>
+            <parameter key="qa">QA</parameter>
+            <parameter key="mk">MK</parameter>
+            <parameter key="bh">BH</parameter>
+            <parameter key="lb">LB</parameter>
+            <parameter key="me">ME</parameter>
+            <parameter key="bz">BZ</parameter>
+            <parameter key="kg">KG</parameter>
+            <parameter key="it">IT</parameter>
+            <parameter key="gi">GI</parameter>
+            <parameter key="na">NA</parameter>
+            <parameter key="aw">AW</parameter>
+            <parameter key="za">ZA</parameter>
+            <parameter key="wf">WF</parameter>
+            <parameter key="ag">AG</parameter>
+            <parameter key="nz">NZ</parameter>
+            <parameter key="pa">PA</parameter>
+            <parameter key="mh">MH</parameter>
+            <parameter key="ps">PS</parameter>
+            <parameter key="al">AL</parameter>
+            <parameter key="ar">AR</parameter>
+            <parameter key="br">BR</parameter>
+            <parameter key="dz">DZ</parameter>
+            <parameter key="ad">AD</parameter>
+            <parameter key="bs">BS</parameter>
+            <parameter key="bd">BD</parameter>
+            <parameter key="bm">BM</parameter>
+            <parameter key="cf">CF</parameter>
+            <parameter key="cl">CL</parameter>
+            <parameter key="cd">CD</parameter>
+            <parameter key="ba">BA</parameter>
+            <parameter key="bj">BJ</parameter>
+            <parameter key="mm">MM</parameter>
+            <parameter key="bo">BO</parameter>
+            <parameter key="td">TD</parameter>
+            <parameter key="bt">BT</parameter>
+            <parameter key="zw">ZW</parameter>
+            <parameter key="vn">VN</parameter>
+            <parameter key="ve">VE</parameter>
+            <parameter key="va">VA</parameter>
+            <parameter key="uz">UZ</parameter>
+            <parameter key="uy">UY</parameter>
+            <parameter key="tm">TM</parameter>
+            <parameter key="tn">TN</parameter>
+            <parameter key="tt">TT</parameter>
+            <parameter key="tg">TG</parameter>
+            <parameter key="tz">TZ</parameter>
+            <parameter key="tw">TW</parameter>
+            <parameter key="th">TH</parameter>
+            <parameter key="tj">TJ</parameter>
+            <parameter key="lk">LK</parameter>
+            <parameter key="sd">SD</parameter>
+            <parameter key="sh">SH</parameter>
+            <parameter key="sb">SB</parameter>
+            <parameter key="sg">SG</parameter>
+            <parameter key="sl">SL</parameter>
+            <parameter key="lc">LC</parameter>
+            <parameter key="sn">SN</parameter>
+            <parameter key="sm">SM</parameter>
+            <parameter key="sv">SV</parameter>
+            <parameter key="pr">PR</parameter>
+            <parameter key="pf">PF</parameter>
+            <parameter key="gf">GF</parameter>
+            <parameter key="kr">KR</parameter>
+            <parameter key="pe">PE</parameter>
+            <parameter key="py">PY</parameter>
+            <parameter key="pg">PG</parameter>
+            <parameter key="pk">PK</parameter>
+            <parameter key="om">OM</parameter>
+            <parameter key="ni">NI</parameter>
+            <parameter key="ng">NG</parameter>
+            <parameter key="ne">NE</parameter>
+            <parameter key="np">NP</parameter>
+            <parameter key="mz">MZ</parameter>
+            <parameter key="mn">MN</parameter>
+            <parameter key="mc">MC</parameter>
+            <parameter key="md">MD</parameter>
+            <parameter key="mx">MX</parameter>
+            <parameter key="mu">MU</parameter>
+            <parameter key="ml">ML</parameter>
+            <parameter key="mv">MV</parameter>
+            <parameter key="mw">MW</parameter>
+            <parameter key="my">MY</parameter>
+            <parameter key="mg">MG</parameter>
+            <parameter key="ly">LY</parameter>
+            <parameter key="lr">LR</parameter>
+            <parameter key="ls">LS</parameter>
+            <parameter key="cu">CU</parameter>
+            <parameter key="cr">CR</parameter>
+            <parameter key="cg">CG</parameter>
+            <parameter key="kh">KH</parameter>
+            <parameter key="co">CO</parameter>
+            <parameter key="ci">CI</parameter>
+            <parameter key="cn">CN</parameter>
+            <parameter key="ke">KE</parameter>
+            <parameter key="cm">CM</parameter>
+            <parameter key="ky">KY</parameter>
+            <parameter key="jp">JP</parameter>
+            <parameter key="jm">JM</parameter>
+            <parameter key="id">ID</parameter>
+            <parameter key="in">IN</parameter>
+            <parameter key="hk">HK</parameter>
+            <parameter key="hn">HN</parameter>
+            <parameter key="ht">HT</parameter>
+            <parameter key="gt">GT</parameter>
+            <parameter key="gh">GH</parameter>
+            <parameter key="ph">PH</parameter>
+            <parameter key="fk">FK</parameter>
+            <parameter key="fj">FJ</parameter>
+            <parameter key="fo">FO</parameter>
+            <parameter key="et">ET</parameter>
+            <parameter key="ec">EC</parameter>
+            <parameter key="gq">GQ</parameter>
+            <parameter key="do">DO</parameter>
+            <parameter key="dm">DM</parameter>
+            <parameter key="ao">AO</parameter>
+            <parameter key="aq">AQ</parameter>
+            <parameter key="gn">GN</parameter>
+            <parameter key="gy">GY</parameter>
+            <parameter key="gw">GW</parameter>
+            <parameter key="ki">KI</parameter>
+            <parameter key="rs">RS</parameter>
+            <parameter key="re">RE</parameter>
+            <parameter key="ma">MA</parameter>
+            <parameter key="im">IM</parameter>
+            <parameter key="kp">KP</parameter>
+            <parameter key="as">AS</parameter>
+            <parameter key="ax">AX</parameter>
+            <parameter key="ai">AI</parameter>
+            <parameter key="bb">BB</parameter>
+            <parameter key="bq">BQ</parameter>
+            <parameter key="bw">BW</parameter>
+            <parameter key="bv">BV</parameter>
+            <parameter key="io">IO</parameter>
+            <parameter key="bn">BN</parameter>
+            <parameter key="bf">BF</parameter>
+            <parameter key="bi">BI</parameter>
+            <parameter key="cv">CV</parameter>
+            <parameter key="cx">CX</parameter>
+            <parameter key="cc">CC</parameter>
+            <parameter key="km">KM</parameter>
+            <parameter key="ck">CK</parameter>
+            <parameter key="dj">DJ</parameter>
+            <parameter key="er">ER</parameter>
+            <parameter key="tf">TF</parameter>
+            <parameter key="ga">GA</parameter>
+            <parameter key="gm">GM</parameter>
+            <parameter key="gl">GL</parameter>
+            <parameter key="gd">GD</parameter>
+            <parameter key="gp">GP</parameter>
+            <parameter key="gu">GU</parameter>
+            <parameter key="gg">GG</parameter>
+            <parameter key="hm">HM</parameter>
+            <parameter key="je">JE</parameter>
+            <parameter key="la">LA</parameter>
+            <parameter key="mo">MO</parameter>
+            <parameter key="mq">MQ</parameter>
+            <parameter key="mr">MR</parameter>
+            <parameter key="yt">YT</parameter>
+            <parameter key="fm">FM</parameter>
+            <parameter key="ms">MS</parameter>
+            <parameter key="nr">NR</parameter>
+            <parameter key="nc">NC</parameter>
+            <parameter key="nu">NU</parameter>
+            <parameter key="nf">NF</parameter>
+            <parameter key="mp">MP</parameter>
+            <parameter key="pw">PW</parameter>
+            <parameter key="pn">PN</parameter>
+            <parameter key="rw">RW</parameter>
+            <parameter key="kn">KN</parameter>
+            <parameter key="mf">MF</parameter>
+            <parameter key="pm">PM</parameter>
+            <parameter key="vc">VC</parameter>
+            <parameter key="ws">WS</parameter>
+            <parameter key="st">ST</parameter>
+            <parameter key="sx">SX</parameter>
+            <parameter key="so">SO</parameter>
+            <parameter key="gs">GS</parameter>
+            <parameter key="sr">SR</parameter>
+            <parameter key="sj">SJ</parameter>
+            <parameter key="sz">SZ</parameter>
+            <parameter key="tl">TL</parameter>
+            <parameter key="tk">TK</parameter>
+            <parameter key="to">TO</parameter>
+            <parameter key="tc">TC</parameter>
+            <parameter key="tv">TV</parameter>
+            <parameter key="ug">UG</parameter>
+            <parameter key="um">UM</parameter>
+            <parameter key="vu">VU</parameter>
+            <parameter key="eh">EH</parameter>
+            <parameter key="cw">CW</parameter>
+            <parameter key="bl">BL</parameter>
+            <parameter key="ss">SS</parameter>
+            <parameter key="xk">XK</parameter>
+        </parameter>
+
+        <parameter key="evp.ticket_admin.menu_supplemental_items" type="collection">
+            <parameter key="currencies" type="collection">
+                <parameter key="LTL">LTL</parameter>
+                <parameter key="USD">USD</parameter>
+                <parameter key="EUR">EUR</parameter>
+            </parameter>
+            <parameter key="fieldTypes" type="collection">
+                <parameter key="email">Email</parameter>
+                <parameter key="text">Text</parameter>
+                <parameter key="optional">Optional</parameter>
+            </parameter>
+            <parameter key="fieldTypes.validators" type="collection">
+                <parameter key="text">Symfony\Component\Validator\Constraints\NotBlank</parameter>
+                <parameter key="email">Symfony\Component\Validator\Constraints\Email</parameter>
+                <parameter key="optional">Symfony\Component\Validator\Constraints\NotBlank</parameter>
+            </parameter>
+            <parameter key="hidden_menus" type="collection">
+                <parameter type="string">EventTypeFieldSchema</parameter>
+                <parameter type="string">EventTypeStep</parameter>
+                <parameter type="string">Templates</parameter>
+                <parameter type="string">Devices</parameter>
+                <parameter type="string">Seat</parameter>
+            </parameter>
+            <parameter key="templating" type="collection">
+                <parameter key="template_types" type="collection">
+                    <parameter key="ticket">admin.entity.template_name.ticket</parameter>
+                    <parameter key="invoice_final">admin.entity.template_name.invoice_final</parameter>
+                    <parameter key="invoice_proforma">admin.entity.template_name.invoice_proforma</parameter>
+                    <parameter key="ticket_email">admin.entity.template_name.ticket_email</parameter>
+                    <parameter key="invoice_final_email">admin.entity.template_name.invoice_final_email</parameter>
+                    <parameter key="invoice_proforma_email">admin.entity.template_name.invoice_proforma_email</parameter>
+                    <parameter key="ticket_used">admin.entity.template_name.ticket_used</parameter>
+                    <parameter key="ticket_unused">admin.entity.template_name.ticket_unused</parameter>
+                    <parameter key="custom">admin.entity.template_name.custom</parameter>
+                </parameter>
+                <parameter key="template_names" type="collection">
+                    <parameter key="ticket">ticket.html.twig</parameter>
+                    <parameter key="invoice_final">invoice_final.html.twig</parameter>
+                    <parameter key="invoice_proforma">invoice_proforma.html.twig</parameter>
+                    <parameter key="ticket_email">ticket.html.twig</parameter>
+                    <parameter key="invoice_final_email">invoice_final.html.twig</parameter>
+                    <parameter key="invoice_proforma_email">invoice_proforma.html.twig</parameter>
+                    <parameter key="ticket_used">ticket_used.html.twig</parameter>
+                    <parameter key="ticket_unused">ticket_unused.html.twig</parameter>
+                </parameter>
+            </parameter>
+        </parameter>
+
+        <parameter key="evp.ticket_admin.service.menu.settings.view_configuration" type="collection">
+            <parameter key="database_driver">hidden</parameter>
+            <parameter key="step_reservation_time">time_diff</parameter>
+            <parameter key="payment_reservation_time">time_diff</parameter>
+            <parameter key="mailer_transport" type="collection">
+                <parameter key="smtp">smtp</parameter>
+                <parameter key="mail">mail</parameter>
+                <parameter key="gmail">gmail</parameter>
+                <parameter key="sendmail">sendmail</parameter>
+            </parameter>
+            <parameter key="mailer_host">text</parameter>
+            <parameter key="mailer_user">text</parameter>
+            <parameter key="mailer_password">text</parameter>
+            <parameter key="mailer_auth_mode" type="collection">
+                <parameter key="plain">plain</parameter>
+                <parameter key="login">login</parameter>
+                <parameter key="cram-md5">cram-md5</parameter>
+                <parameter key="null">no auth</parameter>
+            </parameter>
+            <parameter key="mailer_encryption" type="collection">
+                <parameter key="tls">TLS</parameter>
+                <parameter key="ssl">SSL</parameter>
+                <parameter key="null">no encryption</parameter>
+            </parameter>
+            <parameter key="mailer_port">text</parameter>
+            <parameter key="locale">%evp.ticket_admin.locales%</parameter>
+            <parameter key="secret">hidden</parameter>
+            <parameter key="paysera_project_id">text</parameter>
+            <parameter key="paysera_sign_password">text</parameter>
+            <parameter key="paysera_test_mode" type="collection">
+                <parameter key="1">enabled</parameter>
+                <parameter key="0">disabled</parameter>
+            </parameter>
+            <parameter key="fake_cron">hidden</parameter>
+            <parameter key="offline_sync_depth_future">week_positive</parameter>
+            <parameter key="offline_sync_depth_past">week_negative</parameter>
+            <parameter key="offline_sync_limit">hidden</parameter>
+            <parameter key="pdf_converter" type="collection">
+                <parameter key="shell_exec">local</parameter>
+                <parameter key="over_http">remote</parameter>
+            </parameter>
+            <parameter key="pdf_over_http_remote_uri">hidden</parameter>
+            <parameter key="pdf_over_http_auth_header">bearer_token</parameter>
+            <parameter key="ticket_code_strategy">hidden</parameter>
+        </parameter>
+    </parameters>
+
+    <services>
+        <service
+                id="evp.ticket_admin.service.menu.event_type"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\EventTypeMenu"
+                parent="evp.ticket_admin.service.menu.menu_abstract">
+            <tag name="evp.ticket_admin.menu_item" alias="EventType"/>
+            <call method="setActions">
+                <argument type="collection" key="common">
+                    <argument key="index" type="service" id="evp.ticket_admin.service.menu.action.index"/>
+                    <argument key="edit" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                    <argument key="delete" type="service" id="evp.ticket_admin.service.menu.action.delete"/>
+                    <argument key="fields" type="service" id="evp.ticket_admin.service.menu.action.menu_redirect"/>
+                    <argument key="steps" type="service" id="evp.ticket_admin.service.menu.action.menu_redirect"/>
+                </argument>
+                <argument type="collection" key="general">
+                    <argument key="add" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.event"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\EventMenu"
+                parent="evp.ticket_admin.service.menu.menu_abstract">
+            <tag name="evp.ticket_admin.menu_item" alias="Event"/>
+            <call method="setActions">
+                <argument type="collection" key="common">
+                    <argument key="index" type="service" id="evp.ticket_admin.service.menu.action.index"/>
+                    <argument key="edit" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                    <argument key="devices" type="service" id="evp.ticket_admin.service.menu.action.menu_redirect"/>
+                    <argument key="link" type="service" id="evp.ticket_admin.service.menu.action.event_menu.event_link"/>
+                    <argument key="delete" type="service" id="evp.ticket_admin.service.menu.action.delete"/>
+                    <argument key="templates" type="service" id="evp.ticket_admin.service.menu.action.menu_redirect"/>
+                    <argument key="seats" type="service" id="evp.ticket_admin.service.menu.action.menu_redirect"/>
+                </argument>
+                <argument type="collection" key="general">
+                    <argument key="add" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.discount_type"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\DiscountTypeMenu"
+                parent="evp.ticket_admin.service.menu.menu_abstract">
+            <tag name="evp.ticket_admin.menu_item" alias="DiscountType"/>
+            <call method="setActions">
+                <argument type="collection" key="common">
+                    <argument key="index" type="service" id="evp.ticket_admin.service.menu.action.index"/>
+                    <argument key="edit" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                    <argument key="delete" type="service" id="evp.ticket_admin.service.menu.action.delete"/>
+                </argument>
+                <argument type="collection" key="general">
+                    <argument key="add" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.discount"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\DiscountMenu"
+                parent="evp.ticket_admin.service.menu.menu_abstract">
+            <tag name="evp.ticket_admin.menu_item" alias="Discount"/>
+            <call method="setActions">
+                <argument type="collection" key="common">
+                    <argument key="index" type="service" id="evp.ticket_admin.service.menu.action.index"/>
+                    <argument key="edit" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                    <argument key="delete" type="service" id="evp.ticket_admin.service.menu.action.delete"/>
+                </argument>
+                <argument type="collection" key="general">
+                    <argument key="add" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.ticket_type"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\TicketTypeMenu"
+                parent="evp.ticket_admin.service.menu.menu_abstract">
+            <tag name="evp.ticket_admin.menu_item" alias="TicketType"/>
+            <call method="setActions">
+                <argument type="collection" key="common">
+                    <argument key="index" type="service" id="evp.ticket_admin.service.menu.action.index"/>
+                    <argument key="edit" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                    <argument key="delete" type="service" id="evp.ticket_admin.service.menu.action.delete"/>
+                    <argument key="templates" type="service" id="evp.ticket_admin.service.menu.action.menu_redirect"/>
+                    <argument key="seats" type="service" id="evp.ticket_admin.service.menu.action.menu_redirect"/>
+                </argument>
+                <argument type="collection" key="general">
+                    <argument key="add" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.field_schema"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\FieldSchemaMenu"
+                parent="evp.ticket_admin.service.menu.menu_abstract">
+            <tag name="evp.ticket_admin.menu_item" alias="FieldSchema"/>
+            <call method="setActions">
+                <argument type="collection" key="common">
+                    <argument key="index" type="service" id="evp.ticket_admin.service.menu.action.index"/>
+                    <argument key="edit" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                    <argument key="delete" type="service" id="evp.ticket_admin.service.menu.action.delete"/>
+                </argument>
+                <argument type="collection" key="general">
+                    <argument key="add" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.event_type_field_schema"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\EventTypeFieldSchemaMenu"
+                parent="evp.ticket_admin.service.menu.menu_abstract">
+            <tag name="evp.ticket_admin.menu_item" alias="EventTypeFieldSchema"/>
+            <call method="setActions">
+                <argument type="collection" key="common">
+                    <argument key="index" type="service" id="evp.ticket_admin.service.menu.action.index"/>
+                    <argument key="edit" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                    <argument key="delete" type="service" id="evp.ticket_admin.service.menu.action.delete"/>
+                </argument>
+                <argument type="collection" key="general">
+                    <argument key="add" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.templates"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\TemplatesMenu"
+                parent="evp.ticket_admin.service.menu.menu_abstract">
+            <tag name="evp.ticket_admin.menu_item" alias="Templates"/>
+            <call method="setActions">
+                <argument type="collection" key="common">
+                    <argument key="index" type="service" id="evp.ticket_admin.service.menu.action.templates.index"/>
+                    <argument key="edit" type="service" id="evp.ticket_admin.service.menu.action.templates.edit"/>
+                    <argument key="delete" type="service" id="evp.ticket_admin.service.menu.action.delete"/>
+                </argument>
+                <argument type="collection" key="general">
+                    <argument key="add" type="service" id="evp.ticket_admin.service.menu.action.templates.edit"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.devices"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\DevicesMenu"
+                parent="evp.ticket_admin.service.menu.menu_abstract">
+            <tag name="evp.ticket_admin.menu_item" alias="Devices"/>
+            <call method="setActions">
+                <argument type="collection" key="common">
+                    <argument key="index" type="service" id="evp.ticket_admin.service.menu.action.event_menu.examiners_index"/>
+                    <argument key="edit" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                    <argument key="delete" type="service" id="evp.ticket_admin.service.menu.action.delete"/>
+                </argument>
+                <argument type="collection" key="general">
+                    <argument key="cookie_device" type="service" id="evp.ticket_admin.service.menu.action.event_menu.cookie_device"/>
+                    <argument key="app_device" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.event_type_step"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\EventTypeStepMenu"
+                parent="evp.ticket_admin.service.menu.menu_abstract">
+            <tag name="evp.ticket_admin.menu_item" alias="EventTypeStep"/>
+            <call method="setActions">
+                <argument type="collection" key="common">
+                    <argument key="index" type="service" id="evp.ticket_admin.service.menu.action.index"/>
+                    <argument key="edit" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                    <argument key="delete" type="service" id="evp.ticket_admin.service.menu.action.delete"/>
+                </argument>
+                <argument type="collection" key="general">
+                    <argument key="add" type="service" id="evp.ticket_admin.service.menu.action.edit"/>
+                </argument>
+            </call>
+            <call method="setStepMaps">
+                <argument>%evp.service.step.required_steps%</argument>
+                <argument>%evp.service.step.conflicting_steps%</argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.order"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\OrderMenu"
+                parent="evp.ticket_admin.service.menu.menu_abstract">
+            <tag name="evp.ticket_admin.menu_item" alias="Order"/>
+            <call method="setActions">
+                <argument type="collection" key="common">
+                    <argument key="index" type="service" id="evp.ticket_admin.service.menu.action.index"/>
+
+                    <argument key="resend-tickets" type="service" id="evp.ticket_admin.service.menu.action.order_menu.resend_tickets"/>
+                    <argument key="resend-invoice_proforma" type="service" id="evp.ticket_admin.service.menu.action.order_menu.resend_invoice_proforma"/>
+                    <argument key="resend-invoice_final" type="service" id="evp.ticket_admin.service.menu.action.order_menu.resend_invoice_final"/>
+
+                    <argument key="print-tickets" type="service" id="evp.ticket_admin.service.menu.action.order_menu.print_tickets"/>
+                    <argument key="print-invoice_proforma" type="service" id="evp.ticket_admin.service.menu.action.order_menu.print_invoice_proforma"/>
+                    <argument key="print-invoice_final" type="service" id="evp.ticket_admin.service.menu.action.order_menu.print_invoice_final"/>
+
+                    <argument key="confirm" type="service" id="evp.ticket_admin.service.menu.action.order_menu.mark_as_paid"/>
+                </argument>
+                <argument type="collection" key="general">
+                    <argument key="add" type="service" id="evp.ticket_admin.service.menu.action.order_menu.add"/>
+                </argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.settings"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\SettingsMenu"
+                parent="evp.ticket_admin.service.menu.menu_abstract">
+            <tag name="evp.ticket_admin.menu_item" alias="Settings"/>
+            <call method="setActions">
+                <argument type="collection" key="common">
+                    <argument key="index" type="service" id="evp.ticket_admin.service.menu.action.settings_menu.edit"/>
+                </argument>
+                <argument type="collection" key="general"/>
+            </call>
+            <call method="setRootDir">
+                <argument>%kernel.root_dir%</argument>
+            </call>
+            <call method="setViewConfiguration">
+                <argument>%evp.ticket_admin.service.menu.settings.view_configuration%</argument>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.seat"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\SeatMenu"
+                parent="evp.ticket_admin.service.menu.menu_abstract">
+            <tag name="evp.ticket_admin.menu_item" alias="Seat"/>
+            <call method="setActions">
+                <argument type="collection" key="common">
+                    <argument key="index" type="service" id="evp.ticket_admin.service.menu.action.seat.edit"/>
+                </argument>
+                <argument type="collection" key="general"/>
+            </call>
+        </service>
+        <service
+                id="evp.ticket_admin.service.menu.reporting"
+                class="Evp\Bundle\TicketAdminBundle\Service\Menu\ReportingBridge"
+                parent="evp.ticket_admin.service.menu.menu_abstract">
+            <tag name="evp.ticket_admin.menu_item" alias="Report"/>
+            <call method="setActions">
+                <argument type="collection" key="common"/>
+                <argument type="collection" key="general"/>
+            </call>
+            <call method="setReportManager">
+                <argument type="service" id="evp_reporting.report_manager"/>
+            </call>
+        </service>
+
+        <service id="evp.ticket_admin.form_type.week_positive" class="Evp\Bundle\TicketAdminBundle\Form\Type\WeekPositiveType">
+            <argument type="service" id="translator"/>
+            <tag name="form.type" alias="week_positive"/>
+        </service>
+        <service id="evp.ticket_admin.form_type.week_negative" class="Evp\Bundle\TicketAdminBundle\Form\Type\WeekNegativeType">
+            <argument type="service" id="translator"/>
+            <tag name="form.type" alias="week_negative"/>
+        </service>
+        <service id="evp.ticket_admin.form_type.date_diff" class="Evp\Bundle\TicketAdminBundle\Form\Type\TimeDiffType">
+            <tag name="form.type" alias="time_diff"/>
+        </service>
+        <service id="evp.ticket_admin.form_type.bearer_token" class="Evp\Bundle\TicketAdminBundle\Form\Type\BearerTokenType">
+            <tag name="form.type" alias="bearer_token"/>
+        </service>
+        <service id="evp.ticket_admin.form_type.mailer_encryption" class="Evp\Bundle\TicketAdminBundle\Form\Type\MailerEncryptionType">
+            <tag name="form.type" alias="mailer_encryption"/>
+        </service>
+
+        <service id="evp.ticket_admin.form_type.optional" class="Evp\Bundle\TicketAdminBundle\Form\Type\OptionalType">
+            <tag name="form.type" alias="optional"/>
+        </service>
+    </services>
+
+</container>

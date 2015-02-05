@@ -1,0 +1,96 @@
+/* bootstrap sub-dropdown */
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:-100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:hover>.dropdown-menu{display:block;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+
+
+.filters input {
+    width: 8em;
+}
+.subMenu > div {
+    display: inline-block;
+}
+.menu.sub {
+    padding: 1em 0.1em;
+}
+.text.sub, .menu.sub, .menu.general {
+    display: inline-block;
+}
+.text.sub {
+    font-style: italic;
+}
+.qrCode .info, .qrCode .code {
+    padding-bottom: 3em;
+}
+.stepConflict {
+    font-weight: bold;
+    color: #c90000;
+}
+/*Hack for sub-forms in Edit page*/
+.field > #evp_bundle_ticketbundle_event_area {
+    display: table;
+}
+.field #evp_bundle_ticketbundle_event_area div {
+    display: table-row;
+}
+.field #evp_bundle_ticketbundle_event_area div * {
+    display: table-cell;
+}
+
+.error {
+    font-weight: bold;
+    color: red;
+}
+.error ul {
+    list-style-type: none;
+}
+.tickets_date_dropdowns div {
+    display: inline-block;
+    padding-right: 1em;
+}
+.placeholder {
+    height: 2em;
+}
+.Order .cell.field div div {
+    display: inline-block;
+    padding-right: 1em;
+}
+.Order .multiSelect {
+    padding-top: 0.5em;
+}
+.Order .multiSelect:first-child {
+    padding-top: 0;
+}
+img.qrCode {
+    max-height: 220px;
+    max-width: 220px;
+}
+
+/*Seat selection backend*/
+.seatMatrix svg .seat {
+    cursor: pointer;
+}
+.seatMatrix .seat.show {
+    stroke: black;
+}
+.seatMatrix .seat.hide {
+    fill: #FFFFFF;
+    stroke: #B8B8B8;
+}
+
+.Settings #admin_parameters_form_type_buttons_testConnection,
+.Settings #admin_parameters_form_type_buttons_save {
+    display: inline;
+    width: 49.5%;
+}
+#evp_bundle_ticketbundle_order_ticketTypes_ticketsCount,
+#evp_bundle_ticketbundle_order_ticketTypes_add {
+    width: auto;
+}
+
+.DiscountType input[type="file"] {
+    height: auto;
+}

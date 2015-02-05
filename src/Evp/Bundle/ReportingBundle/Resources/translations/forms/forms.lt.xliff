@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="lt" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>report.submit_form</source>
+                <target>Gauti raportą</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>report.event_label</source>
+                <target>Renginys:</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>report.date_from_label</source>
+                <target>Data nuo:</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>report.date_to_label</source>
+                <target>Data iki:</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>report.report_label</source>
+                <target>Raportas:</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>report.include_test_orders</source>
+                <target>Įtraukti testinius užsakymus</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>ticket_type_sales</source>
+                <target>Bilietų tipų pardavimai dienomis</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>custom_fields</source>
+                <target>Papildomi laukai bilietuose</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>tickets_left</source>
+                <target>Parduoti/Laisvi bilietai pagal tipą</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,34 @@
+{% extends 'EvpTicketBundle:Step:base.html.twig' %}
+
+{% block content %}
+    <div class="eventsList table">
+        <div class="columns row">
+            <div class="name cell">{{ 'column.event_info.all.name'|trans({} , "columns" )  }}</div>
+            <div class="date cell">{{ 'column.event_info.date_starts.date'|trans({} , "columns" ) }}</div>
+            <div class="time cell">{{ 'column.event_info.date_starts.time'|trans({} , "columns" ) }}</div>
+            <div class="date cell">{{ 'column.event_info.date_ends.date'|trans({} , "columns" ) }}</div>
+            <div class="time cell">{{ 'column.event_info.date_ends.time'|trans({} , "columns" ) }}</div>
+        </div>
+        {% for event in elements %}
+            <div class="event row">
+                <div class="name cell">
+                    <a href="{{ path('evp_ticket_event_info', {'_locale' : event.defaultLocale, 'eventId' : event.id}) }}">
+                        {{ event.name }}
+                    </a>
+                </div>
+                <div class="date cell">
+                    {{ event.dateStarts|date("Y-m-d") }}
+                </div>
+                <div class="time cell">
+                    {{ event.dateStarts|date("H:i") }}
+                </div>
+                <div class="date cell">
+                    {{ event.dateEnds|date("Y-m-d") }}
+                </div>
+                <div class="time cell">
+                    {{ event.dateEnds|date("H:i") }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
