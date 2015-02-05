@@ -1,0 +1,27 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_socket: ~
+    step_reservation_time: +5 minutes
+    payment_reservation_time: +2 hours
+    mailer_transport: smtp
+    mailer_host: mailtrap.io
+    mailer_user: tickets-local-0c19bb9d4476a881
+    mailer_password: 257fb8e6e1d6b272
+    mailer_auth_mode: plain
+    mailer_encryption: null
+    mailer_port: 2525
+    locale: en
+    secret: 1a18886587c2efa7b720554ff646d482
+    paysera_project_id: 31530
+    paysera_sign_password: 8c5ebe834bb61a2e5ab8ef38f8d940f3
+    paysera_test_mode: 1
+    fake_cron: false
+    offline_sync_depth_future: +2 month
+    offline_sync_depth_past: -1 month
+    offline_sync_limit: 100
+    pdf_converter: 'over_http'
+    pdf_over_http_remote_uri: 'http://api.paysera.com/pdf/v1/generate'
+    pdf_over_http_auth_header: 'Authorization: Bearer cPI7rH465w7KMr3ZzRinr8pvn0gU4QUX'
+    ticket_code_strategy: 'qr_code'
+    default_connection: host_connection

@@ -1,0 +1,17 @@
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+
+    providers:
+        bearer_user:
+            id: evp_device_api.authentication.bearer_user_provider
+        in_memory:
+            memory:
+                users:
+                    test: { password: 'ttt', roles: ['ROLE_USER'] }
+
+    firewalls:
+        bearer_secured:
+            pattern:    ^%site_path%/%plugin_url_path%/api/
+            stateless:  true
+            bearer:     true

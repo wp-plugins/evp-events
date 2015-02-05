@@ -1,0 +1,24 @@
+evp_reporting:
+    resource: "@EvpReportingBundle/Resources/config/routing.xml"
+    prefix:   %site_path%/%plugin_url_path%/reports
+
+evp_device_api:
+    resource: "@EvpDeviceApiBundle/Resources/config/routing.xml"
+    prefix:   %site_path%/%plugin_url_path%/api
+
+evp_ticket_admin:
+    resource: "@EvpTicketAdminBundle/Resources/config/routing.xml"
+    prefix:   %site_path%/%plugin_url_path%/admin
+
+evp_payment:
+    resource: "@EvpPaymentBundle/Resources/config/routing.xml"
+    prefix:   %site_path%/%plugin_url_path%/payment
+
+evp_ticket:
+    resource: "@EvpTicketBundle/Resources/config/routing.xml"
+    prefix:   %site_path%/%plugin_url_path%
+
+api:
+    resource: Evp\Bundle\DeviceApiBundle\Controller\ApiRestController
+    prefix: %site_path%/%plugin_url_path%/api
+    type: rest

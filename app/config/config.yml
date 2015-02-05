@@ -1,0 +1,166 @@
+imports:
+    - { resource: parameters.php }
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: doctrine_extensions.yml }
+    - { resource: session_config.php }
+
+framework:
+    #esi:             ~
+    translator:      { fallback: %locale% }
+    secret:          %secret%
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+        assets_base_urls: %server_hostname%
+        #assets_version: SomeVersionScheme
+    default_locale:  "%locale%"
+    trusted_proxies: ~
+    session:
+        name:        sessionId
+#        storage_id:  session.storage.php_bridge
+#        handler_id:  ~
+    fragments:       ~
+    http_method_override: true
+
+# Twig Configuration
+twig:
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%
+    cache: false
+
+# Assetic Configuration
+assetic:
+    debug:          %kernel.debug%
+#    use_controller: false
+#    bundles:        [ ]
+    #java: /usr/bin/java
+    filters:
+        cssrewrite: ~
+        scssphp:
+            apply_to: "\.scss$"
+            compass: true
+
+        #closure:
+        #    jar: %kernel.root_dir%/Resources/java/compiler.jar
+        #yui_css:
+        #    jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        connections:
+            host_connection:
+                driver:       %database_driver%
+                host:         %database_host%
+                port:         %database_port%
+                dbname:       %database_name%
+                user:         %database_user%
+                password:     %database_password%
+                charset:      UTF8
+                mapping_types:
+                    enum:     string
+            sock_connection:
+                driver:       %database_driver%
+                unix_socket:  %database_socket%
+                dbname:       %database_name%
+                user:         %database_user%
+                password:     %database_password%
+                charset:      UTF8
+                mapping_types:
+                    enum:     string
+
+        # if using pdo_sqlite as your database driver, add the path in parameters.yml
+        # e.g. database_path: %kernel.root_dir%/data/data.db3
+        # path:     %database_path%
+
+    orm:
+        connection: %default_connection%
+        auto_generate_proxy_classes: %kernel.debug%
+        auto_mapping: true
+        dql:
+            datetime_functions:
+                MONTH: DoctrineExtensions\Query\Mysql\Month
+                YEAR: DoctrineExtensions\Query\Mysql\Year
+                DAY: DoctrineExtensions\Query\Mysql\Day
+                DATE: DoctrineExtensions\Query\Mysql\Date
+
+        mappings:
+            translatable:
+                type: annotation
+                alias: Gedmo
+                prefix: Gedmo\Translatable\Entity
+                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity/MappedSuperclass"
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport:  %mailer_transport%
+    host:       %mailer_host%
+    username:   %mailer_user%
+    password:   %mailer_password%
+    auth_mode:  %mailer_auth_mode%
+    encryption: %mailer_encryption%
+    port:       %mailer_port%
+    spool:      { type: memory }
+
+evp_web_to_pay:
+   credentials:
+       project_id: %paysera_project_id%
+       sign_password: %paysera_sign_password%
+
+exercise_html_purifier:
+    default:
+        Cache.SerializerPath: '%kernel.cache_dir%/htmlpurifier'
+        Cache.SerializerPermissions: 0777
+        Core.Encoding: 'UTF-8'
+        Attr.AllowedFrameTargets: [_blank]
+    basic_html:
+        Cache.SerializerPath: '%kernel.cache_dir%/htmlpurifier'
+        Cache.SerializerPermissions: 0777
+        Core.Encoding: 'UTF-8'
+        HTML.Allowed: a[href],b,big,blockquote,br,cite,dfn,div,em,font[color][face],i,p,small,strong,sub,sup,tt,u
+
+ivory_ck_editor:
+    default_config: full_page
+    configs:
+        full_page:
+            toolbar: full
+            config.entities:            false
+            config.basicEntities:       false
+            config.entities_latin:      false
+            config.entities_greek:      false
+            config.htmlEncodeOutput:    false
+            entities_additional:        ''
+            fullPage:                   true
+            allowedContent:             true
+        body_content:
+            toolbar: full
+            config.entities:            false
+            config.basicEntities:       false
+            config.entities_latin:      false
+            config.entities_greek:      false
+            config.htmlEncodeOutput:    false
+            entities_additional:        ''
+            allowedContent:             true
+
+monolog:
+    handlers:
+        main:
+            type:  stream
+            path:  %kernel.logs_dir%/%kernel.environment%.log
+            level: debug
+        firephp:
+            type:  firephp
+            level: info
+        chromephp:
+            type:  chromephp
+            level: info
+
+fos_rest:
+    routing_loader:
+        default_format: json

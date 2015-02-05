@@ -1,0 +1,38 @@
+# services to handle doctrine extensions
+services:
+    # KernelRequest listener
+    extension.listener:
+        class: Evp\Bundle\TicketBundle\Listener\DoctrineExtensionListener
+        calls:
+            - [ setContainer, [ @service_container ] ]
+        tags:
+            # translatable sets locale after router processing
+            - { name: kernel.event_listener, event: kernel.request, method: onLateKernelRequest, priority: -10 }
+
+    gedmo.listener.translatable:
+        class: Gedmo\Translatable\TranslatableListener
+        tags:
+            - { name: doctrine.event_subscriber }
+        calls:
+            - [ setAnnotationReader, [ @annotation_reader ] ]
+            - [ setDefaultLocale, [ %locale% ] ]
+            - [ setTranslationFallback, [ true ] ]
+            - [ setPersistDefaultLocaleTranslation, [ true ] ]
+
+    evp.maintenance.listener.doctrine.token:
+        class: Evp\Bundle\TicketMaintenanceBundle\Listener\Doctrine\Token
+        tags:
+            - { name: doctrine.event_subscriber }
+        arguments: [@evp_ticket_maintenance.service.unique_token_annotation_reader, @evp_ticket_maintenance.service.unique_token_generator]
+
+    evp.ticket.listener.doctrine.utc_offset_mutator:
+        class: Evp\Bundle\TicketBundle\Listener\UtcOffsetMutator
+        tags:
+            - { name: doctrine.event_subscriber }
+        arguments:
+            [ %utc_offset% ]
+
+    evp.maintenance.listener.doctrine.sqlite_foreign_keys_enable:
+        class: Evp\Bundle\TicketMaintenanceBundle\Listener\Doctrine\SqliteForeignKeysEnable
+        tags:
+            - { name: doctrine.event_subscriber }
