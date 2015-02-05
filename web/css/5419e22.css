@@ -1,0 +1,131 @@
+/* got from http://www.emirplicanic.com/css/css-step-by-step-menu-wizard-style */
+/* = STEPS CONTAINER
+----------------------------*/
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs {
+  margin: 1em 10px 3em 10px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  font-weight: bold;
+  width: 100%;
+  display: inline-block; }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs div {
+  position: relative;
+  display: inline-block;
+  /* = STEP NUMBERS
+----------------------------*/ }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs span {
+  display: block;
+  float: left;
+  font-size: 10px;
+  text-align: center;
+  width: 15px;
+  margin: 2px 5px 0px 0px;
+  line-height: 15px;
+  color: #ccc;
+  background: #fff;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  /* = DEFAULT STEPS
+----------------------------*/ }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs a {
+  position: relative;
+  display: block;
+  width: auto;
+  height: 24px;
+  margin-right: 18px;
+  padding: 0px 10px 0px 3px;
+  float: left;
+  font-size: 11px;
+  line-height: 24px;
+  color: #666;
+  background: #f0eee3;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+  cursor: default;
+  min-width: 10em;
+  text-align: center; }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs a:before {
+  width: 0px;
+  height: 0px;
+  border-top: 12px solid #f0eee3;
+  border-bottom: 12px solid #f0eee3;
+  border-left: 12px solid transparent;
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: -12px; }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs a:after {
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid #f0eee3;
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: -12px;
+  /* = COMPLETED STEPS
+----------------------------*/ }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs .completed-step a {
+  color: #163038;
+  background: #a3c1c9; }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs .completed-step a:before {
+  border-top: 12px solid #a3c1c9;
+  border-bottom: 12px solid #a3c1c9; }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs .completed-step a:after {
+  border-left: 12px solid #a3c1c9; }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs .completed-step span {
+  border: 2px solid #163038;
+  color: #163038;
+  text-shadow: none;
+  /* = ACTIVE STEPS
+----------------------------*/ }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs .active-step a {
+  color: #a3c1c9;
+  background: #163038;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8); }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs .active-step a:before {
+  border-top: 12px solid #163038;
+  border-bottom: 12px solid #163038; }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs .active-step a:after {
+  border-left: 12px solid #163038; }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs .active-step span {
+  color: #163038;
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  border: 2px solid #a3c1c9;
+  /* = HOVER STATES
+----------------------------*/ }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs div:hover a {
+  color: #fff;
+  background: #8f061e;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8); }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs div:hover span {
+  color: #8f061e; }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs div:hover a:before {
+  border-top: 12px solid #8f061e;
+  border-bottom: 12px solid #8f061e; }
+
+#evpTicketPluginWrapper .ticketPluginBreadcrumbs div:hover a:after {
+  border-left: 12px solid #8f061e; }

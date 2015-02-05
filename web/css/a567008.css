@@ -1,0 +1,225 @@
+/*Basic definitions*/
+#evpTicketPluginWrapper * div, #evpTicketPluginWrapper * span, #evpTicketPluginWrapper * applet, #evpTicketPluginWrapper * object, #evpTicketPluginWrapper * iframe, #evpTicketPluginWrapper * h1, #evpTicketPluginWrapper * h2, #evpTicketPluginWrapper * h3, #evpTicketPluginWrapper * h4, #evpTicketPluginWrapper * h5, #evpTicketPluginWrapper * h6, #evpTicketPluginWrapper * p, #evpTicketPluginWrapper * blockquote, #evpTicketPluginWrapper * pre, #evpTicketPluginWrapper * a, #evpTicketPluginWrapper * abbr, #evpTicketPluginWrapper * acronym, #evpTicketPluginWrapper * address, #evpTicketPluginWrapper * big, #evpTicketPluginWrapper * cite, #evpTicketPluginWrapper * code, #evpTicketPluginWrapper * del, #evpTicketPluginWrapper * dfn, #evpTicketPluginWrapper * em, #evpTicketPluginWrapper * img, #evpTicketPluginWrapper * ins, #evpTicketPluginWrapper * kbd, #evpTicketPluginWrapper * q, #evpTicketPluginWrapper * s, #evpTicketPluginWrapper * samp, #evpTicketPluginWrapper * small, #evpTicketPluginWrapper * strike, #evpTicketPluginWrapper * strong, #evpTicketPluginWrapper * sub, #evpTicketPluginWrapper * sup, #evpTicketPluginWrapper * tt, #evpTicketPluginWrapper * var, #evpTicketPluginWrapper * b, #evpTicketPluginWrapper * u, #evpTicketPluginWrapper * i, #evpTicketPluginWrapper * center, #evpTicketPluginWrapper * dl, #evpTicketPluginWrapper * dt, #evpTicketPluginWrapper * dd, #evpTicketPluginWrapper * ol, #evpTicketPluginWrapper * ul, #evpTicketPluginWrapper * li, #evpTicketPluginWrapper * fieldset, #evpTicketPluginWrapper * form, #evpTicketPluginWrapper * label, #evpTicketPluginWrapper * legend, #evpTicketPluginWrapper * table, #evpTicketPluginWrapper * caption, #evpTicketPluginWrapper * tbody, #evpTicketPluginWrapper * tfoot, #evpTicketPluginWrapper * thead, #evpTicketPluginWrapper * tr, #evpTicketPluginWrapper * th, #evpTicketPluginWrapper * td, #evpTicketPluginWrapper * article, #evpTicketPluginWrapper * aside, #evpTicketPluginWrapper * canvas, #evpTicketPluginWrapper * details, #evpTicketPluginWrapper * embed, #evpTicketPluginWrapper * figure, #evpTicketPluginWrapper * figcaption, #evpTicketPluginWrapper * footer, #evpTicketPluginWrapper * header, #evpTicketPluginWrapper * hgroup, #evpTicketPluginWrapper * menu, #evpTicketPluginWrapper * nav, #evpTicketPluginWrapper * output, #evpTicketPluginWrapper * ruby, #evpTicketPluginWrapper * section, #evpTicketPluginWrapper * summary, #evpTicketPluginWrapper * time, #evpTicketPluginWrapper * mark, #evpTicketPluginWrapper * audio, #evpTicketPluginWrapper * video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+  #evpTicketPluginWrapper * table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+  #evpTicketPluginWrapper * caption, #evpTicketPluginWrapper * th, #evpTicketPluginWrapper * td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle; }
+  #evpTicketPluginWrapper * q, #evpTicketPluginWrapper * blockquote {
+    quotes: none; }
+    #evpTicketPluginWrapper * q:before, #evpTicketPluginWrapper * blockquote:before, #evpTicketPluginWrapper * q:after, #evpTicketPluginWrapper * blockquote:after {
+      content: "";
+      content: none; }
+  #evpTicketPluginWrapper * a img {
+    border: none; }
+
+#evpTicketPluginWrapper select {
+  width: auto;
+  margin: 0; }
+
+#evpTicketPluginWrapper .input {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  background: none; }
+
+#evpTicketPluginWrapper *::-moz-selection {
+  background: none;
+  color: inherit; }
+
+#evpTicketPluginWrapper * {
+  font-size: 12px;
+  font-style: normal;
+  font-family: Tahoma, Arial, Helvetica, sans-serif; }
+
+#evpTicketPluginWrapper select {
+  min-height: 2.4em; }
+
+#evpTicketPluginWrapper input[type="text"] {
+  border-radius: 4px; }
+
+#evpTicketPluginWrapper .columns {
+  font-weight: bold;
+  height: 2em; }
+
+#evpTicketPluginWrapper div.nonShown {
+  visibility: collapse; }
+
+#evpTicketPluginWrapper .lineHeight3em {
+  line-height: 6em; }
+
+#evpTicketPluginWrapper .widthToCell, #evpTicketPluginWrapper .widthToCell input {
+  width: 5em; }
+
+.left, .dropdown, .ticketType, .type, .info, .item {
+  float: left; }
+
+#evpTicketPluginWrapper {
+  margin: 10px;
+  padding: 10px;
+  width: auto; }
+
+#evpTicketPluginWrapper .bold {
+  font-weight: bold;
+  /*CSS table definitions*/ }
+
+#evpTicketPluginWrapper .table {
+  display: table;
+  width: auto; }
+
+#evpTicketPluginWrapper .cell {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0.25em 0.5em;
+  min-width: 6em;
+  max-width: 30em; }
+
+#evpTicketPluginWrapper .row {
+  display: table-row; }
+
+#evpTicketPluginWrapper .tableBody {
+  display: table-row-group;
+  /*Single event info definitions*/ }
+
+#evpTicketPluginWrapper .eventInfo .headerLine {
+  font-size: 3em;
+  line-height: normal; }
+
+#evpTicketPluginWrapper .eventInfo .date {
+  font-size: 0.4em;
+  padding-bottom: 1em;
+  clear: both; }
+
+#evpTicketPluginWrapper .eventInfo .description {
+  padding-bottom: 3em;
+  clear: both; }
+
+#evpTicketPluginWrapper .eventInfo .orderInfo {
+  padding-bottom: 1em;
+  /*Ticket type selection step definitions*/ }
+
+#evpTicketPluginWrapper .cartItem.totals .cell {
+  font-weight: bold;
+  font-size: 1.1em;
+  white-space: nowrap;
+  /*Apply discount step definitions*/ }
+
+#evpTicketPluginWrapper .applyDiscount .available, #evpTicketPluginWrapper.applyDiscount .applied {
+  padding-bottom: 2em; }
+
+#evpTicketPluginWrapper .applyDiscount .ticketDiscount {
+  padding-bottom: 2em;
+  clear: both; }
+
+#evpTicketPluginWrapper .applyDiscount .dropdown {
+  width: 12em; }
+
+#evpTicketPluginWrapper .applyDiscount .input {
+  width: 15em; }
+
+#evpTicketPluginWrapper .applyDiscount .discount {
+  width: 7em; }
+
+#evpTicketPluginWrapper .applyDiscount .ticketPrice {
+  width: 6em;
+  /*Payment type selection step definitions*/ }
+
+#evpTicketPluginWrapper .paymentTypes .invoice {
+  padding: 2em 0; }
+
+#evpTicketPluginWrapper .paymentTypes .invoiceCheckbox label {
+  margin-left: 4px; }
+
+#evpTicketPluginWrapper .paymentTypes .invoiceCheckbox input {
+  margin-top: 0; }
+
+#evpTicketPluginWrapper .paymentTypes .item, #evpTicketPluginWrapper .paymentTypes .invoice {
+  clear: both; }
+
+#evpTicketPluginWrapper .paymentTypes * input, #evpTicketPluginWrapper .paymentTypes * label {
+  display: inline-block;
+  /*Invoice details fill step definitions*/ }
+
+#evpTicketPluginWrapper .invoiceDetails .row {
+  padding-top: 1em;
+  clear: both; }
+
+#evpTicketPluginWrapper .invoiceDetails {
+  padding-bottom: 2em; }
+
+#evpTicketPluginWrapper .invoiceDetails .item {
+  padding-right: 2em; }
+
+#evpTicketPluginWrapper .invoiceDetails button {
+  margin-top: 1em; }
+
+#evpTicketPluginWrapper .invoiceDetails * input, #evpTicketPluginWrapper .invoiceDetails * label {
+  display: inline-block; }
+
+#evpTicketPluginWrapper .invoiceDetails * .label {
+  display: block;
+  color: inherit;
+  background-color: inherit;
+  text-shadow: none; }
+
+#evpTicketPluginWrapper .invoiceDetails .form input {
+  margin-right: 1em; }
+
+#evpTicketPluginWrapper .available {
+  overflow: auto;
+  /*User details fill step definitions*/ }
+
+#evpTicketPluginWrapper #evp_bundle_ticketbundle_dynamic_collection_type_globalDetails, #evpTicketPluginWrapper #evp_bundle_ticketbundle_dynamic_collection_type_commonDetails {
+  margin-bottom: 3em; }
+
+#evpTicketPluginWrapper #evp_bundle_ticketbundle_dynamic_collection_type_globalDetails > .form_row, #evpTicketPluginWrapper #evp_bundle_ticketbundle_dynamic_collection_type_commonDetails > .form_row {
+  padding: 2em 0;
+  display: block;
+  clear: both; }
+
+#evpTicketPluginWrapper #evp_bundle_ticketbundle_dynamic_collection_type_commonDetails .form_row * label, #evpTicketPluginWrapper #evp_bundle_ticketbundle_dynamic_collection_type_globalDetails .form_row * label {
+  display: block;
+  clear: both; }
+
+#evpTicketPluginWrapper #evp_bundle_ticketbundle_dynamic_collection_type_commonDetails .form_row * input, #evpTicketPluginWrapper #evp_bundle_ticketbundle_dynamic_collection_type_globalDetails .form_row * input {
+  float: left; }
+
+#evpTicketPluginWrapper .ticketDiscount form select {
+  margin-left: -0.5em; }
+
+#evpTicketPluginWrapper .ticketDiscountCode {
+  height: 2em; }
+
+#evpTicketPluginWrapper .ticketDiscountCode .discount-field {
+  float: left;
+  margin-right: 0.5em; }
+
+#evpTicketPluginWrapper .ticketDiscountCode button[type=submit] {
+  margin-top: -0.1em;
+  /*Seat selection frontend*/ }
+
+#evpTicketPluginWrapper .seatSelection svg .seat.show.free, #evpTicketPluginWrapper .seatSelection svg .seat.show.reserved {
+  cursor: pointer; }
+
+#evpTicketPluginWrapper .seatSelection .seat.show {
+  stroke: black; }
+
+#evpTicketPluginWrapper .seatSelection .seat.show.taken {
+  fill: #b4b4b4; }
+
+#evpTicketPluginWrapper .seatSelection .seat.show.reserved {
+  fill: #b43a39; }
+
+#evpTicketPluginWrapper .userDetails .ticket {
+  padding-top: 2em; }

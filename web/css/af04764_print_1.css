@@ -1,0 +1,45 @@
+.ticket {
+    font-size: 14px;
+    font-style: normal;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    border: 1px solid brown;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+}
+.ticket, .rows, .qrCode, .dates .starts div, .dates .ends div {
+    display: inline-block;
+}
+@media print {
+    .rows {
+        padding-right: 6em;
+    }
+}
+@media screen {
+    .rows {
+        width: 40em;
+    }
+}
+.rows {
+    float: left;
+}
+.eventDetails {
+    padding-bottom: 2em;
+}
+.eventName .value {
+    font-size: 2em;
+    padding-bottom: 0.5em;
+}
+.ticketType {
+    font-size: 1.5em;
+}
+.row {
+    padding-bottom: 0.5em;
+}
+.dates .starts div, .dates .ends div {
+    padding-right: 1em;
+}
+.discountDetails {
+    font-style: italic;
+    color: brown;
+}

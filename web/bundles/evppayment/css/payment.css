@@ -1,0 +1,15 @@
+#order {
+    margin: 100px 10px;
+}
+
+/* Initially the completed container shouldn't be seen */
+#order #completed {
+    display: none;
+}
+
+#order .loading-image-container {
+    margin-left: 10px;
+}
+.customText {
+    padding: 1em 0;
+}

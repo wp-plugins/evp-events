@@ -1,0 +1,7 @@
+@import "configuration";
+
+#{$wrapper} .formErrors {
+    font-weight: bold;
+    color: red;
+    margin-bottom: 2em;
+}

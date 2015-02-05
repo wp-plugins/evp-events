@@ -1,0 +1,25 @@
+@import "compass/reset/utilities";
+@import "configuration";
+
+#{$wrapper} * {
+    @include nested-reset;
+}
+#{$wrapper} select {
+    width: auto;
+    margin: 0;
+}
+
+#{$wrapper} .input {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    background: none;
+}
+
+#{$wrapper} *::-moz-selection {
+    background: none;
+    color: inherit;
+}
