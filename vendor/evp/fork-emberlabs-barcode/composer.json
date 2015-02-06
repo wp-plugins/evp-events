@@ -1,0 +1,9 @@
+{
+    "name": "evp/fork-emberlabs-barcode",
+    "description": "A library for generating barcodes",
+    "autoload": {
+        "psr-0": {
+            "emberlabs\\Barcode\\": "src/"
+        }
+    }
+}
