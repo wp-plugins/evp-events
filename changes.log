@@ -1,0 +1,21 @@
+2014-03-17
+    Added functionality to manually create Orders for inactive TicketType
+2014-03-18
+    Restored original "message.payment_type_selection.short_info" LT translation text
+    Fixed "Discount Type" Status field display as "Active/Inactive" - changed column type in DB
+    Resolved bug when "Ticket type discount" step disallows to proceed to next step when no discount code is provided
+2014-09-04
+    Fixed bug with tailing slash in URL causing Symfony Router skipping route.
+2014-09-24
+    Fixed NonUniqueResultException, when same Discount code is used multiple times
+    Discount Token is always converted to uppercase
+2014-10-24
+    Added discountType option 'multiple discounts' - one code can be validated multiple times
+    Removed TicketTypeDiscount join entity
+    TicketTypes now assigns DiscountTypes, not specific Discounts
+2014-10-24
+    Upload CSV functionality added
+2014-12-04
+    Ticket name is prefixed timestamp + random number
+2014-12-05
+    Invoice number is issued only after payment received
