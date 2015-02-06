@@ -33,6 +33,8 @@ Creating an Event Type
 9. In case you need to change settings of your Event Type, navigate to “Event Types“ and in the “Action” column click on „ … “ and then „Edit“. See an example screenshot below.
 10. After you have saved “Event Type”, you can click on “Edit”, change locale and if necessary provide event information in other languages as well and click “Save” again.
 
+more information -  http://tickets.paysera.lt/
+
 == Changelog ==
 
 = Version: 2015-01-06 =
